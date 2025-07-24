@@ -1,10 +1,8 @@
-package Tema17ProgramacionFuncional.Ejercicio12Repaso;
-
-import org.w3c.dom.ls.LSOutput;
+package Tema17ProgramacionFuncional;
 
 import java.util.stream.IntStream;
 
-public class Ejercicio03MostrarHexadecimal {
+public class Ejercicio05MostrarHexadecimal {
 
     public static void main(String[] args) {
         IntStream
