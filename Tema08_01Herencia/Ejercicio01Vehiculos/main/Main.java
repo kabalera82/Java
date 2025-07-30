@@ -1,10 +1,9 @@
-package Tema08Herencia.Ejercicio01Vehiculos.main;
+package Tema08_01Herencia.Ejercicio01Vehiculos.main;
 
-import Tema08Herencia.Ejercicio01Vehiculos.coche.Coche;
-import Tema08Herencia.Ejercicio01Vehiculos.coche.CocheTodoterreno;
-import Tema08Herencia.Ejercicio01Vehiculos.moto.Moto;
-import Tema08Herencia.Ejercicio01Vehiculos.moto.MotoDeportiva;
-import Tema08Herencia.Ejercicio01Vehiculos.vehiculos.Vehiculo;
+import Tema08_01Herencia.Ejercicio01Vehiculos.coche.Coche;
+import Tema08_01Herencia.Ejercicio01Vehiculos.coche.CocheTodoterreno;
+import Tema08_01Herencia.Ejercicio01Vehiculos.moto.MotoDeportiva;
+import Tema08_01Herencia.Ejercicio01Vehiculos.vehiculos.Vehiculo;
 
 public class Main {
     public static void main(String[] args) {

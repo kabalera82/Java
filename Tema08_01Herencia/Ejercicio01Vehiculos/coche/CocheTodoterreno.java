@@ -1,4 +1,4 @@
-package Tema08Herencia.Ejercicio01Vehiculos.coche;
+package Tema08_01Herencia.Ejercicio01Vehiculos.coche;
 
 public class CocheTodoterreno extends CocheTurismo {
     //Atributos

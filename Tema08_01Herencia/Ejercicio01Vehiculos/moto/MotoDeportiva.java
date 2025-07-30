@@ -1,4 +1,4 @@
-package Tema08Herencia.Ejercicio01Vehiculos.moto;
+package Tema08_01Herencia.Ejercicio01Vehiculos.moto;
 
 public class MotoDeportiva extends Moto {
     //Atributos

@@ -13,7 +13,7 @@ public class Persona {
     //Declaracion de Atributos
     //Los atributos NO son static, porque son compartidos por todas las instancias de la clase.
     // Es decir cada persona debe tener su propio nombre, edad, etc.
-    private String nombre;
+    private static String nombre;
     private String primerApellido;
     private String segundoApellido;
     private String dni;

@@ -1,4 +1,4 @@
-package Tema08Herencia.Ejercicio01Vehiculos.vehiculos;
+package Tema08_01Herencia.Ejercicio01Vehiculos.vehiculos;
 
 public class Vehiculo {
 

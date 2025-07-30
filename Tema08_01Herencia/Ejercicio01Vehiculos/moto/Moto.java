@@ -1,6 +1,6 @@
-package Tema08Herencia.Ejercicio01Vehiculos.moto;
+package Tema08_01Herencia.Ejercicio01Vehiculos.moto;
 
-import Tema08Herencia.Ejercicio01Vehiculos.vehiculos.Vehiculo;
+import Tema08_01Herencia.Ejercicio01Vehiculos.vehiculos.Vehiculo;
 
 public class Moto extends Vehiculo {
     //Atributos

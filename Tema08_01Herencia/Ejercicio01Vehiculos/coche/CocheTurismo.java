@@ -1,11 +1,12 @@
-package Tema08Herencia.Ejercicio01Vehiculos.moto;
+package Tema08_01Herencia.Ejercicio01Vehiculos.coche;
 
-public class MotoTurismo extends Moto {
+public class CocheTurismo extends Coche {
     //Atributos
     int nivelComodidad;
 
-    //Metodos
+    //metodos
 
+    //Getter y Setters
 
     public int getNivelComodidad() {
         return nivelComodidad;
@@ -17,9 +18,9 @@ public class MotoTurismo extends Moto {
 
     @Override
     public String toString() {
-        return "MotoTurismo{" +
+        return "CocheTurismo{" +
                 "nivelComodidad=" + nivelComodidad +
-                ", marchas=" + marchas +
+                ", modelo='" + modelo + '\'' +
                 '}';
     }
 }
