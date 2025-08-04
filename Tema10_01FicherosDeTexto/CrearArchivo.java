@@ -1,4 +1,4 @@
-package Tema10FicherosDeTexto;
+package Tema10_01FicherosDeTexto;
 
 import java.io.File;
 import java.io.FileWriter;
