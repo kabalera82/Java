@@ -4,7 +4,7 @@ package Tema11Colecciones.Ejercicio02Extraccion;
 import java.util.Arrays;
 
 // Usamos la clase Comparable para que se ordene la tabla
-public class Contenedor<Tabla extends Comparable <Tabla>> {
+public class Contenedor<Tabla extends Comparable <Tabla>>{
 
     /* Instanciamos la tabla y se la pasamos como parámetro, ¿por qué? =================================================
      *
@@ -68,5 +68,4 @@ public class Contenedor<Tabla extends Comparable <Tabla>> {
     public String toString() {
         return Arrays.toString(this.objetos);
     }
-
 }

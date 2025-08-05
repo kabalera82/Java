@@ -2,7 +2,7 @@ package Tema04_02VarArgs;
 
 import Tema04_02VarArgs.utils.Utilidades;
 
-public class Ejercicio02MetodosParametrosVariables {
+public class Ejercicio02MetParamVariables {
 
     public static void main(String[] args) {
 
