@@ -15,7 +15,7 @@ public class Conexion {
 
         try {
             URL url1 = new URL("http://www.google.es:80/index.html");
-            URL url2 = new URL("http", "www.uji.es", 80, "index.html");
+            URL url2 = new URL("http", "www.uji.es", 80, "index.jsp");
 
             mostrarDatos(url1);
             System.out.println("--------------------------------------------------------------------------");
