@@ -10,7 +10,7 @@ public class Cliente {
     private String direccion;
     private int telefono;
 
-    public Cliente() {
+    public Cliente(String number, String maria, String s) {
         this.idCliente = ++contador;
     }
 

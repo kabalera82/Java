@@ -32,4 +32,14 @@
 ### En Source Packages agregaremos un paquete para Servlets por cada clase java que tenemos en nuestro modelo de datos tendremos un servlet
 
 
+### Recordar actualizar el mvaven war plugin
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.4.0</version>
+</plugin>
+
+### sourcepackages 
+vamos a crear un nuevo paquete con servletsç
+por cada clase en nuestro modelo de datos vamos a tener un servlet
 
