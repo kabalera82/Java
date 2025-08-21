@@ -1,4 +1,4 @@
-package Tema07Clases.Ejercicio06Geometria.figuras;
+package Tema07Clases.ejercicio06Geometria.figuras;
 
 public class Triangulo extends Figuras {
     //Atributos

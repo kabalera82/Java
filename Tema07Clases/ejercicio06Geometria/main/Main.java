@@ -1,8 +1,8 @@
-package Tema07Clases.Ejercicio06Geometria.main;
+package Tema07Clases.ejercicio06Geometria.main;
 
 
-import Tema07Clases.Ejercicio06Geometria.figuras.Rectangulo;
-import Tema07Clases.Ejercicio06Geometria.figuras.Triangulo;
+import Tema07Clases.ejercicio06Geometria.figuras.Rectangulo;
+import Tema07Clases.ejercicio06Geometria.figuras.Triangulo;
 
 public class Main {
     public static void main(String[] args) {
