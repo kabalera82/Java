@@ -1,4 +1,4 @@
-package Tema15JPA.Ejercicio01.dominio;
+package TemaJPA.Ejercicio01.dominio;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

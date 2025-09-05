@@ -1,7 +1,7 @@
-package Tema15JPA.Ejercicio01;
+package TemaJPA.Ejercicio01;
 
-import Tema15JPA.Ejercicio01.dao.AlumnoDAO;
-import Tema15JPA.Ejercicio01.dominio.Alumno;
+import TemaJPA.Ejercicio01.dao.AlumnoDAO;
+import TemaJPA.Ejercicio01.dominio.Alumno;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Tema15JPA.Ejercicio01.persistencia;
+package TemaJPA.Ejercicio01.persistencia;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
