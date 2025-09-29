@@ -12,6 +12,7 @@ public class Main {
 
 
         //hay que llamamr al metodo run
+
         proces.start();
         // Runnable no tiene metodo star
         proceso2.start();

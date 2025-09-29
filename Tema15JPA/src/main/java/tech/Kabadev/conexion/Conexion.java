@@ -3,20 +3,35 @@ package tech.Kabadev.conexion;
 //imports
 import java.sql.Connection;
 import java.sql.DriverManager;
-
-public class Conexion {
 /**
- * Esta clase gestiona la conexión a la base de datos.
+ * Esta clase gestiona la conexión a la base de datos MySQL.
  *
- * <p> Centraliza la obtencion de una {@link Connection} hacia un servidor</p>
- * <p>MySQL en {code:localhost:3306} contra la base de datos {@code pokemon}.
- * Los parámtetros se encuentran codificados para un entorno de desarrollo.</p>
+ * <p>Centraliza la obtención de una {@link Connection} hacia un servidor
+ * MySQL en <code>localhost:3306</code> contra la base de datos
+ * <code>tutorial</code>.</p>
+ *
+ * <p>Los parámetros (URL, usuario, contraseña) están codificados para
+ * un entorno de desarrollo.</p>
  *
  * <h2>Requisitos</h2>
  * <ul>
- *     <li>Tener el classpath el driver oficial de MySQL:</li>
+ *   <li>Tener en el classpath el driver oficial de MySQL (por ejemplo, <code>mysql-connector-j</code>).</li>
  * </ul>
+ *
+ * <p><b>Nota:</b> en entornos productivos es recomendable externalizar la
+ * configuración (URL, usuario, contraseña) en un fichero de propiedades
+ * o variables de entorno.</p>
+ *
+ * @author kabalera82
+ * @version 1.0
  */
+public class Conexion {
+
+    /**
+     * Obtiene una conexión a la base de datos MySQL.
+     *
+     * @return objeto {@link Connection} si la conexión es exitosa, o {@code null} en caso de error.
+     */
 
     public static Connection getConexion(){
 

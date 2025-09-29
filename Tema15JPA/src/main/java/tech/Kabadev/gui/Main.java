@@ -1,4 +1,4 @@
-package tech.Kabadev;
+package tech.Kabadev.gui;
 
 //imports
 
@@ -17,7 +17,7 @@ public class Main {
          *
          * @param args argumentos de línea de comandos (no utilizados).
          */
-        // Cuando es un metodo estatico accedemos al nombre de la clase. y al metodo estatico
+        // Cuando es un metodo estatico accedemos al nombre de la clase0. y al metodo estatico
         Connection conexion = Conexion.getConexion();
         if (conexion != null) {
             System.out.println("Conexion Correcta");
