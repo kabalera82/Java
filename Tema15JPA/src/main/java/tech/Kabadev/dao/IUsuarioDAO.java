@@ -1,8 +1,10 @@
-package tech.Kabadev.model;
+package tech.Kabadev.dao;
+
+import tech.Kabadev.model.Usuario;
 
 import java.util.List;
 
-public interface IUsuario {
+public interface IUsuarioDAO {
     List <Usuario> listarUsuarios ();
     boolean buscarUsuarioId(Usuario usuario);
     boolean agregarUsuario(Usuario usuario);
