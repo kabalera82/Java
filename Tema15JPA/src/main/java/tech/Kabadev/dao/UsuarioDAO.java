@@ -47,7 +47,7 @@ public class UsuarioDAO implements IUsuarioDAO{
         }
         finally {
             try{
-
+                conexion.close();
             } catch (Exception e) {
                 System.out.println("Error al cerrar la conexión: " + e.getMessage());
             }
@@ -57,11 +57,65 @@ public class UsuarioDAO implements IUsuarioDAO{
 
     @Override
     public boolean buscarUsuarioId(Usuario usuario) {
+        // interfaz JDBC que representa una sentencia SQL por ejemplo: INSERT, UPDATE, DELETE, SELECT).
+        PreparedStatement prepStet;
+        // interfaz de JDBC que representa un consjunto de resultados devueltos por la sentencia SQL
+        ResultSet resultEst;
+        Connection conexion = Conexion.getConexion();
+        String sql = "SELECT * FROM cliente WHERE id = ?";
+        try{
+            prepStet = conexion.prepareStatement(sql);
+            prepStet.setInt(1, usuario.getId());
+            resultEst = prepStet.executeQuery();
+            // Avanza el cursor a la siguiente fila del ResultSet y devuelve true si existe, permitiendo recorrer todos los registros de la consulta
+            if (resultEst.next()){
+                usuario.setNombre(resultEst.getString("nombre"));
+                usuario.setPrimerApellido((resultEst.getString("primerApellido")));
+                usuario.setSegundoApellido(resultEst.getString("segundoApellido"));
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("Error al recuperar el usuario");
+        }
+        finally {
+            try {
+                conexion.close();
+            } catch (Exception e) {
+                System.out.println("Error al cerrar la conexion: " + e.getMessage());
+            }
+        }
         return false;
     }
 
     @Override
     public boolean agregarUsuario(Usuario usuario) {
+        // interfaz JDBC que representa una sentencia SQL por ejemplo: INSERT, UPDATE, DELETE, SELECT).
+        PreparedStatement prepStet;
+        // interfaz de JDBC que representa un consjunto de resultados devueltos por la sentencia SQL
+        ResultSet resultEst;
+        Connection conexion = Conexion.getConexion();
+        String sql = "INSERT INTO usuario(nombre, primerApellido, segundoApellido, telefono, email) + VALUES (?, ?, ?, ?, ?)";
+        try{
+            prepStet = conexion.prepareStatement(sql);
+            prepStet.setInt(1, usuario.getId());
+            resultEst = prepStet.executeQuery();
+            // Avanza el cursor a la siguiente fila del ResultSet y devuelve true si existe, permitiendo recorrer todos los registros de la consulta
+            if (resultEst.next()){
+                usuario.setNombre(resultEst.getString("nombre"));
+                usuario.setPrimerApellido((resultEst.getString("primerApellido")));
+                usuario.setSegundoApellido(resultEst.getString("segundoApellido"));
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("Error al recuperar el usuario");
+        }
+        finally {
+            try {
+                conexion.close();
+            } catch (Exception e) {
+                System.out.println("Error al cerrar la conexion: " + e.getMessage());
+            }
+        }
         return false;
     }
 
