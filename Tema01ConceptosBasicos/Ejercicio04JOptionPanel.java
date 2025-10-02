@@ -7,7 +7,7 @@ import javax.swing.*;
  * <p>
  * Ejercicio 04: [JOptionPanel]
  *
- * @author kabadev
+ * @author kabalera82
  */
 
 public class Ejercicio04JOptionPanel {

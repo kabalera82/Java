@@ -5,7 +5,7 @@ package Tema01ConceptosBasicos;
  * <p>
  * Ejercicio 05: [Comprobaciones Booleanas]
  *
- * @author kabadev
+ * @author kabalera82
  */
 
 import java.util.Scanner;

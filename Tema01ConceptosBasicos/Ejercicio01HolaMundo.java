@@ -5,7 +5,7 @@ package Tema01ConceptosBasicos;
  * <p>
  * Ejercicio 01: [Hello World]
  *
- * @author kabadev
+ * @author kabalera82
  */
 public class Ejercicio01HolaMundo {
     public static void main(String[] args) {

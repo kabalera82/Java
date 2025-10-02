@@ -8,7 +8,7 @@ import java.util.Scanner;
  * <p>
  * Ejercicio 03: [Operadores Aritméticos]
  *
- * @author kabadev
+ * @author kabalera82
  */
 public class Ejercicio03OperadoresAritméticos {
 

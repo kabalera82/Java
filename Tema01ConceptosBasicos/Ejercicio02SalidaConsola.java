@@ -8,7 +8,7 @@ public class Ejercicio02SalidaConsola {
      * <p>
      * Ejercicio 02: [Entrada y Salida de datos por Consola]
      *
-     * @author kabadev
+     * @author kabalera82
      */
     public static void main(String[] args) {
 
