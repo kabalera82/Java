@@ -1,4 +1,4 @@
-package Tema10_01FicherosDeTexto;
+package Tema10_01FicherosDeTexto.Ejercicio01Ejemplo;
 
 import java.io.*; // Importamos todas las clases de entrada/salida
 

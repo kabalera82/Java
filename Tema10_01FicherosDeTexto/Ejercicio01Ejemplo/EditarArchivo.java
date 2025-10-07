@@ -1,4 +1,4 @@
-package Tema10_01FicherosDeTexto;
+package Tema10_01FicherosDeTexto.Ejercicio01Ejemplo;
 
 import java.io.*;
 import java.util.Scanner;
