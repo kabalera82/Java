@@ -1,28 +1,33 @@
 package Tema10_01FicherosDeTexto.Ejercicio02Bonana.model;
 
+import java.util.Objects;
+
 /**
  * POJO que representa una fruta del inventario.
+ * Gestiona automáticamente el ID y asegura que no haya duplicados.
  */
 public class Frutas {
-    // Atributos ===================
-    /** contador estático para asignar IDs únicos */
+
+    /** Contador estático para asignar IDs únicos */
     private static int contador = 1;
-    /** identificador único */
+
+    /** Identificador único */
     private int id;
-    /** nombre del producto */
+
+    /** Nombre de la fruta */
     private String nombre;
-    /** precio en kg del producto */
+
+    /** Precio por kilogramo */
     private double precioKg;
-    /** stock actual del producto */
+
+    /** Stock disponible en kilogramos */
     private int stockKg;
 
-    // Constructor ===========================
+    // ===================== CONSTRUCTORES =====================
+
     /**
-     * Constructor con parámetros.
-     * Asigna un ID autoincremental a cada instancia.
-     * @param nombre nombre de la fruta
-     * @param precioKg precio por kilogramo
-     * @param stockKg stock disponible en kilogramos
+     * Constructor con parámetros principales.
+     * Asigna automáticamente un ID incremental.
      */
     public Frutas(String nombre, double precioKg, int stockKg) {
         this.id = contador++;
@@ -31,62 +36,62 @@ public class Frutas {
         this.stockKg = stockKg;
     }
 
-    // Getters & Setters ====================
-
     /**
-     * Devuelve el ID de la fruta.
-     * @return id de la fruta
+     * Constructor usado al cargar frutas desde archivo.
+     * Actualiza el contador si es necesario para evitar colisiones de ID.
      */
+    public Frutas(int id, String nombre, double precioKg, int stockKg) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precioKg = precioKg;
+        this.stockKg = stockKg;
+
+        if (id >= contador) {
+            contador = id + 1;
+        }
+    }
+
+    // ===================== GETTERS & SETTERS =====================
+
     public int getId() { return id; }
 
-    /**
-     * Devuelve el nombre de la fruta.
-     * @return nombre de la fruta
-     */
     public String getNombre() { return nombre; }
 
-    /**
-     * Asigna el nombre de la fruta.
-     * @param nombre nombre a establecer
-     */
     public void setNombre(String nombre) { this.nombre = nombre; }
 
-    /**
-     * Devuelve el precio de la fruta por kilogramo.
-     * @return precio por kilogramo
-     */
     public double getPrecioKg() { return precioKg; }
 
-    /**
-     * Asigna el precio por kilogramo de la fruta.
-     * @param precioKg nuevo precio por kilogramo
-     */
     public void setPrecioKg(double precioKg) { this.precioKg = precioKg; }
 
-    /**
-     * Devuelve el stock actual de la fruta.
-     * @return stock en kilogramos
-     */
     public int getStockKg() { return stockKg; }
 
-    /**
-     * Asigna el stock actual de la fruta.
-     * @param stockKg stock a establecer
-     */
     public void setStockKg(int stockKg) { this.stockKg = stockKg; }
 
-    // Método toString =======================
-    /**
-     * Representación en texto de la fruta.
-     * @return cadena con los datos de la fruta
-     */
+    // ===================== MÉTODOS DE OBJETO =====================
+
     @Override
     public String toString() {
         return  "---------------------------------------\n" +
                 "ID: " + id + "\n" +
                 "Nombre: " + nombre + "\n" +
-                "Precio/kg: " + precioKg + "\n" +
+                "Precio/kg: " + precioKg + " €\n" +
                 "Stock/kg: " + stockKg + "\n" +
                 "---------------------------------------";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Frutas frutas = (Frutas) o;
+        return id == frutas.id &&
+                Double.compare(frutas.precioKg, precioKg) == 0 &&
+                stockKg == frutas.stockKg &&
+                Objects.equals(nombre, frutas.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nombre, precioKg, stockKg);
     }
 }
