@@ -1,36 +1,43 @@
 package Tema11Colecciones.Ejercicio02Extraccion;
 
 /**
- * Implementar con tipo genéricos
- * la clase Contenedor, donde pordremos guardar tantos objetos
- * como deseemos. Para ello utilizaremos una tabla,
- * que inicialmente tendrá tamaño cero y se irá redimensionando
- * según añadamos o eliminemos elementos.
- * La clase, además del constructor y toString(), tendrá los siguientes métodos:
- * void insertarAlPrincipio(T nuevo)
- * void insertarAlFinal(T nuevo)
- * T extraerDelPrincipio()
- * T extraerDelFinal()
- * void ordenar()
+ * Clase principal para probar la funcionalidad de la clase {@link Contenedor}.
+ *
+ * <p>Se realizan operaciones de inserción, extracción y ordenación sobre un
+ * contenedor de cadenas.</p>
  */
 public class Main {
 
     public static void main(String[] args) {
-        Contenedor <Integer> c = new Contenedor <>(new Integer[0]);
 
-        c.insertarAlFinal(5);
-        c.insertarAlPrincipio(25);
-        c.insertarAlFinal(100);
-        c.insertarAlPrincipio(1);
-        c.insertarAlFinal(6);
-        System.out.println("===========================================================================");
-        System.out.println("contenedor: " + c);
-        System.out.println("===========================================================================");
-        c.ordenar();
-        System.out.println("ordenado: " + c);
-        System.out.println("===========================================================================");
-        System.out.println("Extraido del principio: " + c.extraerDatosInicio());
-        System.out.println("Extraido del final: " + c.extraerDatosFinal());
-        System.out.println("contenedor final: " + c);
+        // Creamos un contenedor de Strings
+        Contenedor<String> contenedor = new Contenedor<>(new String[0]);
+
+        System.out.println("Estado inicial: " + contenedor);
+
+        // Insertar al final
+        contenedor.insertarAlFinal("perro");
+        contenedor.insertarAlFinal("gato");
+        contenedor.insertarAlFinal("caballo");
+        System.out.println("Después de insertar al final: " + contenedor);
+
+        // Insertar al principio
+        contenedor.insertarAlPrincipio("tigre");
+        contenedor.insertarAlPrincipio("león");
+        System.out.println("Después de insertar al principio: " + contenedor);
+
+        // Extraer del final
+        String ultimo = contenedor.extraerDatosFinal();
+        System.out.println("Extraído del final: " + ultimo);
+        System.out.println("Después de extracción final: " + contenedor);
+
+        // Extraer del principio
+        String primero = contenedor.extraerDatosInicio();
+        System.out.println("Extraído del principio: " + primero);
+        System.out.println("Después de extracción inicial: " + contenedor);
+
+        // Ordenar
+        contenedor.ordenar();
+        System.out.println("Después de ordenar: " + contenedor);
     }
 }
