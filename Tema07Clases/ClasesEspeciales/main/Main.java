@@ -63,7 +63,7 @@ public class Main {
         Transporte y1 = Transporte.MOTO;
         Transporte y2 = Transporte.CAMION;
         Transporte y3 = Transporte.AUTOBUS;
-        //No comparamos velocidades comparamos posiciones para la velocidad hariamos metodo
+        //No comparamos velocidades comparamos valores para la velocidad hariamos metodo
         if (y1.compareTo(y2) < 0) {
             System.out.println(y1 + " llega antes que " + y2);
         }

@@ -1,50 +1,58 @@
 package Tema11Colecciones.VueltaEfectivo;
 
+import java.util.Scanner;
+
 /**
  * Programa que descompone una cantidad de dinero en billetes y monedas
  * utilizando recursión directa en lugar de bucles.
  */
+
 public class Main {
+    /** Denominaciones de billetes y monedas de mayor a menor */
+    private static final int[] TIPO_MONEDA = {500, 200, 100, 50, 20, 10, 5, 2, 1};
 
-    /** Array de denominaciones de mayor a menor. */
-    private static final int[] DENOMINACIONES = {500, 200, 100, 50, 20, 10, 5, 2, 1};
-
-    /**
-     * Método principal: inicia el proceso recursivo para la cantidad dada.
-     *
-     * @param args no se utilizan
-     */
+    /** Método main para ejecutar el programa. */
     public static void main(String[] args) {
-        int cantidad = 999;
-        descomponer(cantidad, 0);
+        Scanner sc = new Scanner(System.in);
+        boolean salir = false;
+
+        do {
+            try {
+                System.out.println("Introduzca una cantidad: " + "\n" +
+                        "introduzca 0 para salir");
+                int total = sc.nextInt();
+                int posicion = 0;
+                if(total == 0){
+                    salir = true;
+                }
+                System.out.println("Cantidad introducida: "+ total);
+                maquinaCambios(total, posicion);
+
+            } catch (Exception e){
+                System.out.println("Introduzca un numero."+ "\n" +
+                        "==========================================");
+                sc.nextLine(); // Limpiamos el buffer
+            }
+        }while (!salir);
+        sc.close();
     }
 
-    /**
-     * Descompone recursivamente la cantidad mostrando cuántos billetes/monedas
-     * de cada denominación se necesitan.
-     *
-     * @param cantidad cantidad restante a descomponer
-     * @param indice   posición actual en el array de denominaciones
-     */
-    static void descomponer(int cantidad, int indice) {
-        // Caso base: si no queda cantidad o no quedan denominaciones, terminamos
-        if (cantidad <= 0 || indice >= DENOMINACIONES.length) {
+    private static void maquinaCambios(int total, int indice) {
+        if (total == 0 || indice >= TIPO_MONEDA.length) {
             return;
         }
 
-        int valor = DENOMINACIONES[indice];
-        int numero = cantidad / valor;
+        int valor = TIPO_MONEDA[indice];
+        int numUnidades = total / valor;
+        int resto = total % valor;
 
-        if (numero > 0) {
-            String tipo = valor >= 5 ? "Billetes" : "Monedas";
-            System.out.println(tipo + " de " + valor + ": " + numero);
+        if (numUnidades > 0) {
+            System.out.println("El número de " + (valor >= 5 ? "billetes" : "monedas") +
+                    " de " + valor + "€: " + numUnidades);
         }
 
-        // Llamada recursiva directa → avanza a la siguiente denominación
-        descomponer(cantidad % valor, indice + 1);
+        maquinaCambios(resto, indice + 1);
     }
-}
-
 
 
 }

@@ -29,7 +29,7 @@ public class Ejercicio41CuentaBilletes {
      * de cada denominación se necesitan.
      *
      * @param cantidad cantidad restante a descomponer
-     * @param indice   posición actual en el array de denominaciones
+     * @param indice   posición actual en el array de TIPO_MONEDA
      */
 
     static void descomponer (int cantidad, int indice) {
