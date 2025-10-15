@@ -94,6 +94,8 @@ public class Main {
         } while (opcion != 0);
     }
 
+
+
     /**
      * Muestra el menú principal.
      */
@@ -137,10 +139,66 @@ public class Main {
             System.out.println("No hay productos registrados.");
             return;
         }
-        System.out.println("\nListado de productos (ordenados):");
-        for (Producto p : productos) {
-            System.out.println("- " + p);
+
+        System.out.println("""
+        \n-- LISTADOS --
+        1. Ascendente (A..Z)
+        2. Descendente (Z..A)
+        3. Por rango [desde..hasta] (ambos inclusive)
+        4. Por prefijo (ej.: "man" -> manzana, mango)
+        5. Con Iterator (ejemplo clásico)
+        0. Volver
+        """);
+
+        int op = leerEntero("Elija: ");
+        switch (op) {
+            case 1 -> { // Ascendente (orden natural del TreeSet)
+                productos.forEach(p -> System.out.println("- " + p));
+            }
+            case 2 -> { // Descendente
+                productos.descendingSet().forEach(p -> System.out.println("- " + p));
+            }
+            case 3 -> { // Rango [desde..hasta], inclusivo
+                String desde = pedirNoVacio("Desde (nombre): ");
+                String hasta = pedirNoVacio("Hasta (nombre): ");
+
+                // Usamos compareTo por nombre (tu orden natural).
+                java.util.NavigableSet<Producto> rango =
+                        productos.subSet(new Producto(desde, 0), true,
+                                new Producto(hasta, 0), true);
+
+                if (rango.isEmpty()) System.out.println("Sin resultados en ese rango.");
+                else rango.forEach(p -> System.out.println("- " + p));
+            }
+            case 4 -> { // Prefijo
+                String prefijo = pedirNoVacio("Prefijo: ");
+                // Truco: [prefijo .. prefijo + U+FFFF] cubre todas las cadenas que comienzan por ese prefijo
+                String to = prefijo + "\uffff";
+
+                java.util.NavigableSet<Producto> pref =
+                        productos.subSet(new Producto(prefijo, 0), true,
+                                new Producto(to, 0), true);
+
+                if (pref.isEmpty()) System.out.println("Sin resultados con ese prefijo.");
+                else pref.forEach(p -> System.out.println("- " + p));
+            }
+            case 5 -> { // Iterator "a la antigua"
+                java.util.Iterator<Producto> it = productos.iterator();
+                while (it.hasNext()) System.out.println("- " + it.next());
+            }
+            case 0 -> { /* volver al menú principal */ }
+            default -> System.out.println("Opción no válida.");
         }
+    }
+
+    // Helper para pedir cadenas no vacías (reutiliza tu Scanner)
+    private static String pedirNoVacio(String msg) {
+        String s;
+        do {
+            System.out.print(msg);
+            s = scanner.nextLine().trim();
+        } while (s.isEmpty());
+        return s;
     }
 
     /**
