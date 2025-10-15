@@ -1,0 +1,67 @@
+🌳 Esquema jerárquico — Set en Java
+Collection<E>
+   ▲
+   │
+┌──┴──────────────┐
+│ Set<E>         │   ← Conjunto básico (sin duplicados, sin orden)
+└──▲──────────────┘
+   │
+   │
+   └── SortedSet<E>         ← Conjunto ordenado automáticamente
+         ▲
+         │
+         └── NavigableSet<E>   ← Conjunto ordenado + navegación avanzada
+
+📌 Implementaciones típicas
+Set<E>:
+ ├─ HashSet<E>         → sin orden, rápido
+ └─ LinkedHashSet<E>   → mantiene orden de inserción
+
+SortedSet<E>:
+ └─ TreeSet<E>        → orden natural o Comparator
+
+NavigableSet<E>:
+ └─ TreeSet<E>        → implementa SortedSet y NavigableSet
+
+📝 Resumen general — Set
+
+Característica	Detalle
+
+📌 Interfaz base	java.util.Set<E> (extiende Collection)
+🧠 Elementos únicos	❌ No permite duplicados
+📝 Sin índices	No se accede por posición (no hay get(i))
+🚫 No garantiza orden	A menos que uses implementaciones específicas
+📈 Rendimiento	Muy rápido en búsquedas (HashSet → O(1) promedio)
+🧱 Métodos básicos	add, remove, contains, size, isEmpty, clear, iterator
+🪄 Implementaciones comunes	HashSet, LinkedHashSet, TreeSet
+🧠 Subinterfaces	SortedSet (añade orden), NavigableSet (añade navegación avanzada)
+
+🌿 SortedSet — Resumen
+
+Característica	Detalle
+Orden automático	✅ Natural o con Comparator
+Métodos extra	first(), last(), headSet(), tailSet(), subSet(), comparator()
+Uso típico	Cuando necesitas conjuntos ordenados y rangos
+Implementación principal	TreeSet
+
+🧭 NavigableSet — Resumen
+
+Característica	Detalle
+Extiende SortedSet	✅ Sí
+Navegación avanzada	✅ lower, floor, ceiling, higher, descendingSet
+Rangos con inclusividad	subSet(from, true, to, false)
+Uso típico	Buscar elementos vecinos o recorrer en orden inverso
+Implementación principal	TreeSet
+
+📌 Comparación rápida
+
+Tipo	            Orden	            Duplicados	    Acceso por índice	Métodos especiales
+HashSet	            ❌ No	            ❌ No	        ❌ No	            Básicos (add, remove)
+LinkedHashSet	    Inserción	        ❌ No	        ❌ No	            Igual que Set básico
+TreeSet (Sorted)	Natural/Comparator	❌ No	        ❌ No	            Rangos + navegación (lower, subSet, etc.)
+
+🧠 Frase resumen para recordar
+
+✍️ Set = conjunto sin duplicados
+✍️ SortedSet = Set ordenado automáticamente + rangos
+✍️ NavigableSet = SortedSet con navegación avanzada (vecinos, inverso, etc.)

@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio03pila;
+package Tema11Colecciones.Ejercicio03pila.ejercicio01;
 
 import java.util.Scanner;
 

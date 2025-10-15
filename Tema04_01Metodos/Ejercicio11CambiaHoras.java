@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class Ejercicio11CambiaHoras {
 
+    private static void actualizaHora () {
+        int segundos, minutos, horas;
+        minutos += segundos /60;
+        segundos = segundos % 60;
+        horas = horas % 24;
+    }
+
     /**
      * Escribe un programa que incremente la hora de un reloj.
      * Se pedirán por teclado la hora, minutos y segundos,

@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio02Extraccion;
+package Tema11Colecciones.Ejercicio01Arrays.Ejercicio02Extraccion;
 
 /**
  * Clase principal para probar la funcionalidad de la clase {@link Contenedor}.

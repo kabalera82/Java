@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio05HashMap;
+package Tema11Colecciones.Ejercicio10HashMap;
 
 import java.util.HashMap;
 import java.util.Map;

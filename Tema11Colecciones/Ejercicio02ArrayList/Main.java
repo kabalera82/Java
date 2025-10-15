@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio08ArrayList;
+package Tema11Colecciones.Ejercicio02ArrayList;
 
 
 import java.util.ArrayList;

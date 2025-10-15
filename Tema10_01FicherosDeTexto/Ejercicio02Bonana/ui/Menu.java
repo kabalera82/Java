@@ -37,7 +37,7 @@ public class Menu {
                         sc.close();
                         System.out.println("👋 ¡Gracias por usar Frutitas José Manuel!");
                     }
-                    default -> System.out.println("❌ Opción no válida.");
+                    default -> System.out.println("Opción no válida.");
                 }
             } catch (Exception e) {
                 System.out.println("⚠️ Error: " + e.getMessage());

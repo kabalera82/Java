@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio02Extraccion;
+package Tema11Colecciones.Ejercicio01Arrays.Ejercicio02Extraccion;
 
 import java.util.Arrays;
 

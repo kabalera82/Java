@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio10TreeSet;
+package Tema11Colecciones.Ejercicio07TreeSet;
 
 
 import java.util.Scanner;

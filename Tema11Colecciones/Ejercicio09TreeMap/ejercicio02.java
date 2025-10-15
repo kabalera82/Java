@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio07TreeMap;
+package Tema11Colecciones.Ejercicio09TreeMap;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -21,7 +21,7 @@ import java.util.TreeMap;
  *  5. Eliminar jugador por puntuación.
  *  0. Salir.
  */
-public class Main {
+public class ejercicio02 {
 
     /** Mapa ordenado automáticamente por puntuación (clave). */
     private static final TreeMap<Integer, String> ranking = new TreeMap<>();
