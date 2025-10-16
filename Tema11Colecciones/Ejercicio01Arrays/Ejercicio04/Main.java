@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio01Arrays.Ejercicio01;
+package Tema11Colecciones.Ejercicio01Arrays.Ejercicio04;
 
 import java.util.Arrays;
 import java.util.Scanner;

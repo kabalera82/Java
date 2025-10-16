@@ -31,12 +31,10 @@ import java.util.TreeMap;
  */
 public class GestionInventario {
 
-    private static void  gestionInventario (TreeMap<String, double[]> inventario){
-    for (inventario.keySet())
-    }
+
 
     public static void main (String[] args){
-        gestionInventario();
+
         System.out.println("Hola");
     }
 }
