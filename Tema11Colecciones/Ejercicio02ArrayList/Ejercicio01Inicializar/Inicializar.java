@@ -1,5 +1,9 @@
 package Tema11Colecciones.Ejercicio02ArrayList.Ejercicio01Inicializar;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
 /**
  * Incializa un ArrayList
  *
@@ -34,11 +38,36 @@ package Tema11Colecciones.Ejercicio02ArrayList.Ejercicio01Inicializar;
  *             clear() -> elimina todos los elementos. ej: nombres.clear
  *         </li>
  *         <li>
- *             contains(Objecti
+ *             contains(Object o) -> Comrpueba si existe el elemento. ej: nombre.contains ("Marcos")
+ *         </li>
+ *         <li>
+ *             indexOf(Object o) -> Comprueba la posición del elemento. ej: nombres.indexOf("Marcos")
+ *         </li>
+ *         <li>
+ *             isEmpty() -> Verifica si esta vacío. ej: nombres.isEmpty()
+ *         </li>
+ *         <li>
+ *             toString() -> Muestra el contenido en formato legible. ej: nombres.toString()
  *         </li>
  *     </ul>
  * </p>
  */
 
 public class Inicializar {
+
+    public static void main(String[] args) {
+        ArrayList<String, int> nombres = new ArrayList<>(Arrays.asList(
+                new Object("Marcos", 5),
+                new Object("Maria", 2),
+                new Object("Manuel", 8),
+                new Object("Sofia", 4),
+                new Object("Laia", 6),
+                new Object("Alai", 3),
+                new Object("Artai", 1)
+        ));
+
+
+
+
+    }
 }
