@@ -56,83 +56,55 @@ import java.util.List;
  */
 
 public class Inicializar {
+
     public static void main(String[] args) {
 
-        int [] num = {1,2,3,4,5,6,7,8,9};
-        String [] abc = {"abril", "bebe","babosa", "caracol", "xataka", "biberon","mama","mimar", "l"};
-
-        /**
-         * - - - Bucle for Clasico - - -
-         */
+        int[] num = {1,2,3,4,5,6,7,8,9};
+        String[] abc = {"abril", "bebe","babosa","caracol","xataka","biberon","mama","mimar","l"};
         int[] pares = new int[10];
-        for (int i = 0; i < pares.length; i++) {
-            System.out.println("for" + pares[i]);
-        }
 
-        /**
-         * - - - Bucle for-each - - -
-         */
-        for (int p : pares) {
-            System.out.println("for-each:" + p);
-        }
+        /** for clásico */
+        for (int i = 0; i < pares.length; i++) System.out.println("for: " + pares[i]);
 
-        /**
-         * - - - While - - -
-         */
+        /** for-each */
+        for (int p : pares) System.out.println("for-each: " + p);
+
+        /** while */
         int i = 0;
-        while (i < pares.length) {
-            System.out.println(i++);
-        }
+        while (i < pares.length) System.out.println("while: " + i++);
 
-        /**
-         * Bucle con Streams
-         */
-        Arrays.stream(pares).forEach(numero -> System.out.println("Streams: "));
+        /** stream */
+        Arrays.stream(pares).forEach(n -> System.out.println("stream: " + n));
 
-        /**
-         * Arrays.toString(array)
-         */
+        /** Arrays.toString(array) */
         System.out.println(Arrays.toString(num));
 
-        /**
-         * Arrays.sort(array)
-         */
+        /** Arrays.sort(array) */
         Arrays.sort(num);
         Arrays.sort(abc);
         System.out.println(Arrays.toString(num));
         System.out.println(Arrays.toString(abc));
 
-        /**
-         * Arrays.copyOf(a,10)
-         */
-        int [] numeros = Arrays.copyOf(num, num.length+1);
+        /** Arrays.copyOf(array, nuevoTamaño) */
+        int[] numeros = Arrays.copyOf(num, num.length + 1);
         numeros[numeros.length - 1] = 10;
         System.out.println(Arrays.toString(numeros));
 
-        /**
-         * Arrays.equals(a,b)
-         */
-        System.out.println("¿son iguales?: " + Arrays.equals(num,numeros));
+        /** Arrays.equals(a,b) */
+        System.out.println("¿Son iguales?: " + Arrays.equals(num, numeros));
 
-        /**
-         * Arrays.fill(array, valor)
-         */
-        int [] numeros2 = numeros;
-        System.out.println(Arrays.toString(numeros2));
+        /** Arrays.fill(array, valor) */
+        int[] numeros2 = Arrays.copyOf(numeros, numeros.length);
         Arrays.fill(numeros2, 5);
         System.out.println(Arrays.toString(numeros2));
 
-        /**
-         * Arrays.binarySearch(array, valor)
-         */
+        /** Arrays.binarySearch(array, valor) */
         int posicion = Arrays.binarySearch(num, 5);
         System.out.println(Arrays.toString(num));
-        System.out.println("Posicion: " + posicion);
+        System.out.println("Posición del 5: " + posicion);
 
-        /**
-         * Arrays.asList(array)
-         */
-        String[] nombres = { "Ana", "Luis", "Eva"};
+        /** Arrays.asList(array) */
+        String[] nombres = {"Ana", "Luis", "Eva"};
         List<String> lista = Arrays.asList(nombres);
         System.out.println(lista);
     }

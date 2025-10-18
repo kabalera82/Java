@@ -13,8 +13,7 @@ public class Main {
 
         // 2️⃣ AÑADIR ELEMENTOS =========================================================
         lista.add("Carlos");
-        lista.add("Ana");
-        lista.add("Bea");
+        lista.add("Ana");        lista.add("Bea");
         lista.add("David");
         lista.add("Eva");
 

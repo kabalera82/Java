@@ -1,4 +1,4 @@
-package Tema11Colecciones.Ejercicio06HashSet;
+package Tema11Colecciones.Ejercicio06HashSet.ejercicio02;
 
 import java.util.HashSet;
 import java.util.Scanner;

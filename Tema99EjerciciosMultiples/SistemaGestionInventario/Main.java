@@ -16,14 +16,6 @@ public class Main {
     private static void gestionar() {
         Map<String, double[]> inventarioOrdenado = new TreeMap<>(inventario);
 
-        for(String producto : inventarioOrdenado.keySet()){
-            double[]datos = inventarioOrdenado.get(producto);
-            System.out.println(producto + keySet[0] +": ");
-            for (int i= 0; i<datos.length;i++){
-                System.out.println("producto" + datos[0] + datos[1]);
-            }
-
-        }
     }
 
     public static void main(String[] args) {
