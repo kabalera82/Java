@@ -1,4 +1,4 @@
-package Tema11Colecciones.VueltaEfectivo;
+package Tema05_01Tablas.VueltaEfectivo;
 
 import java.util.Scanner;
 

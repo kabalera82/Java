@@ -9,7 +9,7 @@ import java.util.Scanner;
  * el orden de inserción. Permite insertar, mostrar, actualizar,
  * eliminar y recorrer productos mediante opciones de menú.
  */
-public class Main {
+public class LinkedHashMapEjemplo {
 
     /** Almacena los productos con su nombre como clave y el precio como valor. */
     private static final LinkedHashMap<String, Double> productos = new LinkedHashMap<>();
