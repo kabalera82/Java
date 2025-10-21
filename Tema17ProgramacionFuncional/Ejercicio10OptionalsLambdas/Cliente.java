@@ -15,7 +15,7 @@ public class Cliente {
     }
 
     public Cliente(String nombre, String apellido, String direccion, int telefono) {
-        this.idCliente = ++contador; // ← Aquí estaba el error
+        this.idCliente = ++contador;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
