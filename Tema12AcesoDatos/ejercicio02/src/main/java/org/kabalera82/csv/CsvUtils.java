@@ -11,7 +11,8 @@ import java.util.List;
  *     dobles que puedan encerrar texto con comas internas.
  * </p>
  */
-public class CsvUtils {
+public class
+CsvUtils {
 
     /** Constructor vacío (no realiza ninguna acción), privado evita que se instancie desde fuera). */
     private CsvUtils() { }
