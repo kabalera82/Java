@@ -12,9 +12,9 @@ public class Ejercicio02 {
          */
         try {
             ProcessBuilder pb = new ProcessBuilder(
-                    "cmd",  // Ejecuta el intérprete de comandos de Windows (cmd.exe)
-                    "/c",   // /c → ejecuta el comando y cierra
-                    "dir"   // Comando que se ejecutará: lista los archivos y carpetas del directorio actual
+                    "cmd",    // Ejecuta el intérprete de comandos de Windows (cmd.exe)
+                    "/c",               // /c → ejecuta el comando y cierra
+                    "dir"               // Comando que se ejecutará: lista los archivos y carpetas del directorio actual
             );
 
             pb.redirectOutput(new File("resultado.txt"));
