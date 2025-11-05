@@ -1,0 +1,50 @@
+{
+  "nombre" : "Biblioteca Cher",
+  "usuarios" : [ {
+    "id" : 1,
+    "nombre" : "Manolo",
+    "email" : "manolo@hotmail.com",
+    "activo" : true
+  }, {
+    "id" : 2,
+    "nombre" : "Lucía",
+    "email" : "lucia@gmail.com",
+    "activo" : true
+  }, {
+    "id" : 3,
+    "nombre" : "Carlos",
+    "email" : "carlos@yahoo.es",
+    "activo" : false
+  }, {
+    "id" : 4,
+    "nombre" : "María",
+    "email" : "maria@outlook.com",
+    "activo" : true
+  }, {
+    "id" : 5,
+    "nombre" : "Andrés",
+    "email" : "andres@gmail.com",
+    "activo" : false
+  }, {
+    "id" : 6,
+    "nombre" : "Elena",
+    "email" : "elena@empresa.com",
+    "activo" : true
+  } ],
+  "clientes" : [ {
+    "id" : 1,
+    "nombre" : "Manolo",
+    "telefono" : "666666666",
+    "deuda" : 4000.0
+  }, {
+    "id" : 2,
+    "nombre" : "Lucía",
+    "telefono" : "555555555",
+    "deuda" : 3000.0
+  }, {
+    "id" : 3,
+    "nombre" : "Carlos",
+    "telefono" : "444444444",
+    "deuda" : 10000.0
+  } ]
+}
