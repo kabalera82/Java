@@ -1,8 +1,6 @@
 package Tema12AcesoDatos.ejercicio02Texto.control;
 
-import Tema12AcesoDatos.ejercicio01.src.main.java.Cliente;
 import Tema12AcesoDatos.ejercicio02Texto.dao.Producto;
-
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,18 +8,12 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class ControlProducto {
 
-
-
     public static  List<Producto> importTxt (Path RUTA, List<Producto> productos) {
-
 
         try (BufferedReader br = Files.newBufferedReader(RUTA, StandardCharsets.UTF_8)) {
             String linea;
@@ -65,9 +57,6 @@ public class ControlProducto {
 
         Scanner sc = new Scanner(System.in);
         boolean ok= true;
-
-
-
 
         do {
             ok = true;
@@ -139,7 +128,6 @@ public class ControlProducto {
                     double precio = Double.parseDouble(partes[3]);
 
                     productos.add(new Producto(id, nombre, stockKg, precio));
-
 
                 } catch (NumberFormatException ex) {
                     System.err.println("❌ Error numérico en línea: " + linea);
