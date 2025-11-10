@@ -5,7 +5,7 @@ import java.io.*; // Importamos todas las clases de entrada/salida
 public class LeerArchivo {
     public static void main(String[] args) {
 
-        var nombreArchivo = "miArchivo.txt"; // String
+        var nombreArchivo = "data/miArchivo.txt"; // String
         var archivo = new File(nombreArchivo); // File
 
         try {

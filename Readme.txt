@@ -51,7 +51,7 @@ Este repositorio contiene una colección estructurada de **ejercicios de program
 | `TemaJPA` | Introducción al uso de JPA (Java Persistence API). |
 | `Tema16WebURLAPI` | Consumo de APIs REST, manejo de URLs y clientes HTTP. |
 | `Tema17ProgramacionFuncional` | Lambdas, funciones puras y composición funcional. |
-| `Tema18ProgramacionRed` | Comunicación cliente-servidor mediante sockets. |
+| `Tema18ProgramacionRed` | Comunicación producto-servidor mediante sockets. |
 
 ---
 

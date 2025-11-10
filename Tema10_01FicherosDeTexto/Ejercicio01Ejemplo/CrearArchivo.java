@@ -10,7 +10,7 @@ public class CrearArchivo {
 
         //Vamos a crear un Archivo
         // ✏️ Nombre del archivo que queremos crear
-        var nombreArchivo = "miArchivo.txt"; //String nombreArchivo
+        var nombreArchivo = "data/miArchivo.txt"; //String nombreArchivo
 
         // 🗂️ Creamos un objeto File con ese nombre
         var archivo = new File(nombreArchivo); // File archivo

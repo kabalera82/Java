@@ -20,7 +20,7 @@ public class Main {
         // Abrimos un flujo try - catch
 
         try{
-            flujoSalida = new ObjectOutputStream( new FileOutputStream("datos.dat"));
+            flujoSalida = new ObjectOutputStream( new FileOutputStream("data/datos.dat"));
             for (int n : tabla){
                 flujoSalida.writeInt(n);
             }

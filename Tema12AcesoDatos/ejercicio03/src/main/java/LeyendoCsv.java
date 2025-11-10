@@ -7,10 +7,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class LeyendoCsv {
-    private static final Path RUTA = Paths.get("datos.csv");
+    private static final Path RUTA = Paths.get("data/datos.csv");
 
     public static void archivos() {
         System.out.println("Inserte el texto a añadir.");

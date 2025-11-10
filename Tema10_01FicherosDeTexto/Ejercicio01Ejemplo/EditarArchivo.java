@@ -8,7 +8,7 @@ public class EditarArchivo {
     public static void main(String[] args) {
 
         // 📝 Nombre del archivo a editar
-        var nombreArchivo = "miArchivo.txt";
+        var nombreArchivo = "data/miArchivo.txt";
 
         // 📁 Creamos el objeto File
         var archivo = new File(nombreArchivo);

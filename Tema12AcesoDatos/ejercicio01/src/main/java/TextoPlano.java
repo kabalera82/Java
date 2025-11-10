@@ -1,4 +1,4 @@
-package org.kabalera82;
+package Tema12AcesoDatos.ejercicio01.src.main.java;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -20,7 +20,7 @@ import java.util.List;
 public class TextoPlano {
 
     /** Ruta del archivo donde se guardan los datos. */
-    private static final Path RUTA = Paths.get("clientes.txt");
+    private static final Path RUTA = Paths.get("data/clientes.txt");
 
     /**
      * Crea una lista de clientes, los guarda en el archivo y luego los lee y muestra por consola.
@@ -30,18 +30,18 @@ public class TextoPlano {
     public static void main(String[] args) {
 
         // Lista inicial de clientes
-        List<org.kabalera82.Cliente> clientes = List.of(
-                new org.kabalera82.Cliente(1, "Ana", "ana@correo.com", 1200),
-                new org.kabalera82.Cliente(2, "Luis", "luis@correo.com", 950),
-                new org.kabalera82.Cliente(3, "María", "maria@correo.com", 1800),
-                new org.kabalera82.Cliente(4, "Carlos", "carlos@correo.com", 750),
-                new org.kabalera82.Cliente(5, "Elena", "elena@correo.com", 2100),
-                new org.kabalera82.Cliente(6, "Javier", "javier@correo.com", 1300)
+        List<Cliente> clientes = List.of(
+                new Cliente(1, "Ana", "ana@correo.com", 1200),
+                new Cliente(2, "Luis", "luis@correo.com", 950),
+                new Cliente(3, "María", "maria@correo.com", 1800),
+                new Cliente(4, "Carlos", "carlos@correo.com", 750),
+                new Cliente(5, "Elena", "elena@correo.com", 2100),
+                new Cliente(6, "Javier", "javier@correo.com", 1300)
         );
 
         // Escritura en el archivo
         try (BufferedWriter bw = Files.newBufferedWriter(RUTA, StandardCharsets.UTF_8)) {
-            for (org.kabalera82.Cliente c : clientes) {
+            for (Cliente c : clientes) {
                 bw.write(c.getId() + ";" + c.getNombre() + ";" + c.getEmail() + ";" + c.getSaldo());
                 bw.newLine();
             }
@@ -51,7 +51,7 @@ public class TextoPlano {
         }
 
         // Lista donde se guardarán los clientes leídos
-        List<org.kabalera82.Cliente> leidos = new ArrayList<>();
+        List<Cliente> leidos = new ArrayList<>();
 
         // Lectura del archivo
         try (BufferedReader br = Files.newBufferedReader(RUTA, StandardCharsets.UTF_8)) {
@@ -71,7 +71,7 @@ public class TextoPlano {
                     String email = partes[2];
                     double saldo = Double.parseDouble(partes[3]);
 
-                    leidos.add(new org.kabalera82.Cliente(id, nombre, email, saldo));
+                    leidos.add(new Cliente(id, nombre, email, saldo));
 
                 } catch (NumberFormatException ex) {
                     System.err.println("Error numérico en línea: " + linea);

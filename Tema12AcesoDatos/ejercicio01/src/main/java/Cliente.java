@@ -1,4 +1,4 @@
-package org.kabalera82;
+package Tema12AcesoDatos.ejercicio01.src.main.java;
 
 import java.util.Objects;
 
@@ -19,46 +19,39 @@ public class Cliente {
         this.saldo = saldo;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
     public double getSaldo() {
         return saldo;
     }
-
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "email='" + email + '\'' +
-                ", id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", saldo=" + saldo +
-                '}';
+        return "Cliente[" +
+                " id= " + id +
+                ", nombre= '" + nombre + '\'' +
+                ", email= '" + email + '\'' +
+                ", saldo= " + saldo +
+                ']';
     }
 
     @Override

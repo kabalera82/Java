@@ -8,7 +8,7 @@ public class LeerTodoArchivo {
     public static void main(String[] args) {
 
         // 📝 var → String (porque es un texto que indica el nombre del archivo)
-        var nombreArchivo = "miArchivo.txt"; // String
+        var nombreArchivo = "data/miArchivo.txt"; // String
 
         try {
             // 📥 Leemos todas las líneas del archivo y las guardamos en una lista de cadenas

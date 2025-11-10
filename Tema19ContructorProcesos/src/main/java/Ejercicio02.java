@@ -1,8 +1,6 @@
 package Tema19ContructorProcesos.src.main.java;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.InputStreamReader;
 
 public class Ejercicio02 {
     public static void main(String[] args) {
@@ -17,7 +15,7 @@ public class Ejercicio02 {
                     "dir"               // Comando que se ejecutará: lista los archivos y carpetas del directorio actual
             );
 
-            pb.redirectOutput(new File("resultado.txt"));
+            pb.redirectOutput(new File("data/resultado.txt"));
             pb.redirectError(new File ("errores.txt"));
             pb.start();
             System.out.println("Comando ejecutado. Revisa resultados en el .txt");
