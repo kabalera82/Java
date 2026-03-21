@@ -37,14 +37,14 @@
 | `Tema08_01Herencia` | ⚠️ Incompleto — falta Ej02 | No |
 | `Tema08_02InstanceOf` | ✅ Funcional — 2 ejercicios | No |
 | `Tema09Interfaces` | ✅ Funcional — 4 ejercicios | No |
-| `Tema10_01FicherosDeTexto` | ✅ Funcional — 2 ejercicios | No |
-| `Tema10_02FicherosBinarios` | ✅ Funcional — 5 ejercicios | No |
-| `Tema11Colecciones` | ⚠️ Numeracion duplicada | No |
-| `Tema12AcesoDatos` | ⚠️ Typo + falta Ej04 | No |
-| `Tema13Streams` | ⚠️ Muy escaso — 3 archivos | Si |
-| `Tema14Threads` | ⚠️ Escaso — 3 ejercicios | Si |
-| `Tema15JPA` | 🔴 Bug de seguridad + malnombrado | Si |
-| `Tema16JavaServerPages` | 🔴 Completamente vacio | Si |
+| `Tema11_01FicherosDeTexto` | ✅ Funcional — 2 ejercicios | No |
+| `Tema11_02FicherosBinarios` | ✅ Funcional — 5 ejercicios | No |
+| `Tema12Colecciones` | ⚠️ Numeracion duplicada | No |
+| `Tema13AccesoDatos` | ⚠️ Typo + falta Ej04 | No |
+| `Tema14Streams` | ⚠️ Muy escaso — 3 archivos | Si |
+| `Tema15Hilos` | ⚠️ Escaso — 3 ejercicios | Si |
+| `Tema16JDBC` | 🔴 Bug de seguridad + malnombrado | Si |
+| `Tema17JavaServerPages` | 🔴 Completamente vacio | Si |
 | `Tema99EjerciciosMultiples` | ⚠️ Sin organizacion | No |
 
 ### Archivos en la raíz que deben eliminarse
@@ -80,7 +80,7 @@ git filter-branch --force --index-filter "git rm --cached --ignore-unmatch red.t
 
 Archivo vacio. Sin proposito. Eliminar.
 
-### Sacar la password de `Tema15JPA/Conexión.java`
+### Sacar la password de `Tema16JDBC/Conexión.java`
 
 ```java
 // ACTUAL — password root en repo público de GitHub
@@ -145,9 +145,9 @@ Opciones:
 
 ### Tema12 — AccesoDatos: typo + falta ejercicio
 
-1. **Typo en nombre:** `Tema12AcesoDatos` → `Tema12AccesoDatos` (doble 'c')
+1. **Typo en nombre:** `Tema13AccesoDatos` → `Tema13AccesoDatos` (doble 'c')
    ```bash
-   git mv Tema12AcesoDatos Tema12AccesoDatos
+   git mv Tema13AccesoDatos Tema13AccesoDatos
    ```
 
 2. **Numeracion rota:** `ejercicio03` → salta a `ejercicio05json`
@@ -168,7 +168,7 @@ git mv "Tema05_02MatricesArrays/Ejercicio07MétodosBusqueda.java" \
 
 ---
 
-### Tema15JPA: paquete duplicado
+### Tema16JDBC: paquete duplicado
 
 Dentro del mismo proyecto Maven hay dos arboles de clases identicos:
 - `src/main/java/org/kabalera82/...`
@@ -178,7 +178,7 @@ Dentro del mismo proyecto Maven hay dos arboles de clases identicos:
 
 ---
 
-### Tema15JPA: nombre incorrecto
+### Tema16JDBC: nombre incorrecto
 
 El tema se llama JPA pero usa JDBC (`java.sql.*`, `DriverManager`). JPA requeriria:
 - Hibernate o EclipseLink
@@ -187,12 +187,12 @@ El tema se llama JPA pero usa JDBC (`java.sql.*`, `DriverManager`). JPA requerir
 
 **Renombrar carpeta:**
 ```bash
-git mv Tema15JPA Tema15JDBC
+# Ya renombrado a Tema16JDBC — no ejecutar
 ```
 
 ---
 
-### Tema16JavaServerPages: proyecto completamente vacio
+### Tema17JavaServerPages: proyecto completamente vacio
 
 `Main.java` es el placeholder de IntelliJ con `main` vacio. No hay codigo JSP, no hay dependencias de servlet.
 
@@ -229,7 +229,7 @@ El orden actual tiene dos problemas:
 13 — Acceso a datos               (= Tema12 actual — RENOMBRAR + completar)
 14 — Streams introductorios       (= Tema13 actual — AMPLIAR)
 15 — Hilos                        (= Tema14 actual — AMPLIAR)
-16 — JDBC                         (= Tema15 actual — RENOMBRAR + limpiar)
+16 — JDBC                         (= Tema16JDBC ✅)
 17 — Swing                        (CREAR — Swing/JavaFX básico, FALTA)
 ```
 
@@ -446,8 +446,8 @@ Tema04Metodos/
 Los archivos de datos pertenecen a ejercicios especificos, no a la raíz del repo.
 
 **Mover a:**
-- `Tema12AccesoDatos/data/` — para los ficheros de texto/CSV
-- `Tema10_02FicherosBinarios/data/` — para `datos.dat`
+- `Tema13AccesoDatos/data/` — para los ficheros de texto/CSV
+- `Tema11_02FicherosBinarios/data/` — para `datos.dat`
 
 ---
 
@@ -526,12 +526,12 @@ Este repo cubre 1ºDAM. Muchos temas tienen continuacion natural en Java2:
 
 | Java (1ºDAM) | Java2 (2ºDAM) |
 |-------------|--------------|
-| `Tema14Threads` — hilos basicos | `Hilos/` — ciclo de vida completo, ExecutorService |
-| `Tema14Threads` — synchronized básico | `Sincronizacion/` — ReentrantLock, deadlocks, Filosofos |
+| `Tema15Hilos` — hilos basicos | `Hilos/` — ciclo de vida completo, ExecutorService |
+| `Tema15Hilos` — synchronized básico | `Sincronizacion/` — ReentrantLock, deadlocks, Filosofos |
 | — | `Concurrencia/` — Productor-Consumidor, wait/notify |
-| `Tema12AccesoDatos` — ficheros | `AccesoDatos/` — NIO2, JSON, CSV avanzado |
-| `Tema15JDBC` — JDBC básico | — (Java2 no tiene JDBC completo — pendiente alli también) |
-| `Tema13Streams` — introduccion | `ProgramacionFuncional/` (Java2) — Streams completos, Optional |
+| `Tema13AccesoDatos` — ficheros | `AccesoDatos/` — NIO2, JSON, CSV avanzado |
+| `Tema16JDBC` — JDBC básico | — (Java2 no tiene JDBC completo — pendiente alli también) |
+| `Tema14Streams` — introduccion | `ProgramacionFuncional/` (Java2) — Streams completos, Optional |
 | — | `ProgramacionRed/` (Java2) — Sockets TCP |
 | — | `AlgoritmosOrdenacion/` — FIFO, SJF, SRTF, Round Robin |
 
@@ -543,16 +543,16 @@ Este repo cubre 1ºDAM. Muchos temas tienen continuacion natural en Java2:
 
 - [ ] `git rm red.text` — eliminar archivo con IPs reales
 - [ ] `git rm errores.txt` — eliminar archivo vacio
-- [ ] Sacar password `"221182"` de `Tema15JPA/Conexión.java`
+- [ ] Sacar password `"221182"` de `Tema16JDBC/Conexión.java`
 - [ ] Crear `README.md` (reemplazar `Readme.txt`) ✅ hecho
 - [ ] Actualizar `.gitignore` para excluir credenciales
 
 ### Prioridad 2 — Bugs estructurales
 
-- [ ] Renombrar `Tema12AcesoDatos` → `Tema12AccesoDatos` (typo)
-- [ ] Renombrar `Tema15JPA` → `Tema15JDBC` (nombre incorrecto)
-- [ ] Eliminar paquete `org.kabalera82` de `Tema15JPA` (duplicado)
-- [ ] Corregir numeracion duplicada en `Tema11Colecciones`
+- [ ] Renombrar `Tema13AccesoDatos` → `Tema13AccesoDatos` (typo)
+- [x] Renombrar `Tema15JPA` → `Tema16JDBC` ✅ hecho
+- [ ] Eliminar paquete `org.kabalera82` de `Tema16JDBC` (duplicado)
+- [ ] Corregir numeracion duplicada en `Tema12Colecciones`
 - [ ] Crear o aclarar `Ejercicio02` en `Tema08_01Herencia`
 - [ ] Renombrar archivos con acentos: `Ejercicio03OperadoresAritméticos.java`, `Ejercicio07MétodosBusqueda.java`
 
@@ -564,9 +564,9 @@ Este repo cubre 1ºDAM. Muchos temas tienen continuacion natural en Java2:
 ### Prioridad 4 — Temas escasos que necesitan contenido
 
 - [ ] Ampliar `Tema04_03Polimorfismo` con clases abstractas
-- [ ] Ampliar `Tema13Streams` de 3 a 10+ ejercicios
-- [ ] Ampliar `Tema14Threads` de 3 a 8+ ejercicios
-- [ ] Implementar o eliminar `Tema16JavaServerPages`
+- [ ] Ampliar `Tema14Streams` de 3 a 10+ ejercicios
+- [ ] Ampliar `Tema15Hilos` de 3 a 8+ ejercicios
+- [ ] Implementar o eliminar `Tema17JavaServerPages`
 
 ### Prioridad 5 — Limpieza estructural
 

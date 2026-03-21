@@ -35,14 +35,14 @@
 | `Tema08_01Herencia/` | ⚠️ Incompleto | Falta Ejercicio02. Solo 2 de probables 3+ |
 | `Tema08_02InstanceOf/` | ✅ Funcional | 2 ejercicios de instanceof e interfaces |
 | `Tema09Interfaces/` | ✅ Funcional | 4 ejercicios de interfaces |
-| `Tema10_01FicherosDeTexto/` | ✅ Funcional | 2 ejercicios. Podria tener mas |
-| `Tema10_02FicherosBinarios/` | ✅ Funcional | 5 ejercicios de ObjectOutputStream/InputStream |
-| `Tema11Colecciones/` | ⚠️ Numeros duplicados | Dos Ejercicio04, dos Ejercicio06 — numeros de ejercicio inconsistentes |
-| `Tema12AcesoDatos/` | ⚠️ Typo + incompleto | Typo en nombre (AcesoDatos → AccesoDatos). Falta ejercicio04. JDBC ausente |
-| `Tema13Streams/` | ⚠️ Muy escaso | Solo 3 archivos Java. Necesita ampliacion |
-| `Tema14Threads/` | ⚠️ Muy escaso | Solo 3 ejercicios. La base esta pero necesita mas |
-| `Tema15JPA/` | ⚠️ Malnombrado + bug seguridad | Es JDBC no JPA. Password hardcodeada. Codigo duplicado dentro |
-| `Tema16JavaServerPages/` | ⚠️ Esqueleto vacio | Main.java es un placeholder vacio. No hay JSP real |
+| `Tema11_01FicherosDeTexto/` | ✅ Funcional | 2 ejercicios. Podria tener mas |
+| `Tema11_02FicherosBinarios/` | ✅ Funcional | 5 ejercicios de ObjectOutputStream/InputStream |
+| `Tema12Colecciones/` | ⚠️ Numeros duplicados | Dos Ejercicio04, dos Ejercicio06 — numeros de ejercicio inconsistentes |
+| `Tema13AccesoDatos/` | ⚠️ Typo + incompleto | Typo en nombre (AcesoDatos → AccesoDatos). Falta ejercicio04. JDBC ausente |
+| `Tema14Streams/` | ⚠️ Muy escaso | Solo 3 archivos Java. Necesita ampliacion |
+| `Tema15Hilos/` | ⚠️ Muy escaso | Solo 3 ejercicios. La base esta pero necesita mas |
+| `Tema16JDBC/` | ⚠️ Malnombrado + bug seguridad | Es JDBC no JPA. Password hardcodeada. Codigo duplicado dentro |
+| `Tema17JavaServerPages/` | ⚠️ Esqueleto vacio | Main.java es un placeholder vacio. No hay JSP real |
 | `Tema99EjerciciosMultiples/` | ⚠️ Desorganizado | Mezcla de ejercicios sin tema claro. Algunos duplican AlgoritmosOrdenacion de Java2 |
 
 **Archivos en la raíz que deben eliminarse:**
@@ -71,14 +71,15 @@
 | 08 | [Tema08_01Herencia](./Tema08_01Herencia/) | Herencia, `extends`, `super` |
 | 08b | [Tema08_02InstanceOf](./Tema08_02InstanceOf/) | `instanceof`, casting de objetos |
 | 09 | [Tema09Interfaces](./Tema09Interfaces/) | Interfaces, implementación multiple |
-| 10 | [Tema10_01FicherosDeTexto](./Tema10_01FicherosDeTexto/) | `BufferedReader/Writer`, `Files` |
-| 10b | [Tema10_02FicherosBinarios](./Tema10_02FicherosBinarios/) | `ObjectOutputStream/InputStream`, serializacion |
-| 11 | [Tema11Colecciones](./Tema11Colecciones/) | `List`, `Set`, `Map`, `Stack`, `Queue` |
-| 12 | [Tema12AcesoDatos](./Tema12AcesoDatos/) | Texto plano, JSON, CSV (falta JDBC) |
-| 13 | [Tema13Streams](./Tema13Streams/) | Streams basicos (muy escaso) |
-| 14 | [Tema14Threads](./Tema14Threads/) | `Thread`, `Runnable`, sincronizacion básica |
-| 15 | [Tema15JPA](./Tema15JPA/) | JDBC + MySQL con patrón DAO (mal nombrado) |
-| 16 | [Tema16JavaServerPages](./Tema16JavaServerPages/) | Proyecto vacio (no hay contenido) |
+| 10 | — `Tema10Excepciones` — | **FALTA** — tema completamente ausente |
+| 11 | [Tema11_01FicherosDeTexto](./Tema11_01FicherosDeTexto/) | `BufferedReader/Writer`, `Files` |
+| 11b | [Tema11_02FicherosBinarios](./Tema11_02FicherosBinarios/) | `ObjectOutputStream/InputStream`, serializacion |
+| 12 | [Tema12Colecciones](./Tema12Colecciones/) | `List`, `Set`, `Map`, `Stack`, `Queue` |
+| 13 | [Tema13AccesoDatos](./Tema13AccesoDatos/) | Texto plano, JSON, CSV (falta JDBC) |
+| 14 | [Tema14Streams](./Tema14Streams/) | Streams basicos (muy escaso) |
+| 15 | [Tema15Hilos](./Tema15Hilos/) | `Thread`, `Runnable`, sincronizacion básica |
+| 16 | [Tema16JDBC](./Tema16JDBC/) | JDBC + MySQL con patrón DAO (mal nombrado) |
+| 17 | [Tema17JavaServerPages](./Tema17JavaServerPages/) | Proyecto vacio (no hay contenido) |
 | 99 | [Tema99EjerciciosMultiples](./Tema99EjerciciosMultiples/) | Ejercicios mixtos sin tema claro |
 
 ### Orden y estructura propuesto
@@ -98,10 +99,10 @@ El temario de 1ºDAM cubre los fundamentos del lenguaje.
 10-excepciones/                 try-catch-finally, jerarquía ← FALTA COMPLETAMENTE
 11-ficheros/                    texto plano, binarios, NIO2
 12-colecciones/                 List, Set, Map, Queue, Stack ← CORREGIR NUMERACION
-13-acceso-datos/                CSV, JSON, JDBC (renombrar Tema12AcesoDatos)
+13-acceso-datos/                CSV, JSON, JDBC (renombrar Tema13AccesoDatos)
 14-streams-lambdas/             Streams basicos, lambdas introductorias
 15-hilos/                       Thread, Runnable, sincronizacion
-16-jdbc/                        JDBC completo con patrón DAO (renombrar Tema15JPA)
+16-jdbc/                        JDBC completo con patrón DAO (renombrar Tema16JDBC)
 17-swing/                       Interfaces graficas basicas ← FALTA (Swing/JavaFX)
 ```
 
@@ -122,7 +123,7 @@ Este archivo es la salida del comando `ipconfig` de Windows guardada accidentalm
 
 ---
 
-### SEGURIDAD — `Tema15JPA/src/main/java/tech/Kabadev/conexión/Conexión.java` — password hardcodeada
+### SEGURIDAD — `Tema16JDBC/src/main/java/tech/Kabadev/conexión/Conexión.java` — password hardcodeada
 
 ```java
 // ACTUAL — password root del MySQL en codigo fuente público
@@ -145,7 +146,7 @@ private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
 ---
 
-### BUG — `Tema15JPA/` — codigo duplicado dentro del mismo proyecto
+### BUG — `Tema16JDBC/` — codigo duplicado dentro del mismo proyecto
 
 El proyecto tiene DOS paquetes con exactamente las mismas clases:
 - `org.kabalera82.conexión.Conexión` / `tech.Kabadev.conexión.Conexión`
@@ -157,17 +158,17 @@ Una de las dos implementaciones debe eliminarse. Mantener `tech.Kabadev` que es 
 
 ---
 
-### BUG — `Tema15JPA/` — nombre incorrecto
+### BUG — `Tema16JDBC/` — nombre incorrecto
 
 El tema se llama JPA pero usa `java.sql.Connection`, `DriverManager` y `PreparedStatement` — eso es **JDBC**, no JPA. JPA usa Hibernate/EclipseLink con anotaciones como `@Entity`, `@Table`, `@Id`. El `pom.xml` solo tiene `mysql-connector-java`, no Hibernate.
 
-**Correccion:** Renombrar a `Tema15JDBC/` o `Tema16JDBC/` segun el orden final.
+**Correccion:** Ya renombrado a `Tema16JDBC/`.
 
 ---
 
-### BUG — `Tema16JavaServerPages/` — proyecto vacio
+### BUG — `Tema17JavaServerPages/` — proyecto vacio
 
-`Tema16JavaServerPages/src/main/java/tech/Kabadev/Main.java` contiene solo el placeholder de IntelliJ:
+`Tema17JavaServerPages/src/main/java/tech/Kabadev/Main.java` contiene solo el placeholder de IntelliJ:
 
 ```java
 public class Main {
@@ -181,7 +182,7 @@ No hay codigo JSP, no hay dependencia de servlet en el `pom.xml`. O se implement
 
 ---
 
-### BUG — `Tema11Colecciones/` — numeros de ejercicio duplicados
+### BUG — `Tema12Colecciones/` — numeros de ejercicio duplicados
 
 ```
 Ejercicio04LinkedList/    ← dos Ejercicio04
@@ -207,7 +208,7 @@ O se crea el Ejercicio02 o se renombra Ejercicio03Planta a Ejercicio02Planta.
 
 ---
 
-### BUG MENOR — `Tema12AcesoDatos/` — falta ejercicio04
+### BUG MENOR — `Tema13AccesoDatos/` — falta ejercicio04
 
 ```
 ejercicio01/
@@ -235,7 +236,7 @@ Algunos sistemas de ficheros y herramientas Git tienen problemas con caracteres 
 
 ### AVISO — `data/` en la raíz
 
-La carpeta `data/` con `clientes.txt`, `clientes.csv`, `datos.dat`, `miArchivo.txt`, etc., esta en la raíz del repo en lugar de dentro del ejercicio que la usa. Los archivos de datos deberían estar dentro de cada ejercicio o en `Tema12AcesoDatos/data/`.
+La carpeta `data/` con `clientes.txt`, `clientes.csv`, `datos.dat`, `miArchivo.txt`, etc., esta en la raíz del repo en lugar de dentro del ejercicio que la usa. Los archivos de datos deberían estar dentro de cada ejercicio o en `Tema13AccesoDatos/data/`.
 
 ---
 
@@ -243,7 +244,7 @@ La carpeta `data/` con `clientes.txt`, `clientes.csv`, `datos.dat`, `miArchivo.t
 
 ### CRITICO — Excepciones (`try/catch/finally`)
 
-No existe ningun tema dedicado a excepciones. En el `Readme.txt` original aparecia como `Tema12Excepciones` pero la carpeta no existe — en su lugar hay `Tema12AcesoDatos` que es otro concepto.
+No existe ningun tema dedicado a excepciones. En el `Readme.txt` original aparecia como `Tema12Excepciones` pero la carpeta no existe — en su lugar hay `Tema13AccesoDatos` que es otro concepto.
 
 **Que incluir:**
 ```java
@@ -403,7 +404,7 @@ public static <T extends Comparable<T>> T maximo(T a, T b) {
 
 ### UTIL — Patrón DAO documentado como patrón
 
-`Tema15JPA/` (realmente JDBC) implementa el patrón DAO pero sin documentarlo como tal. El patrón merece su propia explicacion teorica.
+`Tema16JDBC/` (realmente JDBC) implementa el patrón DAO pero sin documentarlo como tal. El patrón merece su propia explicacion teorica.
 
 ---
 
@@ -463,7 +464,7 @@ public static <T extends Comparable<T>> T maximo(T a, T b) {
 
 | Mejora | Descripción |
 |--------|------------|
-| Corregir typo en nombre | `Tema12AcesoDatos` → `Tema12AccesoDatos` (doble 'c') |
+| Corregir typo en nombre | `Tema13AccesoDatos` → `Tema13AccesoDatos` (doble 'c') |
 | Crear ejercicio04 | La numeracion salta del 03 al 05 |
 | Añadir `.properties` | Leer configuración desde fichero — muy util con JDBC |
 
@@ -485,11 +486,11 @@ public static <T extends Comparable<T>> T maximo(T a, T b) {
 | Añadir `Callable` y `Future` | Para hilos con valor de retorno |
 | Documentar ciclo de vida | Diagrama ASCII: NEW → RUNNABLE → BLOCKED → TERMINATED |
 
-### Tema15 — JDBC (actualmente llamado JPA)
+### Tema16 — JDBC (actualmente llamado JPA)
 
 | Mejora | Descripción |
 |--------|------------|
-| **Renombrar a `Tema15JDBC/`** | El nombre actual (JPA) es incorrecto |
+| ~~Renombrar a `Tema15JDBC/`~~ ✅ hecho | El nombre actual (JPA) es incorrecto |
 | **Eliminar paquete `org.kabalera82`** | Codigo duplicado — mantener solo `tech.Kabadev` |
 | **Sacar password del codigo** | `"221182"` en texto plano en GitHub público |
 | Añadir `README.md` | Explicar patrón DAO, requisitos (MySQL), como configurar |
@@ -527,7 +528,7 @@ Contiene ejercicios como `Algoritmos/` (que tiene FCFS, FIFO, SJF — mismos alg
 
 Los archivos de datos (`clientes.txt`, `clientes.csv`, `datos.dat`, etc.) estan en la raíz en lugar de dentro de los ejercicios que los usan. Esto dificulta saber que ejercicio usa cada archivo.
 
-**Propuesta:** Mover cada archivo a su ejercicio correspondiente o crear una carpeta `Tema12AccesoDatos/data/` centralizada.
+**Propuesta:** Mover cada archivo a su ejercicio correspondiente o crear una carpeta `Tema13AccesoDatos/data/` centralizada.
 
 ---
 
@@ -594,16 +595,16 @@ application.local.properties
 
 - [ ] **ELIMINAR `red.text`** — expone IPs reales del sistema en repo público
 - [ ] **ELIMINAR `errores.txt`** — archivo vacio sin proposito
-- [ ] **Eliminar password hardcodeada** en `Tema15JPA/Conexión.java` — `"221182"` en repo público
-- [ ] **Eliminar paquete duplicado** `org.kabalera82` de `Tema15JPA/`
+- [ ] **Eliminar password hardcodeada** en `Tema16JDBC/Conexión.java` — `"221182"` en repo público
+- [ ] **Eliminar paquete duplicado** `org.kabalera82` de `Tema16JDBC/`
 - [ ] Crear `README.md` (este archivo) y eliminar `Readme.txt`
 
 ### Prioridad 2 — Bugs estructurales
 
-- [ ] Corregir numeracion duplicada en `Tema11Colecciones/` (Ejercicio04×2, Ejercicio06×2)
+- [ ] Corregir numeracion duplicada en `Tema12Colecciones/` (Ejercicio04×2, Ejercicio06×2)
 - [ ] Crear o aclarar `Ejercicio02` en `Tema08_01Herencia/`
-- [ ] Renombrar `Tema15JPA/` a `Tema15JDBC/`
-- [ ] Corregir typo `Tema12AcesoDatos/` → `Tema12AccesoDatos/`
+- [ ] ~~Renombrado a `Tema16JDBC/`~~ ✅ hecho
+- [ ] Corregir typo `Tema13AccesoDatos/` → `Tema13AccesoDatos/`
 - [ ] Renombrar archivos con acentos: `Ejercicio03OperadoresAritméticos.java`, `Ejercicio07MétodosBusqueda.java`
 
 ### Prioridad 3 — Temas que necesitan contenido urgente
@@ -611,12 +612,12 @@ application.local.properties
 - [ ] **Crear `Tema10Excepciones/`** — tema completamente ausente, crítico para 1ºDAM
 - [ ] Ampliar `Tema06CadenasDeCaracteres/` de 2 a 10+ ejercicios
 - [ ] Ampliar `Tema04_03Polimorfismo/` con clases abstractas
-- [ ] Ampliar `Tema13Streams/` de 3 a 10+ ejercicios
-- [ ] Ampliar `Tema14Threads/` de 3 a 8+ ejercicios
+- [ ] Ampliar `Tema14Streams/` de 3 a 10+ ejercicios
+- [ ] Ampliar `Tema15Hilos/` de 3 a 8+ ejercicios
 
 ### Prioridad 4 — Limpieza estructural
 
-- [ ] Implementar o eliminar `Tema16JavaServerPages/` (actualmente vacio)
+- [ ] Implementar o eliminar `Tema17JavaServerPages/` (actualmente vacio)
 - [ ] Mover archivos de `data/` raíz al ejercicio correspondiente
 - [ ] Añadir `Tema99EjerciciosMultiples/README.md` explicando el origen de cada ejercicio
 - [ ] Unificar nomenclatura de subtemas (Tema04_01 vs subcarpetas)
@@ -624,9 +625,9 @@ application.local.properties
 ### Prioridad 5 — Mejoras de calidad
 
 - [ ] Añadir `enum` como ejercicio en Tema07 o Tema09
-- [ ] Añadir Generics basicos como ejercicio en Tema11Colecciones
-- [ ] Documentar patrón DAO en `Tema15JDBC/`
-- [ ] Añadir transacciones JDBC en `Tema15JDBC/`
+- [ ] Añadir Generics basicos como ejercicio en Tema12Colecciones
+- [ ] Documentar patrón DAO en `Tema16JDBC/`
+- [ ] Añadir transacciones JDBC en `Tema16JDBC/`
 - [ ] Actualizar `.gitignore` para excluir `target/`, `out/`, `*.class`, `database.properties`
 
 ---
@@ -635,8 +636,8 @@ application.local.properties
 
 **Requisitos:**
 - **Java 17+** (recomendado) — el `pom.xml` raíz usa Java 24
-- **Maven 3.6+** — para `Tema15JPA/`, `Tema16JavaServerPages/`
-- **MySQL 8+** — para `Tema15JPA/` (JDBC)
+- **Maven 3.6+** — para `Tema16JDBC/`, `Tema17JavaServerPages/`
+- **MySQL 8+** — para `Tema16JDBC/` (JDBC)
 - **IDE recomendado:** IntelliJ IDEA o VS Code con Extension Pack for Java
 
 **Compilar un ejercicio sin IDE:**
@@ -650,8 +651,8 @@ java -cp out Tema01ConceptosBasicos.Ejercicio01HolaMundo
 javac -d out Tema07Clases/ejercicio01persona/*.java
 java -cp out ejercicio01persona.Main
 
-# Tema15JPA con Maven
-cd Tema15JPA
+# Tema16JDBC con Maven
+cd Tema16JDBC
 mvn compile
 mvn exec:java -Dexec.mainClass="tech.Kabadev.gui.Main"
 ```

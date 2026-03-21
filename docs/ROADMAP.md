@@ -54,7 +54,7 @@ El núcleo del lenguaje. Sin esto, nada de lo demás tiene sentido.
 | **Enumeraciones (`enum`)** | **FALTA en ambos repos** | Java Docs: Enum Types |
 | **Records (Java 16+)** | **FALTA en ambos repos** | Java Docs: Records |
 | Clases selladas (`sealed`, Java 17+) | FALTA | Java Docs |
-| `equals()`, `hashCode()`, `toString()` correctamente | Parcial en Tema15JPA | [Java] Tema07 |
+| `equals()`, `hashCode()`, `toString()` correctamente | Parcial en Tema16JDBC | [Java] Tema07 |
 | Inmutabilidad: `final`, clases inmutables | FALTA | Java Docs |
 
 ---
@@ -87,8 +87,8 @@ Sin dominar esto, los Streams no tienen sentido.
 | CSV: parseo manual con `split()` | ✅ | [Java] Tema12, [Java2] AccesoDatos |
 | **JSON con Jackson o Gson** | **⚠️ existe estructura, falta código** | Ampliar [Java2] AccesoDatos |
 | Fichero `.properties` (`Properties`) | FALTA | Java Docs |
-| **JDBC: `Connection`, `PreparedStatement`, `ResultSet`** | **⚠️ básico en Tema15JPA (con bugs)** | Corregir [Java] Tema15 |
-| JDBC: transacciones (`commit`, `rollback`) | FALTA | Ampliar [Java] Tema15 |
+| **JDBC: `Connection`, `PreparedStatement`, `ResultSet`** | **⚠️ básico en Tema16JDBC (con bugs)** | Corregir [Java] Tema15 |
+| JDBC: transacciones (`commit`, `rollback`) | FALTA | Ampliar [Java] Tema16JDBC |
 | **JPA/Hibernate: `@Entity`, `@Table`, `@Id`, `EntityManager`** | **FALTA en ambos repos** | Spring Data JPA docs |
 | Connection Pool (HikariCP) | FALTA | HikariCP docs |
 | **SQL: `SELECT`, `JOIN`, `GROUP BY`, índices, claves** | **FALTA en ambos repos** | W3Schools SQL, SQLBolt |
@@ -184,7 +184,7 @@ Lo que diferencia a un junior de un semi-senior.
 | Tema | Estado | Dónde |
 |------|--------|-------|
 | **Principios SOLID** | **FALTA en ambos repos** | "Clean Architecture" - R. Martin |
-| **Patrón DAO** | Parcial en [Java] Tema15 | Documentar como patrón |
+| **Patrón DAO** | Parcial en [Java] Tema16JDBC | Documentar como patrón |
 | **Patrón Singleton** | FALTA | Design Patterns - GoF |
 | **Patrón Factory / Factory Method** | FALTA | Design Patterns - GoF |
 | **Patrón Builder** | FALTA | Design Patterns - GoF |
