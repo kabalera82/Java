@@ -1,10 +1,8 @@
-# Tema 11 — Colecciones
+# Tema 12 — Colecciones
 
 > Prerequisito: Tema 07 (clases), Tema 09 (interfaces), Generics basicos
 
 El framework de colecciones de Java — estructuras de datos dinamicas para almacenar y manipular grupos de objetos.
-
-> ⚠️ **Pendiente:** corregir numeracion duplicada (dos Ejercicio04, dos Ejercicio06).
 
 ---
 
@@ -130,16 +128,14 @@ deque.poll()     // 1 — primero en entrar, primero en salir
 | `Ejercicio02ArrayList/` | Operaciones con `ArrayList` |
 | `Ejercicio03pila/` | Implementar pila con `LinkedList` o `ArrayDeque` |
 | `Ejercicio04LinkedList/` | Operaciones con `LinkedList` |
-| `Ejercicio04Map/` | `HashMap` — pares clave-valor ⚠️ numero duplicado |
-| `Ejercicio05ArrayList/` | ArrayList avanzado |
-| `Ejercicio06HashSet/` | Operaciones con `HashSet` |
-| `Ejercicio06LinkedHashSet/` | `LinkedHashSet` — set con orden de insercion ⚠️ numero duplicado |
-| `Ejercicio07TreeSet/` | `TreeSet` — set ordenado naturalmente |
-| `Ejercicio08LinkedHashMap/` | `LinkedHashMap` — mapa con orden de insercion |
-| `Ejercicio09TreeMap/` | `TreeMap` — mapa ordenado por clave |
-| `Ejercicio10HashMap/` | HashMap avanzado |
-| `Ejercicio11Generico/` | Clase generica con colección |
-| `Ejercicio12/` | Ejercicio combinado de colecciones |
+| `Ejercicio05Map/` | `HashMap` — pares clave-valor |
+| `Ejercicio06ArrayList/` | ArrayList avanzado |
+| `Ejercicio07HashSet/` | Operaciones con `HashSet` |
+| `Ejercicio08LinkedHashSet/` | `LinkedHashSet` — set con orden de insercion |
+| `Ejercicio09TreeSet/` | `TreeSet` — set ordenado naturalmente |
+| `Ejercicio10LinkedHashMap/` | `LinkedHashMap` — mapa con orden de insercion |
+| `Ejercicio11TreeMap/` | `TreeMap` — mapa ordenado por clave |
+| `Ejercicio12HashMap/` | HashMap avanzado |
+| `Ejercicio13Generico/` | Clase generica con colección |
+| `Ejercicio14/` | Ejercicio combinado de colecciones |
 | `Colecciones.png` | Diagrama del jerarquía de colecciones |
-
-> ⚠️ **Pendiente:** renombrar `Ejercicio04Map` y `Ejercicio06LinkedHashSet` para que los numeros sean unicos.

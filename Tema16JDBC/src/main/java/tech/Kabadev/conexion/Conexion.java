@@ -37,8 +37,8 @@ public class Conexion {
     private static final String BASE_DATOS = "tutorial";
     private static final String URL = "jdbc:mysql://localhost:3306/" + BASE_DATOS
             + "?createDatabaseIfNotExist=true"; // crea la BD si no existe
-    private static final String USUARIO = "root";
-    private static final String PASSWORD = "221182";
+    private static final String USUARIO = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "root";
+    private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
     /**
      * Obtiene una conexión a la base de datos MySQL.

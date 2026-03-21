@@ -35,14 +35,15 @@
 | `Tema08_01Herencia/` | ⚠️ Incompleto | Falta Ejercicio02. Solo 2 de probables 3+ |
 | `Tema08_02InstanceOf/` | ✅ Funcional | 2 ejercicios de instanceof e interfaces |
 | `Tema09Interfaces/` | ✅ Funcional | 4 ejercicios de interfaces |
+| `Tema10Excepciones/` | ✅ Nuevo | 6 ejercicios: try-catch, finally, excepciones personalizadas, throw/throws |
 | `Tema11_01FicherosDeTexto/` | ✅ Funcional | 2 ejercicios. Podria tener mas |
 | `Tema11_02FicherosBinarios/` | ✅ Funcional | 5 ejercicios de ObjectOutputStream/InputStream |
-| `Tema12Colecciones/` | ⚠️ Numeros duplicados | Dos Ejercicio04, dos Ejercicio06 — numeros de ejercicio inconsistentes |
+| `Tema12Colecciones/` | ✅ Funcional | 14 ejercicios. Numeracion corregida |
 | `Tema13AccesoDatos/` | ⚠️ Typo + incompleto | Typo en nombre (AcesoDatos → AccesoDatos). Falta ejercicio04. JDBC ausente |
 | `Tema14Streams/` | ⚠️ Muy escaso | Solo 3 archivos Java. Necesita ampliacion |
 | `Tema15Hilos/` | ⚠️ Muy escaso | Solo 3 ejercicios. La base esta pero necesita mas |
-| `Tema16JDBC/` | ⚠️ Malnombrado + bug seguridad | Es JDBC no JPA. Password hardcodeada. Codigo duplicado dentro |
-| `Tema17JavaServerPages/` | ⚠️ Esqueleto vacio | Main.java es un placeholder vacio. No hay JSP real |
+| `Tema16JDBC/` | ✅ Funcional | JDBC + DAO. Password via env var. Paquete duplicado eliminado |
+
 | `Tema99EjerciciosMultiples/` | ⚠️ Desorganizado | Mezcla de ejercicios sin tema claro. Algunos duplican AlgoritmosOrdenacion de Java2 |
 
 **Archivos en la raíz que deben eliminarse:**
@@ -71,7 +72,7 @@
 | 08 | [Tema08_01Herencia](./Tema08_01Herencia/) | Herencia, `extends`, `super` |
 | 08b | [Tema08_02InstanceOf](./Tema08_02InstanceOf/) | `instanceof`, casting de objetos |
 | 09 | [Tema09Interfaces](./Tema09Interfaces/) | Interfaces, implementación multiple |
-| 10 | — `Tema10Excepciones` — | **FALTA** — tema completamente ausente |
+| 10 | [Tema10Excepciones](./Tema10Excepciones/) | `try-catch-finally`, excepciones personalizadas, `throw`/`throws` |
 | 11 | [Tema11_01FicherosDeTexto](./Tema11_01FicherosDeTexto/) | `BufferedReader/Writer`, `Files` |
 | 11b | [Tema11_02FicherosBinarios](./Tema11_02FicherosBinarios/) | `ObjectOutputStream/InputStream`, serializacion |
 | 12 | [Tema12Colecciones](./Tema12Colecciones/) | `List`, `Set`, `Map`, `Stack`, `Queue` |
@@ -609,7 +610,7 @@ application.local.properties
 
 ### Prioridad 3 — Temas que necesitan contenido urgente
 
-- [ ] **Crear `Tema10Excepciones/`** — tema completamente ausente, crítico para 1ºDAM
+- [x] **Crear `Tema10Excepciones/`** ✅ hecho — 6 ejercicios creados
 - [ ] Ampliar `Tema06CadenasDeCaracteres/` de 2 a 10+ ejercicios
 - [ ] Ampliar `Tema04_03Polimorfismo/` con clases abstractas
 - [ ] Ampliar `Tema14Streams/` de 3 a 10+ ejercicios
