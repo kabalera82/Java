@@ -4,7 +4,7 @@
 
 ---
 
-## Indice
+## Índice
 
 1. [Estado actual del repositorio](#1-estado-actual-del-repositorio)
 2. [Temario actual y orden propuesto](#2-temario-actual-y-orden-propuesto)
@@ -49,8 +49,8 @@
 | `Tema20Interfaces/` | ⚠️ Mal ubicado | Contiene solo `Swing/` — deberia ser su propio tema |
 | `Tema99EjerciciosMultiples/` | ⚠️ Desorganizado | Mezcla de ejercicios sin tema claro. Algunos duplican AlgoritmosOrdenacion de Java2 |
 
-**Archivos en la raiz que deben eliminarse:**
-- `red.text` — salida de `ipconfig` con IPs reales del sistema. **ELIMINAR — expone informacion sensible**
+**Archivos en la raíz que deben eliminarse:**
+- `red.text` — salida de `ipconfig` con IPs reales del sistema. **ELIMINAR — expone información sensible**
 - `errores.txt` — archivo vacio sin proposito
 - `Readme.txt` — reemplazado por este `README.md`
 
@@ -74,19 +74,19 @@
 | 07 | [Tema07Clases](./Tema07Clases/) | Clases, constructores, encapsulamiento, `static` |
 | 08 | [Tema08_01Herencia](./Tema08_01Herencia/) | Herencia, `extends`, `super` |
 | 08b | [Tema08_02InstanceOf](./Tema08_02InstanceOf/) | `instanceof`, casting de objetos |
-| 09 | [Tema09Interfaces](./Tema09Interfaces/) | Interfaces, implementacion multiple |
+| 09 | [Tema09Interfaces](./Tema09Interfaces/) | Interfaces, implementación multiple |
 | 10 | [Tema10_01FicherosDeTexto](./Tema10_01FicherosDeTexto/) | `BufferedReader/Writer`, `Files` |
 | 10b | [Tema10_02FicherosBinarios](./Tema10_02FicherosBinarios/) | `ObjectOutputStream/InputStream`, serializacion |
 | 11 | [Tema11Colecciones](./Tema11Colecciones/) | `List`, `Set`, `Map`, `Stack`, `Queue` |
 | 12 | [Tema12AcesoDatos](./Tema12AcesoDatos/) | Texto plano, JSON, CSV (falta JDBC) |
 | 13 | [Tema13Streams](./Tema13Streams/) | Streams basicos (muy escaso) |
-| 14 | [Tema14Threads](./Tema14Threads/) | `Thread`, `Runnable`, sincronizacion basica |
-| 15 | [Tema15JPA](./Tema15JPA/) | JDBC + MySQL con patron DAO (mal nombrado) |
+| 14 | [Tema14Threads](./Tema14Threads/) | `Thread`, `Runnable`, sincronizacion básica |
+| 15 | [Tema15JPA](./Tema15JPA/) | JDBC + MySQL con patrón DAO (mal nombrado) |
 | 16 | [Tema16JavaServerPages](./Tema16JavaServerPages/) | Proyecto vacio (no hay contenido) |
 | 17 | [Tema17ProgramacionFuncional](./Tema17ProgramacionFuncional/) | Lambdas/Streams — duplicado de Java2 |
 | 18 | [Tema18ProgramacionRed](./Tema18ProgramacionRed/) | Sockets — duplicado de Java2 |
 | 19 | [Tema19ContructorProcesos](./Tema19ContructorProcesos/) | ProcessBuilder Maven — duplicado de Java2 |
-| 20 | [Tema20Interfaces](./Tema20Interfaces/) | Swing basico (mal ubicado) |
+| 20 | [Tema20Interfaces](./Tema20Interfaces/) | Swing básico (mal ubicado) |
 | 99 | [Tema99EjerciciosMultiples](./Tema99EjerciciosMultiples/) | Ejercicios mixtos sin tema claro |
 
 ### Orden y estructura propuesto
@@ -103,13 +103,13 @@ El temario de 1ºDAM cubre los fundamentos del lenguaje. Los temas 17-19 son de 
 07-poo-clases/                  clases, constructores, encapsulamiento, static
 08-herencia/                    extends, super, override, abstract ← COMPLETAR
 09-interfaces/                  interface, polimorfismo ← UNIFICAR Tema04_03 aqui
-10-excepciones/                 try-catch-finally, jerarquia ← FALTA COMPLETAMENTE
+10-excepciones/                 try-catch-finally, jerarquía ← FALTA COMPLETAMENTE
 11-ficheros/                    texto plano, binarios, NIO2
 12-colecciones/                 List, Set, Map, Queue, Stack ← CORREGIR NUMERACION
 13-acceso-datos/                CSV, JSON, JDBC (renombrar Tema12AcesoDatos)
 14-streams-lambdas/             Streams basicos, lambdas introductorias
 15-hilos/                       Thread, Runnable, sincronizacion
-16-jdbc/                        JDBC completo con patron DAO (renombrar Tema15JPA)
+16-jdbc/                        JDBC completo con patrón DAO (renombrar Tema15JPA)
 17-swing/                       Interfaces graficas basicas ← MOVER Tema20Interfaces aqui
 ```
 
@@ -126,19 +126,19 @@ El temario de 1ºDAM cubre los fundamentos del lenguaje. Los temas 17-19 son de 
 - Puerta de enlace: 192.168.1.1
 ```
 
-Este archivo es la salida del comando `ipconfig` de Windows guardada accidentalmente. **Debe eliminarse del repo** — expone informacion de red del sistema del autor.
+Este archivo es la salida del comando `ipconfig` de Windows guardada accidentalmente. **Debe eliminarse del repo** — expone información de red del sistema del autor.
 
 ---
 
-### SEGURIDAD — `Tema15JPA/src/main/java/tech/Kabadev/conexion/Conexion.java` — password hardcodeada
+### SEGURIDAD — `Tema15JPA/src/main/java/tech/Kabadev/conexión/Conexión.java` — password hardcodeada
 
 ```java
-// ACTUAL — password root del MySQL en codigo fuente publico
+// ACTUAL — password root del MySQL en codigo fuente público
 private static final String USUARIO = "root";
 private static final String PASSWORD = "221182";
 ```
 
-La contraseña de root del servidor MySQL esta en texto plano en el repositorio publico de GitHub.
+La contraseña de root del servidor MySQL esta en texto plano en el repositorio público de GitHub.
 
 **Correccion:**
 ```java
@@ -156,7 +156,7 @@ private static final String PASSWORD = System.getenv("DB_PASSWORD");
 ### BUG — `Tema15JPA/` — codigo duplicado dentro del mismo proyecto
 
 El proyecto tiene DOS paquetes con exactamente las mismas clases:
-- `org.kabalera82.conexion.Conexion` / `tech.Kabadev.conexion.Conexion`
+- `org.kabalera82.conexión.Conexión` / `tech.Kabadev.conexión.Conexión`
 - `org.kabalera82.dao.UsuarioDAO` / `tech.Kabadev.dao.UsuarioDAO`
 - `org.kabalera82.model.Usuario` / `tech.Kabadev.model.Usuario`
 - `org.kabalera82.gui.Main` / `tech.Kabadev.gui.Main`
@@ -252,9 +252,9 @@ Son temas de 2ºDAM que no deberían estar en el repo de 1ºDAM. Evaluar si elim
 
 ---
 
-### AVISO — `data/` en la raiz
+### AVISO — `data/` en la raíz
 
-La carpeta `data/` con `clientes.txt`, `clientes.csv`, `datos.dat`, `miArchivo.txt`, etc., esta en la raiz del repo en lugar de dentro del ejercicio que la usa. Los archivos de datos deberían estar dentro de cada ejercicio o en `Tema12AcesoDatos/data/`.
+La carpeta `data/` con `clientes.txt`, `clientes.csv`, `datos.dat`, `miArchivo.txt`, etc., esta en la raíz del repo en lugar de dentro del ejercicio que la usa. Los archivos de datos deberían estar dentro de cada ejercicio o en `Tema12AcesoDatos/data/`.
 
 ---
 
@@ -266,7 +266,7 @@ No existe ningun tema dedicado a excepciones. En el `Readme.txt` original aparec
 
 **Que incluir:**
 ```java
-// Jerarquia de excepciones
+// Jerarquía de excepciones
 Throwable
 ├── Error (OutOfMemoryError, StackOverflowError)
 └── Exception
@@ -278,12 +278,12 @@ try {
     int[] arr = new int[5];
     arr[10] = 1; // ArrayIndexOutOfBoundsException
 } catch (ArrayIndexOutOfBoundsException e) {
-    System.err.println("Indice fuera de rango: " + e.getMessage());
+    System.err.println("Índice fuera de rango: " + e.getMessage());
 } finally {
     System.out.println("Esto siempre se ejecuta");
 }
 
-// Crear excepcion personalizada
+// Crear excepción personalizada
 public class SaldoInsuficienteException extends RuntimeException {
     public SaldoInsuficienteException(double importe) {
         super("Saldo insuficiente para operar con " + importe + " €");
@@ -299,7 +299,7 @@ public void retirar(double importe) throws SaldoInsuficienteException {
 
 **Ejercicios propuestos:**
 1. Capturar `NumberFormatException` al parsear entrada del usuario
-2. Jerarquia de excepciones — `catch` multiple y orden
+2. Jerarquía de excepciones — `catch` multiple y orden
 3. `finally` para cerrar recursos
 4. Crear `CuentaBancariaException` personalizada
 5. `try-with-resources` con `BufferedReader`
@@ -345,7 +345,7 @@ String.format("Nombre: %s, Edad: %d", nombre, edad);
 2. Revertir una cadena
 3. Comprobar si es palindromo
 4. Contar palabras en una oracion
-5. Cifrado Cesar basico
+5. Cifrado Cesar básico
 6. Validar email con `contains()` e `indexOf()`
 7. Anagrama: comprobar si dos palabras son anagramas
 8. `StringBuilder` vs `String` — diferencia de rendimiento
@@ -360,7 +360,7 @@ String.format("Nombre: %s, Edad: %d", nombre, edad);
 ```java
 // Clase abstracta
 public abstract class Figura {
-    public abstract double area();  // metodo abstracto — sin implementacion
+    public abstract double area();  // metodo abstracto — sin implementación
     public void mostrar() {
         System.out.println("Area: " + area()); // metodo concreto
     }
@@ -373,7 +373,7 @@ public class Circulo extends Figura {
     public double area() { return Math.PI * radio * radio; }
 }
 
-// Polimorfismo en accion
+// Polimorfismo en acción
 List<Figura> figuras = List.of(new Circulo(5), new Rectangulo(4, 3));
 figuras.forEach(f -> f.mostrar()); // cada figura calcula su area a su manera
 ```
@@ -402,7 +402,7 @@ System.out.println(hoy.esLaboral()); // true
 
 ### UTIL — Generics basicos
 
-Los Generics son prerequisito para entender las colecciones y los Streams. No hay ningun ejercicio especifico.
+Los Generics son prerequisito para entender las colecciones y los Streams. No hay ningun ejercicio específico.
 
 ```java
 // Clase generica
@@ -420,9 +420,9 @@ public static <T extends Comparable<T>> T maximo(T a, T b) {
 
 ---
 
-### UTIL — Patron DAO documentado como patron
+### UTIL — Patrón DAO documentado como patrón
 
-`Tema15JPA/` (realmente JDBC) implementa el patron DAO pero sin documentarlo como tal. El patron merece su propia explicacion teorica.
+`Tema15JPA/` (realmente JDBC) implementa el patrón DAO pero sin documentarlo como tal. El patrón merece su propia explicacion teorica.
 
 ---
 
@@ -430,99 +430,99 @@ public static <T extends Comparable<T>> T maximo(T a, T b) {
 
 ### Tema01 — ConceptosBasicos
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
-| Completar `Ejercicio05` y `Ejercicio06` | Nombres vacios — anadir descripcion en el nombre |
+| Completar `Ejercicio05` y `Ejercicio06` | Nombres vacios — añadir descripción en el nombre |
 | Renombrar `Primitivos.java` | No sigue el convenio `EjercicioXX` — mover a ejercicio de referencia |
-| Anadir ejercicio de `Scanner` | El `Scanner` se usa mucho pero no hay ejercicio dedicado |
+| Añadir ejercicio de `Scanner` | El `Scanner` se usa mucho pero no hay ejercicio dedicado |
 
 ### Tema04 — Metodos
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | Unificar en una sola carpeta | `Tema04_01`, `Tema04_02`, `Tema04_03` deberían ser subcarpetas de `Tema04Metodos/` |
 | Ampliar `Tema04_03Polimorfismo` | Un solo ejercicio no es suficiente para este concepto |
-| Anadir clases abstractas | `abstract class` es el paso natural despues de interfaces |
+| Añadir clases abstractas | `abstract class` es el paso natural despues de interfaces |
 
 ### Tema06 — Cadenas
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
-| Ampliar de 2 a 12 ejercicios | Ver seccion "Temas que faltan" para lista completa |
-| Anadir expresiones regulares | `String.matches()`, `Pattern`, `Matcher` |
+| Ampliar de 2 a 12 ejercicios | Ver sección "Temas que faltan" para lista completa |
+| Añadir expresiones regulares | `String.matches()`, `Pattern`, `Matcher` |
 | `String.format()` y `printf` | Formato de cadenas — muy util en todos los temas |
 
 ### Tema07 — Clases
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | Unificar nomenclatura | Mezcla `Ejercicio07ClasesEspeciales` (carpeta) con `DDBBPersonCocheCCorriente.java` (archivo suelto) |
 | `DDBBPersonCocheCCorriente.java` | Nombre confuso — renombrar y mover dentro de una carpeta de ejercicio |
-| Anadir `Ejercicio09` con `enum` | Natural despues de los ejercicios de clases |
-| Documentar patron de clase | Orden de elementos: constantes → campos → constructores → metodos |
+| Añadir `Ejercicio09` con `enum` | Natural despues de los ejercicios de clases |
+| Documentar patrón de clase | Orden de elementos: constantes → campos → constructores → metodos |
 
 ### Tema08 — Herencia
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | Crear `Ejercicio02` | El salto de 01 a 03 sugiere que falta un ejercicio |
-| Anadir clases abstractas | `Tema08_01Herencia` no tiene ningun ejemplo con `abstract` |
-| Anadir `@Override` explicito | Varios ejercicios sobreescriben sin la anotacion |
+| Añadir clases abstractas | `Tema08_01Herencia` no tiene ningun ejemplo con `abstract` |
+| Añadir `@Override` explicito | Varios ejercicios sobreescriben sin la anotacion |
 
 ### Tema11 — Colecciones
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | Corregir numeracion duplicada | Dos Ejercicio04 y dos Ejercicio06 — renombrar |
-| Anadir `Deque` | `ArrayDeque` como pila y cola — el mas eficiente |
-| Anadir `PriorityQueue` | Cola con prioridad — muy pedida en examenes |
+| Añadir `Deque` | `ArrayDeque` como pila y cola — el mas eficiente |
+| Añadir `PriorityQueue` | Cola con prioridad — muy pedida en examenes |
 | Mover o eliminar `Set.txt` | Archivo de texto suelto en la carpeta — su contenido debería estar en el README |
 
 ### Tema12 — AccesoDatos
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | Corregir typo en nombre | `Tema12AcesoDatos` → `Tema12AccesoDatos` (doble 'c') |
 | Crear ejercicio04 | La numeracion salta del 03 al 05 |
-| Anadir `.properties` | Leer configuracion desde fichero — muy util con JDBC |
+| Añadir `.properties` | Leer configuración desde fichero — muy util con JDBC |
 
 ### Tema13 — Streams
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | Ampliar de 3 a 10+ ejercicios | Solo hay 3 archivos Java — insuficiente para el tema |
-| Anadir ejercicios de `filter/map/collect` | Las operaciones fundamentales |
-| Anadir `Optional` | Muy relacionado con Streams |
+| Añadir ejercicios de `filter/map/collect` | Las operaciones fundamentales |
+| Añadir `Optional` | Muy relacionado con Streams |
 | Convertir Readme.txt a README.md | Unificar extension de documentacion |
 
 ### Tema14 — Threads
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | Ampliar de 3 a 8+ ejercicios | Solo 3 ejercicios — el tema es muy importante |
-| Anadir `ExecutorService` | El enfoque moderno para gestion de hilos |
-| Anadir `Callable` y `Future` | Para hilos con valor de retorno |
+| Añadir `ExecutorService` | El enfoque moderno para gestión de hilos |
+| Añadir `Callable` y `Future` | Para hilos con valor de retorno |
 | Documentar ciclo de vida | Diagrama ASCII: NEW → RUNNABLE → BLOCKED → TERMINATED |
 
 ### Tema15 — JDBC (actualmente llamado JPA)
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
 | **Renombrar a `Tema15JDBC/`** | El nombre actual (JPA) es incorrecto |
 | **Eliminar paquete `org.kabalera82`** | Codigo duplicado — mantener solo `tech.Kabadev` |
-| **Sacar password del codigo** | `"221182"` en texto plano en GitHub publico |
-| Anadir `README.md` | Explicar patron DAO, requisitos (MySQL), como configurar |
-| Anadir transacciones | `setAutoCommit(false)`, `commit()`, `rollback()` |
-| Anadir ejercicio sin GUI | La GUI de `Main.java` es demasiado compleja de entrada |
+| **Sacar password del codigo** | `"221182"` en texto plano en GitHub público |
+| Añadir `README.md` | Explicar patrón DAO, requisitos (MySQL), como configurar |
+| Añadir transacciones | `setAutoCommit(false)`, `commit()`, `rollback()` |
+| Añadir ejercicio sin GUI | La GUI de `Main.java` es demasiado compleja de entrada |
 
 ### Tema20 — Swing
 
-| Mejora | Descripcion |
+| Mejora | Descripción |
 |--------|------------|
-| Mover a `Tema17Swing/` | El numero 20 queda fuera del orden logico |
+| Mover a `Tema17Swing/` | El numero 20 queda fuera del orden lógico |
 | Ampliar el contenido | Solo hay `Swing01` — necesita mas ejercicios |
-| Anadir layouts | BorderLayout, GridLayout, FlowLayout |
-| Anadir eventos | ActionListener, KeyListener |
+| Añadir layouts | BorderLayout, GridLayout, FlowLayout |
+| Añadir eventos | ActionListener, KeyListener |
 | `SwingUtilities.invokeLater()` | Crear ventanas en el EDT — obligatorio |
 
 ---
@@ -556,13 +556,13 @@ Tema04Metodos/
 
 Contiene ejercicios como `Algoritmos/` (que tiene FCFS, FIFO, SJF — mismos algoritmos de Java2), `Billetes/`, `campanadas/`, etc. No hay README y no queda claro si son examenes, practicas o ejercicios de repaso.
 
-**Propuesta:** Crear `README.md` en Tema99 explicando el origen de cada ejercicio (examen, practica, repaso).
+**Propuesta:** Crear `README.md` en Tema99 explicando el origen de cada ejercicio (examen, práctica, repaso).
 
 ---
 
-### `data/` en la raiz del repo
+### `data/` en la raíz del repo
 
-Los archivos de datos (`clientes.txt`, `clientes.csv`, `datos.dat`, etc.) estan en la raiz en lugar de dentro de los ejercicios que los usan. Esto dificulta saber que ejercicio usa cada archivo.
+Los archivos de datos (`clientes.txt`, `clientes.csv`, `datos.dat`, etc.) estan en la raíz en lugar de dentro de los ejercicios que los usan. Esto dificulta saber que ejercicio usa cada archivo.
 
 **Propuesta:** Mover cada archivo a su ejercicio correspondiente o crear una carpeta `Tema12AccesoDatos/data/` centralizada.
 
@@ -589,7 +589,7 @@ El `.gitignore` actual es el de IntelliJ por defecto. No excluye:
 | Variable | camelCase | `nombreUsuario` |
 | Constante | UPPER_SNAKE_CASE | `MAX_INTENTOS` |
 | Paquete | lowercase sin acentos | `tema01conceptosbasicos` |
-| Archivo | Igual que la clase publica | `CuentaBancaria.java` |
+| Archivo | Igual que la clase pública | `CuentaBancaria.java` |
 
 **Violaciones actuales:**
 - `Ejercicio03OperadoresAritméticos.java` — acento en nombre de archivo
@@ -629,9 +629,9 @@ application.local.properties
 
 ### Prioridad 1 — Seguridad y basura (hacer ANTES de cualquier otra cosa)
 
-- [ ] **ELIMINAR `red.text`** — expone IPs reales del sistema en repo publico
+- [ ] **ELIMINAR `red.text`** — expone IPs reales del sistema en repo público
 - [ ] **ELIMINAR `errores.txt`** — archivo vacio sin proposito
-- [ ] **Eliminar password hardcodeada** en `Tema15JPA/Conexion.java` — `"221182"` en repo publico
+- [ ] **Eliminar password hardcodeada** en `Tema15JPA/Conexión.java` — `"221182"` en repo público
 - [ ] **Eliminar paquete duplicado** `org.kabalera82` de `Tema15JPA/`
 - [ ] Crear `README.md` (este archivo) y eliminar `Readme.txt`
 
@@ -645,7 +645,7 @@ application.local.properties
 
 ### Prioridad 3 — Temas que necesitan contenido urgente
 
-- [ ] **Crear `Tema10Excepciones/`** — tema completamente ausente, critico para 1ºDAM
+- [ ] **Crear `Tema10Excepciones/`** — tema completamente ausente, crítico para 1ºDAM
 - [ ] Ampliar `Tema06CadenasDeCaracteres/` de 2 a 10+ ejercicios
 - [ ] Ampliar `Tema04_03Polimorfismo/` con clases abstractas
 - [ ] Ampliar `Tema13Streams/` de 3 a 10+ ejercicios
@@ -654,18 +654,18 @@ application.local.properties
 ### Prioridad 4 — Limpieza estructural
 
 - [ ] Decidir que hacer con `Tema17`, `Tema18`, `Tema19` (duplicados de Java2) — evaluar eliminar
-- [ ] Mover `Tema20Interfaces/Swing/` a `Tema17Swing/` o similar con numero logico
+- [ ] Mover `Tema20Interfaces/Swing/` a `Tema17Swing/` o similar con numero lógico
 - [ ] Implementar o eliminar `Tema16JavaServerPages/` (actualmente vacio)
-- [ ] Mover archivos de `data/` raiz al ejercicio correspondiente
-- [ ] Anadir `Tema99EjerciciosMultiples/README.md` explicando el origen de cada ejercicio
+- [ ] Mover archivos de `data/` raíz al ejercicio correspondiente
+- [ ] Añadir `Tema99EjerciciosMultiples/README.md` explicando el origen de cada ejercicio
 - [ ] Unificar nomenclatura de subtemas (Tema04_01 vs subcarpetas)
 
 ### Prioridad 5 — Mejoras de calidad
 
-- [ ] Anadir `enum` como ejercicio en Tema07 o Tema09
-- [ ] Anadir Generics basicos como ejercicio en Tema11Colecciones
-- [ ] Documentar patron DAO en `Tema15JDBC/`
-- [ ] Anadir transacciones JDBC en `Tema15JDBC/`
+- [ ] Añadir `enum` como ejercicio en Tema07 o Tema09
+- [ ] Añadir Generics basicos como ejercicio en Tema11Colecciones
+- [ ] Documentar patrón DAO en `Tema15JDBC/`
+- [ ] Añadir transacciones JDBC en `Tema15JDBC/`
 - [ ] Actualizar `.gitignore` para excluir `target/`, `out/`, `*.class`, `database.properties`
 
 ---
@@ -673,7 +673,7 @@ application.local.properties
 ## 9. Requisitos y compilacion
 
 **Requisitos:**
-- **Java 17+** (recomendado) — el `pom.xml` raiz usa Java 24
+- **Java 17+** (recomendado) — el `pom.xml` raíz usa Java 24
 - **Maven 3.6+** — para `Tema15JPA/`, `Tema16JavaServerPages/`, `Tema19ContructorProcesos/`
 - **MySQL 8+** — para `Tema15JPA/` (JDBC)
 - **IDE recomendado:** IntelliJ IDEA o VS Code con Extension Pack for Java
@@ -698,7 +698,7 @@ mvn exec:java -Dexec.mainClass="tech.Kabadev.gui.Main"
 **Estructura de cada tema:**
 ```
 TemaXX/
-├── README.md           ← Teoria + indice de ejercicios
+├── README.md           ← Teoria + índice de ejercicios
 ├── EjercicioXX/        ← Cada ejercicio en su carpeta
 │   ├── Main.java       ← Punto de entrada
 │   └── *.java          ← Clases auxiliares

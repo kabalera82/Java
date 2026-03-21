@@ -84,7 +84,7 @@ double resultado = (double) a / b;  // 2.5 — sin el cast seria 2 (division ent
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
 | `Ejercicio01HolaMundo.java` | `System.out.print` vs `System.out.println` |
 | `Ejercicio02SalidaConsola.java` | Formatear salida con `printf` y tipos |
@@ -109,7 +109,7 @@ double resultado = (double) a / b;  // 2.5 — sin el cast seria 2 (division ent
 ```java
 Math.abs(-5)        // 5 — valor absoluto
 Math.pow(2, 10)     // 1024.0 — potencia
-Math.sqrt(16)       // 4.0 — raiz cuadrada
+Math.sqrt(16)       // 4.0 — raíz cuadrada
 Math.max(3, 7)      // 7 — maximo
 Math.min(3, 7)      // 3 — minimo
 Math.round(3.7)     // 4 — redondeo

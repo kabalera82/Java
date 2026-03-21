@@ -2,9 +2,9 @@
 
 > Prerequisito: Tema 11 (colecciones), Tema 09 (interfaces funcionales basicas)
 
-Introduccion a la programacion funcional con Streams en Java. Los Streams permiten procesar colecciones de forma declarativa — describimos QUE queremos, no COMO hacerlo.
+Introduccion a la programación funcional con Streams en Java. Los Streams permiten procesar colecciones de forma declarativa — describimos QUE queremos, no COMO hacerlo.
 
-> ⚠️ **Tema muy escaso — solo 3 archivos Java.** Ver [propuestas de mejora en README raiz](../README.md).
+> ⚠️ **Tema muy escaso — solo 3 archivos Java.** Ver [propuestas de mejora en README raíz](../README.md).
 
 ---
 
@@ -13,14 +13,14 @@ Introduccion a la programacion funcional con Streams en Java. Los Streams permit
 ### Que es un Stream
 
 ```
-Coleccion.stream()
+Colección.stream()
     [operaciones intermedias — devuelven Stream, son lazy]
     .filter(Predicate)    <- filtra elementos
     .map(Function)        <- transforma cada elemento
     .sorted()             <- ordena
     .distinct()           <- elimina duplicados
     .limit(n)             <- toma los primeros n
-    [operacion terminal — consume el stream, produce resultado]
+    [operación terminal — consume el stream, produce resultado]
     .collect(Collectors.toList())
     .forEach(Consumer)
     .count()
@@ -64,7 +64,7 @@ nombres.stream()
 ### Lambdas — sintaxis
 
 ```java
-// Una lambda es una funcion anonima
+// Una lambda es una función anonima
 (parametros) -> expresion
 (parametros) -> { bloque de codigo }
 
@@ -79,11 +79,11 @@ s -> s.toUpperCase()         // Function<String, String>
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
-| `Ejercicio01Hola.java` | Stream basico con `forEach` |
+| `Ejercicio01Hola.java` | Stream básico con `forEach` |
 | `Ejercicio02SaludoMultiple.java` | Stream con operaciones intermedias |
 | `ISaludo.java` | Interfaz funcional custom |
 | `Cliente.java` | Clase modelo para ejercicios con Stream |
 
-> **Pendiente:** ampliar con `filter`, `map`, `collect`, `reduce`, `Optional`, `groupingBy`. Ver [README raiz](../README.md).
+> **Pendiente:** ampliar con `filter`, `map`, `collect`, `reduce`, `Optional`, `groupingBy`. Ver [README raíz](../README.md).

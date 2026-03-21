@@ -24,7 +24,7 @@ sumar(1)             // 1 argumento
 sumar(1, 2, 3)       // 3 argumentos
 sumar(1, 2, 3, 4, 5) // 5 argumentos
 
-// REGLA: varargs debe ser el ultimo parametro
+// REGLA: varargs debe ser el último parametro
 public static void log(String nivel, String... mensajes) { ... }
 ```
 
@@ -52,9 +52,9 @@ area(4, 6)       // llama al tercero (dos int)
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
-| `Ejercicio01ArgumentosVariables.java` | Metodo basico con varargs |
+| `Ejercicio01ArgumentosVariables.java` | Metodo básico con varargs |
 | `Ejercicio02MetParamVariables.java` | Metodo con parametros variables y calculo |
 | `Ejercicio03ArgumentosMetodosVariables.java` | Combinar varargs con otros parametros |
 | `Ejercicio04SobrecargaMetodos.java` | Sobrecarga — mismo nombre, diferente firma |

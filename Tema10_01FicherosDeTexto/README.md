@@ -59,17 +59,17 @@ Files.write(Path.of("salida.txt"), lineas);
 ### try-with-resources — OBLIGATORIO para I/O
 
 ```java
-// El bloque try cierra automaticamente el recurso al salir, incluso si hay excepcion
+// El bloque try cierra automáticamente el recurso al salir, incluso si hay excepción
 try (BufferedReader br = new BufferedReader(new FileReader("archivo.txt"))) {
     // usar br
-}  // br.close() se llama aqui automaticamente
+}  // br.close() se llama aqui automáticamente
 ```
 
 ---
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
 | `Ejercicio01Ejemplo/` | Leer y mostrar el contenido de un fichero |
 | `Ejercicio02Bonana/` | Leer fichero de frutas, procesarlo y escribir resultado |

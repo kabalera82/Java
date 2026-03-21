@@ -2,7 +2,7 @@
 
 > Prerequisito: Tema 08 (herencia)
 
-Interfaces en Java: definicion, implementacion, herencia multiple de interfaces y diferencia con clases abstractas.
+Interfaces en Java: definición, implementación, herencia multiple de interfaces y diferencia con clases abstractas.
 
 ---
 
@@ -13,11 +13,11 @@ Interfaces en Java: definicion, implementacion, herencia multiple de interfaces 
 ```java
 // Una interfaz es un contrato: define QUE hay que hacer, no COMO
 public interface Reproducible {
-    void reproducir();              // metodo abstracto (publico por defecto)
+    void reproducir();              // metodo abstracto (público por defecto)
     void pausar();
     void detener();
 
-    // Metodo con implementacion por defecto (Java 8+)
+    // Metodo con implementación por defecto (Java 8+)
     default void reiniciar() {
         detener();
         reproducir();
@@ -77,9 +77,9 @@ public interface Multimedia extends Reproducible, Descargable {
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
-| `Ejercicio01/` | Definir e implementar una interfaz basica |
+| `Ejercicio01/` | Definir e implementar una interfaz básica |
 | `Ejercicio02Lista/` | Lista de objetos tipada con una interfaz |
-| `Ejercicio03Jerarquia/` | Jerarquia de interfaces (interfaz extiende interfaz) |
+| `Ejercicio03Jerarquia/` | Jerarquía de interfaces (interfaz extiende interfaz) |
 | `Ejercicio04Hibrida/` | Clase que hereda de clase abstracta e implementa interfaz |

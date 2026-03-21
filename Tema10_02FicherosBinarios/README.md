@@ -15,7 +15,7 @@ import java.io.Serializable;
 
 // La clase DEBE implementar Serializable para poder guardarse en fichero binario
 public class Producto implements Serializable {
-    private static final long serialVersionUID = 1L;  // version del objeto
+    private static final long serialVersionUID = 1L;  // versión del objeto
 
     private String nombre;
     private double precio;
@@ -67,7 +67,7 @@ Si la clase cambia (nuevos campos, metodos eliminados) y el `serialVersionUID` n
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
 | `Ejercicio01InsertaTabla/` | Guardar un array de datos en fichero binario |
 | `Ejercicio02InsertaVersos/` | Escribir versos en fichero binario |

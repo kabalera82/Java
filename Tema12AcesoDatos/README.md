@@ -80,7 +80,7 @@ String json = mapper.writeValueAsString(cliente);  // como String
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
 | `ejercicio01/` | Leer fichero de texto plano linea a linea |
 | `ejercicio02Texto/` | Escribir y leer datos de clientes en texto |

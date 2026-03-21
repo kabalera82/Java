@@ -10,12 +10,12 @@ El framework de colecciones de Java — estructuras de datos dinamicas para alma
 
 ## Teoria rapida
 
-### Jerarquia de colecciones
+### Jerarquía de colecciones
 
 ```
 Collection
 ├── List — elementos ordenados, permite duplicados
-│   ├── ArrayList     ← array dinamico, acceso por indice O(1)
+│   ├── ArrayList     ← array dinamico, acceso por índice O(1)
 │   ├── LinkedList    ← lista enlazada, insercion/eliminacion O(1)
 │   └── Vector        ← como ArrayList pero sincronizado (legacy)
 │
@@ -50,7 +50,7 @@ lista.get(0)        // "Ana"
 lista.size()        // 3
 lista.contains("Luis") // true
 lista.remove("Luis")   // elimina por valor
-lista.remove(0)        // elimina por indice
+lista.remove(0)        // elimina por índice
 
 // Ordenar
 Collections.sort(lista);          // orden natural
@@ -113,7 +113,7 @@ ArrayDeque<Integer> deque = new ArrayDeque<>();
 
 // Usar como PILA (LIFO)
 deque.push(1);   deque.push(2);   deque.push(3);
-deque.pop()      // 3 — ultimo en entrar, primero en salir
+deque.pop()      // 3 — último en entrar, primero en salir
 
 // Usar como COLA (FIFO)
 deque.offer(1);  deque.offer(2);  deque.offer(3);
@@ -124,9 +124,9 @@ deque.poll()     // 1 — primero en entrar, primero en salir
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
-| `Ejercicio01Arrays/` | Conversion entre array y coleccion (`Arrays.asList`) |
+| `Ejercicio01Arrays/` | Conversion entre array y colección (`Arrays.asList`) |
 | `Ejercicio02ArrayList/` | Operaciones con `ArrayList` |
 | `Ejercicio03pila/` | Implementar pila con `LinkedList` o `ArrayDeque` |
 | `Ejercicio04LinkedList/` | Operaciones con `LinkedList` |
@@ -138,8 +138,8 @@ deque.poll()     // 1 — primero en entrar, primero en salir
 | `Ejercicio08LinkedHashMap/` | `LinkedHashMap` — mapa con orden de insercion |
 | `Ejercicio09TreeMap/` | `TreeMap` — mapa ordenado por clave |
 | `Ejercicio10HashMap/` | HashMap avanzado |
-| `Ejercicio11Generico/` | Clase generica con coleccion |
+| `Ejercicio11Generico/` | Clase generica con colección |
 | `Ejercicio12/` | Ejercicio combinado de colecciones |
-| `Colecciones.png` | Diagrama del jerarquia de colecciones |
+| `Colecciones.png` | Diagrama del jerarquía de colecciones |
 
 > ⚠️ **Pendiente:** renombrar `Ejercicio04Map` y `Ejercicio06LinkedHashSet` para que los numeros sean unicos.

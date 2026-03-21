@@ -58,7 +58,7 @@ public class Perro extends Animal {
 ```java
 // No se puede instanciar directamente — sirve como base para otras clases
 public abstract class Figura {
-    // Metodo abstracto — sin implementacion, OBLIGA a las subclases a implementarlo
+    // Metodo abstracto — sin implementación, OBLIGA a las subclases a implementarlo
     public abstract double area();
     public abstract double perimetro();
 
@@ -89,16 +89,16 @@ List<Animal> animales = List.of(
     new Perro("Rex", 3, "Labrador"),
     new Gato("Mimi", 5)
 );
-animales.forEach(Animal::comer);  // cada animal usa su propia implementacion
+animales.forEach(Animal::comer);  // cada animal usa su propia implementación
 ```
 
 ---
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
-| `Ejercicio01Vehiculos/` | Jerarquia `Vehiculo → Coche/Moto/Camion` con `extends` y `super` |
-| `Ejercicio03Planta/` | Jerarquia de plantas con metodos sobreescritos |
+| `Ejercicio01Vehiculos/` | Jerarquía `Vehiculo → Coche/Moto/Camion` con `extends` y `super` |
+| `Ejercicio03Planta/` | Jerarquía de plantas con metodos sobreescritos |
 
-> ⚠️ **Pendiente:** falta `Ejercicio02`. Ver [README raiz](../README.md#bugs-y-errores-pendientes).
+> ⚠️ **Pendiente:** falta `Ejercicio02`. Ver [README raíz](../README.md#bugs-y-errores-pendientes).

@@ -74,7 +74,7 @@ for (int tabla = 1; tabla <= 10; tabla++) {
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
 | `Ejercicio01ComprobacionNum.java` | Comprobar condicion en un rango |
 | `Ejercicio02FuncAlumn.java` | Funcionalidad con alumnos |

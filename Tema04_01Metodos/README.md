@@ -70,7 +70,7 @@ static int factorial(int n) {
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
 | `Ejercicio01Suma.java` | Metodo que suma dos enteros |
 | `Ejercicio02Saludar.java` | Metodo con `String` como retorno |
@@ -80,7 +80,7 @@ static int factorial(int n) {
 | `Ejercicio06LongitudCadena.java` | Metodo que recibe y retorna String |
 | `Ejercicio07GeneradorId.java` | Generar identificadores unicos |
 | `Ejercicio08GeneradorEmails.java` | Construir emails a partir de datos |
-| `Ejercicio09FuncionRecursiva.java` | Recursion basica |
+| `Ejercicio09FuncionRecursiva.java` | Recursion básica |
 | `Ejercicio10AreasYVolumenes.java` | Metodos geometricos con `Math` |
 | `Ejercicio11CambiaHoras.java` | Conversion de unidades de tiempo |
 | `Ejercicio12MostrarRango.java` | Metodo que imprime un rango |
@@ -89,6 +89,6 @@ static int factorial(int n) {
 | `Ejercicio15esVocal.java` | Metodo que verifica si es vocal |
 | `Ejercicio16EsPRimo.java` | Verificar si un numero es primo |
 | `Ejercicio17DivisoresPrimos.java` | Descomposicion en factores primos |
-| `Ejercicio18Calculadora.java` | Calculadora con metodos por operacion |
+| `Ejercicio18Calculadora.java` | Calculadora con metodos por operación |
 | `Ejercicio19MaximoParametros.java` | Maximo con multiple parametros |
 | `Ejercicio20Iterativa.java` | Comparacion iterativo vs recursivo |

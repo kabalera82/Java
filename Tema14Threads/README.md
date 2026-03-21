@@ -2,7 +2,7 @@
 
 > Prerequisito: Tema 07 (clases), Tema 09 (interfaces)
 
-Programacion concurrente en Java: crear y gestionar hilos, coordinacion basica y sincronizacion.
+Programación concurrente en Java: crear y gestionar hilos, coordinacion básica y sincronizacion.
 
 > ⚠️ **Tema escaso — solo 3 ejercicios.** Necesita ampliacion.
 
@@ -42,7 +42,7 @@ t.start();
 
 ### Metodos fundamentales
 
-| Metodo | Descripcion |
+| Metodo | Descripción |
 |--------|------------|
 | `start()` | Inicia el hilo — llama a `run()` en un hilo separado |
 | `run()` | El codigo que ejecuta el hilo — NO llamar directamente |
@@ -64,7 +64,7 @@ RUNNING      → wait()   → WAITING   → (notify) → RUNNABLE
 RUNNING      → fin de run() → TERMINATED
 ```
 
-### Sincronizacion basica — `synchronized`
+### Sincronizacion básica — `synchronized`
 
 ```java
 // Problema: dos hilos incrementan un contador — el resultado es impredecible (race condition)
@@ -84,10 +84,10 @@ public class Contador {
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
 | `Ejercicio01/` | Crear hilos con `extends Thread` e `implements Runnable` |
 | `Ejercicio02/` | Uso de `sleep()` y `join()` para coordinar hilos |
 | `Ejercicio03SincronizacionHilos/` | `synchronized` para evitar race conditions |
 
-> **Pendiente:** ampliar con `ExecutorService`, `Callable`, `Future` y patrones de concurrencia. Ver [README raiz](../README.md).
+> **Pendiente:** ampliar con `ExecutorService`, `Callable`, `Future` y patrones de concurrencia. Ver [README raíz](../README.md).

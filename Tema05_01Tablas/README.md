@@ -18,12 +18,12 @@ int[] numeros = new int[5];         // [0, 0, 0, 0, 0]
 int[] primos = {2, 3, 5, 7, 11};   // longitud inferida = 5
 
 // Acceder a elementos
-primos[0]   // 2  — primer elemento (indice 0)
-primos[4]   // 11 — ultimo elemento
+primos[0]   // 2  — primer elemento (índice 0)
+primos[4]   // 11 — último elemento
 primos.length // 5 — numero de elementos
 
-// CUIDADO: ArrayIndexOutOfBoundsException si el indice esta fuera de rango
-primos[5]   // ERROR — el ultimo indice valido es 4
+// CUIDADO: ArrayIndexOutOfBoundsException si el índice esta fuera de rango
+primos[5]   // ERROR — el último índice valido es 4
 ```
 
 ### Recorrer un array
@@ -31,7 +31,7 @@ primos[5]   // ERROR — el ultimo indice valido es 4
 ```java
 int[] nums = {10, 20, 30, 40, 50};
 
-// for clasico — cuando necesitas el indice
+// for clasico — cuando necesitas el índice
 for (int i = 0; i < nums.length; i++) {
     System.out.println("nums[" + i + "] = " + nums[i]);
 }
@@ -75,7 +75,7 @@ static void duplicar(int[] arr) {
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
 | `Ejercicio01TablaReferencia.java` | Crear y mostrar un array |
 | `Ejercicio02RangoValores.java` | Rellenar array con rango de valores |

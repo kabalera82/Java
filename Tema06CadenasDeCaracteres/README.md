@@ -4,7 +4,7 @@
 
 Manejo de `String` y `StringBuilder` en Java. Metodos mas comunes, comparacion correcta y construccion eficiente de cadenas.
 
-> ⚠️ **Tema muy escaso — solo 2 ejercicios.** Ver [propuestas de mejora en README raiz](../README.md#tema06--cadenas).
+> ⚠️ **Tema muy escaso — solo 2 ejercicios.** Ver [propuestas de mejora en README raíz](../README.md#tema06--cadenas).
 
 ---
 
@@ -37,7 +37,7 @@ s.contains("Mundo")              // true
 s.startsWith("Hola")             // true
 s.endsWith("Mundo")              // true
 s.isEmpty()                      // false
-s.isBlank()                      // false (isBlank tambien cuenta espacios)
+s.isBlank()                      // false (isBlank también cuenta espacios)
 
 // Division y union
 String[] partes = s.split(" ");  // ["Hola", "Mundo"]
@@ -65,7 +65,7 @@ a.compareTo(b)  // 0 si iguales, <0 si a<b, >0 si a>b
 
 ```java
 // Usar cuando hay muchas concatenaciones en un bucle
-// String + String crea un objeto nuevo en cada operacion (ineficiente)
+// String + String crea un objeto nuevo en cada operación (ineficiente)
 
 StringBuilder sb = new StringBuilder();
 for (int i = 0; i < 10; i++) {
@@ -98,9 +98,9 @@ boolean b = Boolean.parseBoolean("true"); // true
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
 | `Ejercicio01.java` | Operaciones basicas con String |
 | `Ejercicio02LongitudStrings.java` | Longitud y comparacion de cadenas |
 
-> **Pendiente:** ampliar a 10+ ejercicios — ver seccion 4 del [README raiz](../README.md).
+> **Pendiente:** ampliar a 10+ ejercicios — ver sección 4 del [README raíz](../README.md).

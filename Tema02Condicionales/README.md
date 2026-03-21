@@ -70,7 +70,7 @@ if (!estaVacio) { ... }
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
 | `Ejercicio01ParImpar.java` | Determinar si un numero es par o impar |
 | `Ejercicio02ComparaNum.java` | Comparar dos numeros |

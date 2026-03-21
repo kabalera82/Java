@@ -2,7 +2,7 @@
 
 > Prerequisito: Tema 08a (herencia)
 
-Comprobacion de tipos en tiempo de ejecucion con `instanceof` y casting seguro entre clases de una jerarquia.
+Comprobacion de tipos en tiempo de ejecucion con `instanceof` y casting seguro entre clases de una jerarquía.
 
 ---
 
@@ -18,7 +18,7 @@ a instanceof Animal   // true
 a instanceof Perro    // true
 a instanceof Gato     // false
 
-// Patron clasico antes de un cast
+// Patrón clasico antes de un cast
 if (a instanceof Perro) {
     Perro p = (Perro) a;   // cast seguro
     p.ladrar();
@@ -59,7 +59,7 @@ if (a instanceof Perro) {
 
 ## Ejercicios
 
-| Carpeta | Descripcion |
+| Carpeta | Descripción |
 |---------|------------|
-| `ejercicio01/` | Uso de `instanceof` en jerarquia de clases |
+| `ejercicio01/` | Uso de `instanceof` en jerarquía de clases |
 | `ejercicio02Interfaz/` | `instanceof` con interfaces |

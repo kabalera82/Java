@@ -94,7 +94,7 @@ static int busquedaBinaria(int[] arr, int objetivo) {
 
 ## Ejercicios
 
-| Archivo | Descripcion |
+| Archivo | Descripción |
 |---------|------------|
 | `Ejercicio01MatrizUnidimensional.java` | Crear y mostrar una matriz |
 | `Ejercicio02ForEach.java` | Recorrer con for-each |

@@ -2,7 +2,7 @@
 
 > Prerequisito: Tema 01-06
 
-Programacion Orientada a Objetos: clases, objetos, constructores, encapsulamiento, modificadores de acceso y metodos especiales.
+Programación Orientada a Objetos: clases, objetos, constructores, encapsulamiento, modificadores de acceso y metodos especiales.
 
 ---
 
@@ -109,7 +109,7 @@ public class Contador {
 
 ## Ejercicios
 
-| Carpeta/Archivo | Descripcion |
+| Carpeta/Archivo | Descripción |
 |---------|------------|
 | `Ejercicio00Modificadores/` | Modificadores de acceso public/private/protected |
 | `ejercicio01persona/` | Clase `Persona` con getters/setters y toString |
