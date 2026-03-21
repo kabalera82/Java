@@ -4,7 +4,6 @@
 
 Manejo de `String` y `StringBuilder` en Java. Metodos mas comunes, comparacion correcta y construccion eficiente de cadenas.
 
-> ⚠️ **Tema muy escaso — solo 2 ejercicios.** Ver [propuestas de mejora en README raíz](../README.md#tema06--cadenas).
 
 ---
 
@@ -100,7 +99,11 @@ boolean b = Boolean.parseBoolean("true"); // true
 
 | Archivo | Descripción |
 |---------|------------|
-| `Ejercicio01.java` | Operaciones basicas con String |
+| `Ejercicio01.java` | Recorrer todos los caracteres Unicode (code points) |
 | `Ejercicio02LongitudStrings.java` | Longitud y comparacion de cadenas |
-
-> **Pendiente:** ampliar a 10+ ejercicios — ver sección 4 del [README raíz](../README.md).
+| `Ejercicio03MetodosBasicos.java` | `length`, `charAt`, `indexOf`, `contains`, `trim`, `replace` |
+| `Ejercicio04SplitJoin.java` | `split()` con separadores y regex, `String.join()` |
+| `Ejercicio05Comparacion.java` | `equals` vs `==`, `equalsIgnoreCase`, `compareTo`, null safety |
+| `Ejercicio06StringBuilder.java` | `StringBuilder` — rendimiento vs String, `append`, `insert`, `reverse` |
+| `Ejercicio07Formato.java` | `String.format`, `printf`, tabla formateada con especificadores |
+| `Ejercicio08Practico.java` | Palindromos, contar palabras, capitalizar, contar ocurrencias |

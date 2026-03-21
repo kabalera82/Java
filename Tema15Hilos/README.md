@@ -1,10 +1,8 @@
-# Tema 14 — Hilos (Threads)
+# Tema 15 — Hilos (Threads)
 
 > Prerequisito: Tema 07 (clases), Tema 09 (interfaces)
 
 Programación concurrente en Java: crear y gestionar hilos, coordinacion básica y sincronizacion.
-
-> ⚠️ **Tema escaso — solo 3 ejercicios.** Necesita ampliacion.
 
 ---
 
@@ -87,7 +85,8 @@ public class Contador {
 | Carpeta | Descripción |
 |---------|------------|
 | `Ejercicio01/` | Crear hilos con `extends Thread` e `implements Runnable` |
-| `Ejercicio02/` | Uso de `sleep()` y `join()` para coordinar hilos |
-| `Ejercicio03SincronizacionHilos/` | `synchronized` para evitar race conditions |
-
-> **Pendiente:** ampliar con `ExecutorService`, `Callable`, `Future` y patrones de concurrencia. Ver [README raíz](../README.md).
+| `Ejercicio02/` | Stress test: cuantos hilos aguanta la JVM |
+| `Ejercicio03SincronizacionHilos/` | `synchronized` — race condition con y sin sincronizacion |
+| `Ejercicio04SleepJoin/` | `sleep()`, `join()`, `join(timeout)`, `isAlive()` |
+| `Ejercicio05Daemon/` | Hilos daemon — la JVM los mata al terminar los hilos de usuario |
+| `Ejercicio06ExecutorService/` | `ExecutorService`, pool de hilos, `Future`, `Callable` |

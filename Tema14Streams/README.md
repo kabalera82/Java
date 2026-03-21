@@ -1,10 +1,8 @@
-# Tema 13 — Streams (Introducción)
+# Tema 14 — Streams y Lambdas
 
-> Prerequisito: Tema 11 (colecciones), Tema 09 (interfaces funcionales basicas)
+> Prerequisito: Tema 12 (colecciones), Tema 09 (interfaces funcionales basicas)
 
 Introduccion a la programación funcional con Streams en Java. Los Streams permiten procesar colecciones de forma declarativa — describimos QUE queremos, no COMO hacerlo.
-
-> ⚠️ **Tema muy escaso — solo 3 archivos Java.** Ver [propuestas de mejora en README raíz](../README.md).
 
 ---
 
@@ -81,9 +79,11 @@ s -> s.toUpperCase()         // Function<String, String>
 
 | Archivo | Descripción |
 |---------|------------|
-| `Ejercicio01Hola.java` | Stream básico con `forEach` |
-| `Ejercicio02SaludoMultiple.java` | Stream con operaciones intermedias |
+| `Ejercicio01Hola.java` | Interfaz funcional custom con lambda |
+| `Ejercicio02SaludoMultiple.java` | Metodo generico con interfaz funcional |
+| `Ejercicio03StreamBasico.java` | `filter`, `map`, `sorted`, `distinct`, encadenado |
+| `Ejercicio04Reduccion.java` | `count`, `sum`, `min`, `max`, `average`, `reduce`, `anyMatch` |
+| `Ejercicio05MethodReference.java` | `::` — los 4 tipos de referencias a metodo |
+| `Ejercicio06Optional.java` | `Optional` — evitar `NullPointerException` con elegancia |
 | `ISaludo.java` | Interfaz funcional custom |
-| `Cliente.java` | Clase modelo para ejercicios con Stream |
-
-> **Pendiente:** ampliar con `filter`, `map`, `collect`, `reduce`, `Optional`, `groupingBy`. Ver [README raíz](../README.md).
+| `Cliente.java` | Clase modelo para ejercicios |
