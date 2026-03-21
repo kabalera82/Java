@@ -43,10 +43,6 @@
 | `Tema14Threads/` | ⚠️ Muy escaso | Solo 3 ejercicios. La base esta pero necesita mas |
 | `Tema15JPA/` | ⚠️ Malnombrado + bug seguridad | Es JDBC no JPA. Password hardcodeada. Codigo duplicado dentro |
 | `Tema16JavaServerPages/` | ⚠️ Esqueleto vacio | Main.java es un placeholder vacio. No hay JSP real |
-| `Tema17ProgramacionFuncional/` | ⚠️ Duplicado de Java2 | Contenido identico al repo Java2 — no pertenece aqui |
-| `Tema18ProgramacionRed/` | ⚠️ Duplicado de Java2 | Contenido identico al repo Java2 — no pertenece aqui |
-| `Tema19ContructorProcesos/` | ⚠️ Duplicado de Java2 | Contenido identico al repo Java2 — no pertenece aqui |
-| `Tema20Interfaces/` | ⚠️ Mal ubicado | Contiene solo `Swing/` — deberia ser su propio tema |
 | `Tema99EjerciciosMultiples/` | ⚠️ Desorganizado | Mezcla de ejercicios sin tema claro. Algunos duplican AlgoritmosOrdenacion de Java2 |
 
 **Archivos en la raíz que deben eliminarse:**
@@ -83,15 +79,11 @@
 | 14 | [Tema14Threads](./Tema14Threads/) | `Thread`, `Runnable`, sincronizacion básica |
 | 15 | [Tema15JPA](./Tema15JPA/) | JDBC + MySQL con patrón DAO (mal nombrado) |
 | 16 | [Tema16JavaServerPages](./Tema16JavaServerPages/) | Proyecto vacio (no hay contenido) |
-| 17 | [Tema17ProgramacionFuncional](./Tema17ProgramacionFuncional/) | Lambdas/Streams — duplicado de Java2 |
-| 18 | [Tema18ProgramacionRed](./Tema18ProgramacionRed/) | Sockets — duplicado de Java2 |
-| 19 | [Tema19ContructorProcesos](./Tema19ContructorProcesos/) | ProcessBuilder Maven — duplicado de Java2 |
-| 20 | [Tema20Interfaces](./Tema20Interfaces/) | Swing básico (mal ubicado) |
 | 99 | [Tema99EjerciciosMultiples](./Tema99EjerciciosMultiples/) | Ejercicios mixtos sin tema claro |
 
 ### Orden y estructura propuesto
 
-El temario de 1ºDAM cubre los fundamentos del lenguaje. Los temas 17-19 son de 2ºDAM y no deberían estar aqui.
+El temario de 1ºDAM cubre los fundamentos del lenguaje.
 
 ```
 01-conceptos-basicos/           tipos, operadores, Scanner, JOptionPane
@@ -110,7 +102,7 @@ El temario de 1ºDAM cubre los fundamentos del lenguaje. Los temas 17-19 son de 
 14-streams-lambdas/             Streams basicos, lambdas introductorias
 15-hilos/                       Thread, Runnable, sincronizacion
 16-jdbc/                        JDBC completo con patrón DAO (renombrar Tema15JPA)
-17-swing/                       Interfaces graficas basicas ← MOVER Tema20Interfaces aqui
+17-swing/                       Interfaces graficas basicas ← FALTA (Swing/JavaFX)
 ```
 
 ---
@@ -238,17 +230,6 @@ Tema05_02MatricesArrays/Ejercicio07MétodosBusqueda.java        ← acento en é
 ```
 
 Algunos sistemas de ficheros y herramientas Git tienen problemas con caracteres no-ASCII en nombres de archivo. Renombrar a `Ejercicio03OperadoresAritmeticos.java` y `Ejercicio07MetodosBusqueda.java`.
-
----
-
-### AVISO — `Tema17`, `Tema18`, `Tema19` son duplicados exactos de Java2
-
-Estos tres temas son copia identica del repositorio `Java2` (2ºDAM):
-- `Tema17ProgramacionFuncional/` = `Java2/Tema17ProgramacionFuncional/`
-- `Tema18ProgramacionRed/` = `Java2/Tema18ProgramacionRed/`
-- `Tema19ContructorProcesos/` = `Java2/Tema19ContructorProcesos/`
-
-Son temas de 2ºDAM que no deberían estar en el repo de 1ºDAM. Evaluar si eliminarlos o moverlos.
 
 ---
 
@@ -515,27 +496,9 @@ public static <T extends Comparable<T>> T maximo(T a, T b) {
 | Añadir transacciones | `setAutoCommit(false)`, `commit()`, `rollback()` |
 | Añadir ejercicio sin GUI | La GUI de `Main.java` es demasiado compleja de entrada |
 
-### Tema20 — Swing
-
-| Mejora | Descripción |
-|--------|------------|
-| Mover a `Tema17Swing/` | El numero 20 queda fuera del orden lógico |
-| Ampliar el contenido | Solo hay `Swing01` — necesita mas ejercicios |
-| Añadir layouts | BorderLayout, GridLayout, FlowLayout |
-| Añadir eventos | ActionListener, KeyListener |
-| `SwingUtilities.invokeLater()` | Crear ventanas en el EDT — obligatorio |
-
 ---
 
 ## 6. Problemas estructurales del repo
-
-### Temas 17, 18, 19 son de 2ºDAM
-
-`Tema17ProgramacionFuncional`, `Tema18ProgramacionRed` y `Tema19ContructorProcesos` son copia exacta del repo `Java2`. Lambdas/Streams avanzados, sockets y ProcessBuilder son temas de 2ºDAM.
-
-**Propuesta:** Eliminar estos tres temas del repo `Java1` y referenciar `Java2` para esos contenidos.
-
----
 
 ### Tema numerados con esquema inconsistente
 
@@ -653,8 +616,6 @@ application.local.properties
 
 ### Prioridad 4 — Limpieza estructural
 
-- [ ] Decidir que hacer con `Tema17`, `Tema18`, `Tema19` (duplicados de Java2) — evaluar eliminar
-- [ ] Mover `Tema20Interfaces/Swing/` a `Tema17Swing/` o similar con numero lógico
 - [ ] Implementar o eliminar `Tema16JavaServerPages/` (actualmente vacio)
 - [ ] Mover archivos de `data/` raíz al ejercicio correspondiente
 - [ ] Añadir `Tema99EjerciciosMultiples/README.md` explicando el origen de cada ejercicio
@@ -674,7 +635,7 @@ application.local.properties
 
 **Requisitos:**
 - **Java 17+** (recomendado) — el `pom.xml` raíz usa Java 24
-- **Maven 3.6+** — para `Tema15JPA/`, `Tema16JavaServerPages/`, `Tema19ContructorProcesos/`
+- **Maven 3.6+** — para `Tema15JPA/`, `Tema16JavaServerPages/`
 - **MySQL 8+** — para `Tema15JPA/` (JDBC)
 - **IDE recomendado:** IntelliJ IDEA o VS Code con Extension Pack for Java
 

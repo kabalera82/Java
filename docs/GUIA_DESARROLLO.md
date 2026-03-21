@@ -45,10 +45,6 @@
 | `Tema14Threads` | ⚠️ Escaso — 3 ejercicios | Si |
 | `Tema15JPA` | 🔴 Bug de seguridad + malnombrado | Si |
 | `Tema16JavaServerPages` | 🔴 Completamente vacio | Si |
-| `Tema17ProgramacionFuncional` | ⚠️ Duplicado de Java2 | Si |
-| `Tema18ProgramacionRed` | ⚠️ Duplicado de Java2 | Si |
-| `Tema19ContructorProcesos` | ⚠️ Duplicado de Java2 | Si |
-| `Tema20Interfaces` | ⚠️ Solo Swing01 — mal ubicado | No |
 | `Tema99EjerciciosMultiples` | ⚠️ Sin organizacion | No |
 
 ### Archivos en la raíz que deben eliminarse
@@ -234,14 +230,8 @@ El orden actual tiene dos problemas:
 14 — Streams introductorios       (= Tema13 actual — AMPLIAR)
 15 — Hilos                        (= Tema14 actual — AMPLIAR)
 16 — JDBC                         (= Tema15 actual — RENOMBRAR + limpiar)
-17 — Swing                        (= Tema20Interfaces/Swing — MOVER + AMPLIAR)
+17 — Swing                        (CREAR — Swing/JavaFX básico, FALTA)
 ```
-
-### Temas de 2ºDAM que no deben estar en este repo
-
-- `Tema17ProgramacionFuncional` — Lambdas avanzadas, Collectors, parallelStream
-- `Tema18ProgramacionRed` — Sockets TCP, ServerSocket
-- `Tema19ContructorProcesos` — ProcessBuilder avanzado con Maven
 
 ---
 
@@ -433,29 +423,9 @@ public static <T extends Comparable<T>> T maximo(T a, T b) {
 | Añadir transacciones | `setAutoCommit`, `commit`, `rollback` |
 | Crear ejercicio sin GUI | `Main.java` con GUI es demasiado complejo de entrada |
 
-### Tema20 — Swing
-
-| Mejora | Descripción |
-|--------|------------|
-| Mover a `Tema17Swing/` | El numero 20 rompe el orden lógico |
-| Ampliar de 1 a 8+ ejercicios | Solo `Swing01` |
-| Añadir layouts | BorderLayout, GridLayout, FlowLayout |
-| Añadir eventos | ActionListener, KeyListener |
-| `SwingUtilities.invokeLater()` | Obligatorio para crear ventanas en el EDT |
-
 ---
 
 ## 7. Problemas estructurales
-
-### Temas 17, 18, 19 — duplicados de Java2
-
-Son exactamente los mismos archivos. Temas de 2ºDAM que no pertenecen a este repo.
-
-**Decision necesaria:**
-- Eliminarlos completamente de este repo
-- O mantenerlos como referencia rapida con un NOTE en el README que diga de donde vienen
-
----
 
 ### Subtemas numerados con `_01`, `_02`, `_03` vs carpetas directas
 
@@ -561,8 +531,8 @@ Este repo cubre 1ºDAM. Muchos temas tienen continuacion natural en Java2:
 | — | `Concurrencia/` — Productor-Consumidor, wait/notify |
 | `Tema12AccesoDatos` — ficheros | `AccesoDatos/` — NIO2, JSON, CSV avanzado |
 | `Tema15JDBC` — JDBC básico | — (Java2 no tiene JDBC completo — pendiente alli también) |
-| `Tema13Streams` — introduccion | `Tema17ProgramacionFuncional/` — Streams completos, Optional |
-| — | `Tema18ProgramacionRed/` — Sockets TCP |
+| `Tema13Streams` — introduccion | `ProgramacionFuncional/` (Java2) — Streams completos, Optional |
+| — | `ProgramacionRed/` (Java2) — Sockets TCP |
 | — | `AlgoritmosOrdenacion/` — FIFO, SJF, SRTF, Round Robin |
 
 ---
@@ -600,8 +570,6 @@ Este repo cubre 1ºDAM. Muchos temas tienen continuacion natural en Java2:
 
 ### Prioridad 5 — Limpieza estructural
 
-- [ ] Decidir que hacer con `Tema17`, `Tema18`, `Tema19` (duplicados de Java2)
-- [ ] Mover `Tema20Interfaces/Swing` a su propio tema con numero lógico
 - [ ] Mover archivos de `data/` raíz al ejercicio correspondiente
 - [ ] Unificar nomenclatura subtemas (Tema04_01 → subcarpetas)
 - [ ] Añadir `enum` como ejercicio en Tema07 o Tema09
