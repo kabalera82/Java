@@ -1,4 +1,4 @@
-package Tema10_02FicherosBinarios.Ejercicio03RecuperaVersos;
+package Tema11_02FicherosBinarios.Ejercicio03RecuperaVersos;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
@@ -13,7 +13,7 @@ public class Main {
 
 
     public static String ExtraerFile() {
-        try (ObjectInputStream entrada = new ObjectInputStream(new FileInputStream("./Tema10_02FicherosBinarios/cancionPirata.dat"))) {
+        try (ObjectInputStream entrada = new ObjectInputStream(new FileInputStream("./Tema11_02FicherosBinarios/cancionPirata.dat"))) {
             String versos = (String) entrada.readObject();
             return versos;
         } catch (Exception e) {

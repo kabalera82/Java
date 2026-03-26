@@ -1,4 +1,4 @@
-package Tema10_01FicherosDeTexto.Ejercicio01Ejemplo;
+package Tema11_01FicherosDeTexto.Ejercicio01Ejemplo;
 
 import java.nio.file.Files;   // Para usar el método readAllLines
 import java.nio.file.Paths;   // Para crear rutas del sistema

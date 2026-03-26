@@ -1,4 +1,4 @@
-package Tema10_01FicherosDeTexto.Ejercicio02Bonana.model;
+package Tema11_01FicherosDeTexto.Ejercicio02Bonana.model;
 
 import java.util.Objects;
 

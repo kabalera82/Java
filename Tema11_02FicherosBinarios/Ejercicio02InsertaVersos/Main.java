@@ -1,4 +1,4 @@
-package Tema10_02FicherosBinarios.Ejercicio02InsertaVersos;
+package Tema11_02FicherosBinarios.Ejercicio02InsertaVersos;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -16,7 +16,7 @@ import java.io.ObjectOutputStream;
 public class Main {
 
     public static void CrearFile (String recibido) {
-        try (ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("./Tema10_02FicherosBinarios/cancionPirata.dat"))){
+        try (ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("./Tema11_02FicherosBinarios/cancionPirata.dat"))){
             salida.writeObject(recibido);
         } catch (Exception e) {
             throw new RuntimeException(e);

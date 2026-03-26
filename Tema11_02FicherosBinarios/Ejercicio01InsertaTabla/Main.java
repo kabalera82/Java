@@ -1,4 +1,4 @@
-package Tema10_02FicherosBinarios.Ejercicio01InsertaTabla;
+package Tema11_02FicherosBinarios.Ejercicio01InsertaTabla;
 
 //importamos de java IO FileOut y ObjectOut
 import java.io.FileOutputStream;

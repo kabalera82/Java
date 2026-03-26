@@ -1,6 +1,6 @@
-package Tema10_01FicherosDeTexto.Ejercicio02Bonana.servicio;
+package Tema11_01FicherosDeTexto.Ejercicio02Bonana.servicio;
 
-import Tema10_01FicherosDeTexto.Ejercicio02Bonana.model.Frutas;
+import Tema11_01FicherosDeTexto.Ejercicio02Bonana.model.Frutas;
 import java.util.List;
 
 /**

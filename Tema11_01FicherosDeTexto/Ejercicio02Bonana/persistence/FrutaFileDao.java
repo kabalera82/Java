@@ -1,6 +1,6 @@
-package Tema10_01FicherosDeTexto.Ejercicio02Bonana.persistence;
+package Tema11_01FicherosDeTexto.Ejercicio02Bonana.persistence;
 
-import Tema10_01FicherosDeTexto.Ejercicio02Bonana.model.Frutas;
+import Tema11_01FicherosDeTexto.Ejercicio02Bonana.model.Frutas;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -16,7 +16,7 @@ public class FrutaFileDao {
 
     /** Ruta del archivo de persistencia */
     private final Path archivoFrutas =
-            Path.of("Tema10_01FicherosDeTexto/Ejercicio02Bonana/data/misFrutitas.txt");
+            Path.of("Tema11_01FicherosDeTexto/Ejercicio02Bonana/data/misFrutitas.txt");
 
     /**
      * Carga las frutas desde el archivo de texto.
