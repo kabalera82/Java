@@ -1,673 +1,710 @@
-# Java — Apuntes 1ºDAM
+# Java desde Cero — Guía de Aprendizaje Completa
 
-> Repositorio de teoría, apuntes y ejercicios de Java para primer curso de Desarrollo de Aplicaciones Multiplataforma (DAM). Los temas van de los fundamentos del lenguaje hasta la programación orientada a objetos, colecciones, ficheros, hilos y acceso a datos con JDBC.
+![Java 24](https://img.shields.io/badge/Java-24-orange?logo=openjdk)
+![IntelliJ IDEA](https://img.shields.io/badge/IDE-IntelliJ%20IDEA-blue?logo=intellijidea)
+![Maven](https://img.shields.io/badge/build-Maven-red?logo=apachemaven)
+![Licencia MIT](https://img.shields.io/badge/licencia-MIT-green)
 
----
-
-## Índice
-
-1. [Estado actual del repositorio](#1-estado-actual-del-repositorio)
-2. [Temario actual y orden propuesto](#2-temario-actual-y-orden-propuesto)
-3. [Bugs y errores pendientes](#3-bugs-y-errores-pendientes)
-4. [Temas que faltan por desarrollar](#4-temas-que-faltan-por-desarrollar)
-5. [Mejoras propuestas por tema](#5-mejoras-propuestas-por-tema)
-6. [Problemas estructurales del repo](#6-problemas-estructurales-del-repo)
-7. [Convenios de codigo](#7-convenios-de-codigo)
-8. [Hoja de ruta](#8-hoja-de-ruta)
-9. [Requisitos y compilacion](#9-requisitos-y-compilacion)
+Repositorio de teoría y ejercicios de Java para el primer curso de **Desarrollo de Aplicaciones Multiplataforma (1º DAM)**. Cubre desde los fundamentos del lenguaje hasta programación orientada a objetos, colecciones, ficheros, hilos y acceso a bases de datos con JDBC. Cada concepto se aprende con ejercicios prácticos, comentados paso a paso.
 
 ---
 
-## 1. Estado actual del repositorio
+## ¿Para quién es este repositorio?
 
-| Carpeta | Estado | Comentario |
-|---------|--------|-----------|
-| `Tema01ConceptosBasicos/` | ✅ Completo | 17 ejercicios + repaso. Buen volumen |
-| `Tema02Condicionales/` | ✅ Completo | 20 ejercicios variados |
-| `Tema03Bucles/` | ✅ Completo | 20 ejercicios. Buen volumen |
-| `Tema04_01Metodos/` | ✅ Completo | 20 ejercicios incluyendo recursion |
-| `Tema04_02VarArgs/` | ✅ Funcional | 4 ejercicios de varargs y sobrecarga |
-| `Tema04_03Polimorfismo/` | ⚠️ Muy escaso | Solo 1 ejercicio. Necesita ampliacion |
-| `Tema05_01Tablas/` | ✅ Completo | 15 ejercicios de arrays 1D |
-| `Tema05_02MatricesArrays/` | ✅ Completo | 8 ejercicios de arrays 2D y ordenacion |
-| `Tema06CadenasDeCaracteres/` | ⚠️ Muy escaso | Solo 2 ejercicios. Necesita ampliacion urgente |
-| `Tema07Clases/` | ✅ Funcional con issues | Buena base POO. Nomenclatura mixta (carpetas/archivos sueltos) |
-| `Tema08_01Herencia/` | ⚠️ Incompleto | Falta Ejercicio02. Solo 2 de probables 3+ |
-| `Tema08_02InstanceOf/` | ✅ Funcional | 2 ejercicios de instanceof e interfaces |
-| `Tema09Interfaces/` | ✅ Funcional | 4 ejercicios de interfaces |
-| `Tema10Excepciones/` | ✅ Nuevo | 6 ejercicios: try-catch, finally, excepciones personalizadas, throw/throws |
-| `Tema11_01FicherosDeTexto/` | ✅ Funcional | 2 ejercicios. Podria tener mas |
-| `Tema11_02FicherosBinarios/` | ✅ Funcional | 5 ejercicios de ObjectOutputStream/InputStream |
-| `Tema12Colecciones/` | ✅ Funcional | 14 ejercicios. Numeracion corregida |
-| `Tema13AccesoDatos/` | ⚠️ Typo + incompleto | Typo en nombre (AcesoDatos → AccesoDatos). Falta ejercicio04. JDBC ausente |
-| `Tema14Streams/` | ⚠️ Muy escaso | Solo 3 archivos Java. Necesita ampliacion |
-| `Tema15Hilos/` | ⚠️ Muy escaso | Solo 3 ejercicios. La base esta pero necesita mas |
-| `Tema16JDBC/` | ✅ Funcional | JDBC + DAO. Password via env var. Paquete duplicado eliminado |
+Este repositorio es para ti si:
 
-| `Tema99EjerciciosMultiples/` | ⚠️ Desorganizado | Mezcla de ejercicios sin tema claro. Algunos duplican AlgoritmosOrdenacion de Java2 |
+- Estás empezando a programar en Java (o en cualquier lenguaje)
+- Estudias un ciclo formativo de Informática o una carrera técnica
+- Quieres consolidar los fundamentos antes de lanzarte a frameworks y librerías
+- Aprendes mejor leyendo código real que memorizando teoría
 
-**Archivos en la raíz que deben eliminarse:**
-- `red.text` — salida de `ipconfig` con IPs reales del sistema. **ELIMINAR — expone información sensible**
-- `errores.txt` — archivo vacio sin proposito
-- `Readme.txt` — reemplazado por este `README.md`
+No necesitas saber nada de programación para empezar. El Tema 01 parte desde cero.
 
 ---
 
-## 2. Temario actual y orden propuesto
+## Cómo usar este repositorio
 
-### Temario actual
+Este repositorio está pensado para seguirse **en orden**, de arriba a abajo. Cada tema construye sobre el anterior.
 
-| # | Carpeta | Contenido |
-|---|---------|-----------|
-| 01 | [Tema01ConceptosBasicos](./Tema01ConceptosBasicos/) | Tipos primitivos, operadores, `Scanner`, `JOptionPane` |
-| 02 | [Tema02Condicionales](./Tema02Condicionales/) | `if/else`, `switch`, operador ternario |
-| 03 | [Tema03Bucles](./Tema03Bucles/) | `for`, `while`, `do-while`, bucles anidados |
-| 04 | [Tema04_01Metodos](./Tema04_01Metodos/) | Declaracion, parametros, retorno, recursion |
-| 04b | [Tema04_02VarArgs](./Tema04_02VarArgs/) | Argumentos variables, sobrecarga |
-| 04c | [Tema04_03Polimorfismo](./Tema04_03Polimorfismo/) | Polimorfismo (escaso) |
-| 05 | [Tema05_01Tablas](./Tema05_01Tablas/) | Arrays unidimensionales |
-| 05b | [Tema05_02MatricesArrays](./Tema05_02MatricesArrays/) | Arrays 2D, algoritmos de ordenacion e busqueda |
-| 06 | [Tema06CadenasDeCaracteres](./Tema06CadenasDeCaracteres/) | `String`, `StringBuilder` (escaso) |
-| 07 | [Tema07Clases](./Tema07Clases/) | Clases, constructores, encapsulamiento, `static` |
-| 08 | [Tema08_01Herencia](./Tema08_01Herencia/) | Herencia, `extends`, `super` |
-| 08b | [Tema08_02InstanceOf](./Tema08_02InstanceOf/) | `instanceof`, casting de objetos |
-| 09 | [Tema09Interfaces](./Tema09Interfaces/) | Interfaces, implementación multiple |
-| 10 | [Tema10Excepciones](./Tema10Excepciones/) | `try-catch-finally`, excepciones personalizadas, `throw`/`throws` |
-| 11 | [Tema11_01FicherosDeTexto](./Tema11_01FicherosDeTexto/) | `BufferedReader/Writer`, `Files` |
-| 11b | [Tema11_02FicherosBinarios](./Tema11_02FicherosBinarios/) | `ObjectOutputStream/InputStream`, serializacion |
-| 12 | [Tema12Colecciones](./Tema12Colecciones/) | `List`, `Set`, `Map`, `Stack`, `Queue` |
-| 13 | [Tema13AccesoDatos](./Tema13AccesoDatos/) | Texto plano, JSON, CSV (falta JDBC) |
-| 14 | [Tema14Streams](./Tema14Streams/) | Streams basicos (muy escaso) |
-| 15 | [Tema15Hilos](./Tema15Hilos/) | `Thread`, `Runnable`, sincronizacion básica |
-| 16 | [Tema16JDBC](./Tema16JDBC/) | JDBC + MySQL con patrón DAO (mal nombrado) |
-| 17 | [Tema17JavaServerPages](./Tema17JavaServerPages/) | Proyecto vacio (no hay contenido) |
-| 99 | [Tema99EjerciciosMultiples](./Tema99EjerciciosMultiples/) | Ejercicios mixtos sin tema claro |
+1. Lee la descripción del tema en este README para saber qué vas a aprender
+2. Abre la carpeta del tema en IntelliJ IDEA
+3. Lee los comentarios `[APRENDE]` dentro del código — están en el punto exacto donde ocurre el concepto
+4. Ejecuta el ejercicio, cambia valores, rompe cosas, observa qué pasa
+5. Cuando entiendas el ejercicio, pasa al siguiente
 
-### Orden y estructura propuesto
+> No copies el código sin entenderlo. Si no sabes por qué funciona, no funciona para ti.
 
-El temario de 1ºDAM cubre los fundamentos del lenguaje.
+---
+
+## Estructura del proyecto
 
 ```
-01-conceptos-basicos/           tipos, operadores, Scanner, JOptionPane
-02-condicionales/               if/else, switch, ternario
-03-bucles/                      for, while, do-while
-04-metodos/                     declaracion, sobrecarga, recursion, varargs
-05-arrays/                      1D, 2D, Arrays utility class
-06-cadenas/                     String, StringBuilder, expresiones regulares ← AMPLIAR
-07-poo-clases/                  clases, constructores, encapsulamiento, static
-08-herencia/                    extends, super, override, abstract ← COMPLETAR
-09-interfaces/                  interface, polimorfismo ← UNIFICAR Tema04_03 aqui
-10-excepciones/                 try-catch-finally, jerarquía ← FALTA COMPLETAMENTE
-11-ficheros/                    texto plano, binarios, NIO2
-12-colecciones/                 List, Set, Map, Queue, Stack ← CORREGIR NUMERACION
-13-acceso-datos/                CSV, JSON, JDBC (renombrar Tema13AccesoDatos)
-14-streams-lambdas/             Streams basicos, lambdas introductorias
-15-hilos/                       Thread, Runnable, sincronizacion
-16-jdbc/                        JDBC completo con patrón DAO (renombrar Tema16JDBC)
-17-swing/                       Interfaces graficas basicas ← FALTA (Swing/JavaFX)
+JavaRepo/
+├── Tema01ConceptosBasicos/        Tipos, operadores, entrada de datos
+├── Tema02Condicionales/           if/else, switch, operador ternario
+├── Tema03Bucles/                  for, while, do-while
+├── Tema04_01Metodos/              Métodos, parámetros, retorno, recursión
+├── Tema04_02VarArgs/              Argumentos variables, sobrecarga
+├── Tema04_03Polimorfismo/         Polimorfismo, clases abstractas, casting
+├── Tema05_01Tablas/               Arrays unidimensionales
+├── Tema05_02MatricesArrays/       Arrays 2D, ordenación, búsqueda
+├── Tema06CadenasDeCaracteres/     String, StringBuilder, formateo
+├── Tema07Clases/                  Clases, constructores, encapsulamiento
+├── Tema08_01Herencia/             Herencia, extends, super, @Override
+├── Tema08_02InstanceOf/           instanceof, casting de objetos
+├── Tema09Interfaces/              Interfaces, implementación múltiple
+├── Tema10Excepciones/             try-catch-finally, excepciones personalizadas
+├── Tema11_01FicherosDeTexto/      Lectura y escritura de ficheros de texto
+├── Tema11_02FicherosBinarios/     Serialización, ObjectOutputStream/InputStream
+├── Tema12Colecciones/             List, Set, Map, Queue, Stack
+├── Tema13AccesoDatos/             Texto plano, Properties, JSON, CSV
+├── Tema14Streams/                 Streams, lambdas, Optional
+├── Tema15Hilos/                   Thread, Runnable, sincronización, ExecutorService
+├── Tema16JDBC/                    JDBC + MySQL con patrón DAO
+└── Tema99EjerciciosMultiples/     Ejercicios mixtos de repaso
 ```
 
 ---
 
-## 3. Bugs y errores pendientes
-
-### SEGURIDAD CRITICA — `red.text` expone IPs reales del sistema
-
-```
-/tmp/Java1/red.text — contiene salida de ipconfig con:
-- Direccion IPv4: 192.168.1.133
-- Direccion IPv6: 2a0c:5a80:3c09:f100:4106:f7bc:da5b:fea
-- Puerta de enlace: 192.168.1.1
-```
-
-Este archivo es la salida del comando `ipconfig` de Windows guardada accidentalmente. **Debe eliminarse del repo** — expone información de red del sistema del autor.
+## Temario completo
 
 ---
 
-### SEGURIDAD — `Tema16JDBC/src/main/java/tech/Kabadev/conexión/Conexión.java` — password hardcodeada
+### TEMA 01 — Conceptos Básicos
+
+**¿Qué aprenderás?**
+- Tipos de datos primitivos: `int`, `double`, `boolean`, `char`
+- Operadores aritméticos, relacionales y lógicos
+- Entrada de datos con `Scanner` y `JOptionPane`
+- Conversiones entre tipos (`casting`)
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01HolaMundo | El primer programa en Java | `System.out.println`, clase, `main` |
+| Ejercicio02SalidaConsola | Mostrar distintos tipos de datos | `print`, `println`, `printf` |
+| Ejercicio03OperadoresAritmeticos | Suma, resta, multiplicación, división | Operadores `+`, `-`, `*`, `/`, `%` |
+| Ejercicio04JOptionPanel | Ventanas de diálogo con Swing | `JOptionPane`, ventana emergente |
+| Ejercicio05 / Ejercicio06 | Ejercicios de variables y tipos | Declaración y asignación |
+| Ejercicio07Economista | Cálculo de porcentajes e intereses | `double`, operaciones matemáticas |
+| Ejercicio08Multiplos | Múltiplos de un número | Operador módulo `%` |
+| Ejercicio09Triangulo | Cálculo de área de triángulo | Fórmulas con variables |
+| Ejercicio10Ec2Grado | Ecuación de segundo grado | `Math.sqrt`, raíz cuadrada |
+| Ejercicio11Tiempo | Conversión de segundos a horas/min/seg | División entera y módulo |
+| Ejercicio12Conversiones | Conversiones de unidades | Casting, operaciones encadenadas |
+| Ejercicio13-16Calculos | Series de cálculos numéricos | Operadores, precedencia |
+| Ejercicio99Repaso | Ejercicio integrador del tema | Todos los conceptos del tema |
+| Primitivos | Referencia de tipos primitivos | Rango y tamaño de cada tipo |
+
+**Concepto clave:** Una variable es como una caja con etiqueta. La etiqueta es el nombre (`edad`, `precio`), lo que hay dentro es el valor (`25`, `9.99`), y el tipo (`int`, `double`) define qué tipo de cosas puedes meter en esa caja. No puedes meter texto en una caja de enteros.
+
+---
+
+### TEMA 02 — Condicionales
+
+**¿Qué aprenderás?**
+- Estructuras `if`, `else if`, `else`
+- `switch` para múltiples opciones
+- Operador ternario `condicion ? valor1 : valor2`
+- Combinar condiciones con `&&`, `||`, `!`
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01ParImpar | Determinar si un número es par o impar | `if/else`, módulo `%` |
+| Ejercicio02ComparaNum | Comparar dos números | Operadores relacionales |
+| Ejercicio03OrdenarNum | Ordenar tres números | `if` anidados |
+| Ejercicio04NumDec | Clasificar número positivo, negativo o cero | `if / else if / else` |
+| Ejercicio08Coeficiente | Calcular coeficiente con condiciones | Condiciones compuestas |
+| Ejercicio10Nota | Nota a letra (A, B, C...) | `switch` |
+| Ejercicio11NumSemana | Nombre del día de la semana | `switch` con `String` |
+| Ejercicio12-14Fechas | Validación y cálculos con fechas | Condiciones encadenadas |
+| Ejercicio16GeneraDni | Generar la letra del DNI | Módulo y array de letras |
+| Ejercicio17Animales | Clasificar animales por características | `switch` con múltiples casos |
+| Ejercicio18NumLetra | Número en letra (uno, dos...) | `switch` exhaustivo |
+| Ejercicio19JuegoSumas | Juego simple de sumas | `if`, `Scanner` |
+| Ejercicio20Angulos | Clasificar ángulos (agudo, recto, obtuso) | Rangos con `if` |
+| Ejercicio21-26 | Ejercicios variados de condicionales | Todos los patrones del tema |
+
+**Concepto clave:** Un condicional es como una señal de tráfico: "si el semáforo está en verde, avanza; si está en rojo, para". El programa toma decisiones según el valor de las variables, igual que tú decides qué ropa ponerte según el tiempo que hace.
+
+---
+
+### TEMA 03 — Bucles
+
+**¿Qué aprenderás?**
+- Bucle `for` cuando sabes cuántas veces repetir
+- Bucle `while` cuando repites hasta que se cumple una condición
+- Bucle `do-while` para ejecutar al menos una vez
+- `for-each` para recorrer colecciones
+- Bucles anidados (un bucle dentro de otro)
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01ComprobacionNum | Validar entrada hasta que sea correcta | `while` como guardián |
+| Ejercicio02FuncAlumn | Calcular media de alumnos | `for`, acumuladores |
+| Ejercicio03NumSecreto | Juego: adivina el número secreto | `while`, `Random` |
+| Ejercicio04InvestigacionFlora | Contar plantas según condición | `for`, contadores |
+| Ejercicio06AprenderContar | Contar en distintos rangos | `for` con paso |
+| Ejercicio07multiplos | Mostrar múltiplos de un número | `for`, módulo |
+| Ejercicio09TablaMult | Tabla de multiplicar | `for` anidado |
+| Ejercicio11Factorial | Calcular el factorial de un número | `for` acumulativo |
+| Ejercicio14Tablas | Tablas de múltiples números | Bucles anidados |
+| Ejercicio15Triangulo | Dibujar triángulo con asteriscos | Bucles anidados, `print` |
+| Ejercicio20ConversionBinario | Convertir decimal a binario | `while`, división entera |
+| Ejercicio21HoraReloj | Simular un reloj con tres bucles | `for` anidados (horas, min, seg) |
+| Ejercicio22Primos | Listar números primos hasta N | Bucle dentro de bucle |
+| Ejercicio24ComprobacionTipo | Identificar el tipo de un carácter | `do-while` para repetir |
+
+**Concepto clave:** Un bucle es como una lavadora: defines el programa (condición de parada) y la máquina repite el ciclo hasta terminarlo. El `for` es cuando sabes exactamente cuántas vueltas (`lavar 5 veces`). El `while` es cuando no sabes cuántas, pero sabes cuándo parar (`hasta que la ropa esté limpia`).
+
+---
+
+### TEMA 04a — Métodos
+
+**¿Qué aprenderás?**
+- Declarar y llamar métodos
+- Parámetros y valores de retorno
+- Ámbito de las variables
+- Recursión: un método que se llama a sí mismo
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01Suma | Método que suma dos números | Declaración, parámetros, `return` |
+| Ejercicio02Saludar | Método que genera saludos | `String` como retorno |
+| Ejercicio04ParImpar | Método booleano par o impar | `boolean` como retorno |
+| Ejercicio07GeneradorId | Generar IDs únicos | Método con lógica interna |
+| Ejercicio09FuncionRecursiva | Primeros pasos en recursión | Caso base, llamada recursiva |
+| Ejercicio18Calculadora | Calculadora con métodos separados | Organización con métodos |
+| Ejercicio20Iterativa / Ejercicio21Recursiva | Misma operación de dos formas | Comparar iterativo vs recursivo |
+| Ejercicio23Fibonacci | Serie de Fibonacci recursiva | Recursión con dos llamadas |
+| Ejercicio24_Geometria / Matematicas | Fórmulas organizadas en métodos | Reutilización de código |
+| Ejercicio37Factorial / Ejercicio38Fibonacci | Factorial y Fibonacci avanzados | Recursión + validación |
+| Ejercicio40ContarCifras | Contar cifras de un número | Recursión con enteros |
+| Ejercicio41CuentaBilletes | Cambio óptimo en billetes | Algoritmo voraz |
+
+**Concepto clave:** Un método es como una receta de cocina. La defines una vez (`cómo hacer una tortilla`) y la puedes usar todas las veces que quieras sin volver a escribir los pasos. Los parámetros son los ingredientes que le pasas, y el `return` es el plato que te devuelve.
+
+---
+
+### TEMA 04b — VarArgs y Sobrecarga
+
+**¿Qué aprenderás?**
+- Métodos con número variable de parámetros (`varargs`)
+- Sobrecarga: mismo nombre de método, distintos parámetros
+- Cuándo usar uno u otro
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01ArgumentosVariables | Suma con número ilimitado de argumentos | `int... numeros` |
+| Ejercicio02MetParamVariables | Métodos con parámetros opcionales | Varargs con lógica |
+| Ejercicio03ArgumentosMetodosVariables | Combinar varargs con tipos distintos | Firmas de métodos |
+| Ejercicio04SobrecargaMetodos | Mismo método, distintos tipos de datos | Sobrecarga de métodos |
+
+**Concepto clave:** La sobrecarga es como tener una paleta multiusos: `calcularArea(radio)` para un círculo y `calcularArea(base, altura)` para un triángulo. Mismo nombre, distintos ingredientes. Java sabe cuál usar según lo que le pases.
+
+---
+
+### TEMA 04c — Polimorfismo y Clases Abstractas
+
+**¿Qué aprenderás?**
+- Qué es el polimorfismo y para qué sirve
+- Clases abstractas: plantillas que no se pueden instanciar
+- Lista polimórfica: tratar objetos distintos de forma uniforme
+- Casting entre tipos de la jerarquía
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01 | Polimorfismo básico con animales | `Animal`, `Perro`, `Gato`, `hablar()` |
+| Ejercicio02ClasesAbstractas | Figuras geométricas con clase abstracta | `abstract class`, `@Override` |
+| Ejercicio03ListaPolimorfica | Lista con vehículos distintos | `List<Vehiculo>`, polimorfismo real |
+| Ejercicio04Casting | Downcasting y comprobación de tipo | `instanceof`, casting seguro |
+
+**Concepto clave:** El polimorfismo es como un control remoto universal. No importa si tienes un Samsung o un LG — el botón "subir volumen" funciona en ambos porque todos los televisores `implementan` la misma acción. Tu código habla con la interfaz común, no con cada marca por separado.
+
+---
+
+### TEMA 05a — Arrays (Tablas Unidimensionales)
+
+**¿Qué aprenderás?**
+- Declarar, inicializar y recorrer arrays
+- Buscar el máximo, mínimo y media
+- Eliminar duplicados
+- Copiar y transformar arrays con `Arrays`
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01TablaReferencia | Crear y mostrar un array | Declaración e inicialización |
+| Ejercicio02RangoValores | Rellenar con rango de valores | Bucle + índice |
+| Ejercicio04MaximoTabla | Encontrar el máximo de un array | Recorrido lineal |
+| Ejercicio06NumeroAciertos | Contar coincidencias entre arrays | Comparación elemento a elemento |
+| Ejercicio07SinRepetidos | Eliminar duplicados de un array | Lógica de unicidad |
+| Ejercicio09MediaNumeros | Calcular la media | Acumulador + tamaño |
+| Ejercicio11SumaDiagonal | Suma de la diagonal de una matriz | Índices, arrays 2D básico |
+| Ejercicio12CamaraSecreta | Cifrado de texto con array | Caracteres y arrays |
+| Ejercicio13CreaOrdena | Crear y ordenar un array | `Arrays.sort()` |
+| Ejercicio14ArrayFill | Rellenar con `Arrays.fill()` | Clase utilitaria `Arrays` |
+| Ejercicio15CopyOf | Copiar arrays con `Arrays.copyOf()` | Copia parcial y total |
+
+**Concepto clave:** Un array es como una fila de casilleros numerados del 0 al N. Cada casillero guarda un valor, y puedes acceder a cualquiera directamente si sabes su número (`casillero[3]`). El problema: el tamaño es fijo desde el momento en que lo creas. Para tamaño dinámico, usarás colecciones (Tema 12).
+
+---
+
+### TEMA 05b — Arrays Bidimensionales y Ordenación
+
+**¿Qué aprenderás?**
+- Matrices: arrays de arrays
+- Algoritmos de ordenación: burbuja, inserción, selección
+- Algoritmos de búsqueda: lineal y binaria
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01MatrizUnidimensional | Recorrer una matriz con índices | `array[fila][columna]` |
+| Ejercicio02ForEach | Iterar con `for-each` | Sintaxis compacta de recorrido |
+| Ejercicio03MatrizBidimensional | Crear y operar sobre una matriz | Bucles anidados |
+| Ejercicio04Burbuja | Ordenación por burbuja | Intercambio de elementos adyacentes |
+| Ejercicio05OrdenacionInsercion | Ordenación por inserción | Comparar e insertar |
+| Ejercicio06OrdenacionSeleccion | Ordenación por selección | Buscar mínimo y colocar |
+| Ejercicio07MetodosBusqueda | Búsqueda lineal | Recorrer hasta encontrar |
+| Ejercicio08BusquedaBinaria | Búsqueda binaria | Dividir y conquistar |
+
+**Concepto clave:** Una matriz es como una hoja de Excel: tiene filas y columnas. Para acceder a la celda de la fila 2, columna 3 escribes `tabla[2][3]`. Los algoritmos de ordenación son como ordenar cartas: burbuja las va cambiando de dos en dos, inserción las va encajando en su lugar, selección busca la más pequeña cada vez.
+
+---
+
+### TEMA 06 — Cadenas de Caracteres
+
+**¿Qué aprenderás?**
+- Los métodos más útiles de `String`
+- Comparar cadenas correctamente (no con `==`)
+- Construir cadenas dinámicas con `StringBuilder`
+- Formatear texto con `String.format()`
+- Dividir y unir cadenas con `split()` y `join()`
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01 | Explorar propiedades de una cadena | `length()`, `charAt()`, `indexOf()` |
+| Ejercicio02LongitudStrings | Medir y comparar longitudes | `length()`, comparación |
+| Ejercicio03MetodosBasicos | Transformar cadenas | `toUpperCase()`, `trim()`, `replace()` |
+| Ejercicio04SplitJoin | Dividir y reunir cadenas | `split()`, `String.join()` |
+| Ejercicio05Comparacion | Comparar cadenas correctamente | `equals()`, `equalsIgnoreCase()`, no usar `==` |
+| Ejercicio06StringBuilder | Construir cadenas eficientemente | `StringBuilder`, `append()`, `reverse()` |
+| Ejercicio07Formato | Dar formato a datos con plantilla | `String.format()`, `%s`, `%d`, `%.2f` |
+| Ejercicio08Practico | Ejercicio integrador de cadenas | Varios métodos combinados |
+
+**Concepto clave:** Un `String` es como una frase escrita en piedra: una vez creada, no se puede modificar (es inmutable). Cada vez que "cambias" un `String`, Java crea uno nuevo. Si necesitas construir texto dinámicamente (en un bucle, por ejemplo), usa `StringBuilder`, que es como un bloc de notas al que puedes añadir, borrar y modificar sin crear copias nuevas.
+
+---
+
+### TEMA 07 — Clases y Programación Orientada a Objetos
+
+**¿Qué aprenderás?**
+- Crear clases con atributos y métodos
+- Constructores: cómo se crean los objetos
+- Encapsulamiento: `private` + getters/setters
+- Modificadores `static` y `final`
+- Clases especiales de Java
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| ejercicio01persona | Clase `Persona` con nombre y edad | Clase, constructor, getters/setters |
+| ejercicio02coche | Clase `Coche` con marca y velocidad | Encapsulamiento, métodos de comportamiento |
+| ejercicio03CuentaCorriente | Cuenta bancaria con saldo | Validación en setters, lógica de negocio |
+| ejercicio04Conversor | Conversor de unidades | Métodos estáticos `static` |
+| ejercicio05restaurante | Sistema de pedidos de restaurante | Objetos que colaboran entre sí |
+| ejercicio06Geometria | Figuras geométricas con clase | Múltiples constructores |
+| ejercicio07personaSobrecarga | Persona con constructores sobrecargados | Sobrecarga de constructores |
+| ejercicio08Clonando | Clonar objetos | Constructor copia |
+| ClasesEspeciales | Clases de la API de Java | `Math`, `Random`, `LocalDate` |
+| CasteoDeClases | Conversión entre tipos de clase | Casting con objetos |
+
+**Concepto clave:** Una clase es como el plano de una casa: define cuántas habitaciones tiene, dónde está la cocina, qué puertas hay. Un objeto es la casa construida a partir de ese plano. Puedes construir mil casas (objetos) a partir del mismo plano (clase), y cada una tendrá sus propios muebles (valores de atributos).
+
+---
+
+### TEMA 08a — Herencia
+
+**¿Qué aprenderás?**
+- Herencia con `extends`: una clase hija que hereda de la madre
+- Reutilizar y ampliar comportamiento
+- `super`: acceder al constructor y métodos del padre
+- Sobreescritura de métodos con `@Override`
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01Vehiculos | Jerarquía Vehículo → Coche/Moto | `extends`, constructor con `super` |
+| Ejercicio02Planta | Jerarquía de plantas | `@Override`, especialización de métodos |
+
+**Concepto clave:** La herencia es como la herencia biológica. Un `Perro` es un `Animal` y hereda sus características (tiene patas, come, respira). Pero además tiene las suyas propias (ladra, mueve el rabo). Con `extends` le dices a Java: "esta clase es una versión especializada de aquella otra, con todo lo que tenía más estas cosas nuevas".
+
+---
+
+### TEMA 08b — instanceof y Casting
+
+**¿Qué aprenderás?**
+- Comprobar el tipo real de un objeto con `instanceof`
+- Hacer downcasting de forma segura
+- Diferencia entre tipo declarado y tipo real
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| ejercicio01 | Jerarquía de vehículos con `instanceof` | Verificar tipo antes de hacer casting |
+| ejercicio02Interfaz | `instanceof` con interfaces | Casting desde interfaz |
+
+**Concepto clave:** Imagina que tienes una caja marcada como `Animal`. Dentro puede haber un `Perro` o un `Gato`. Antes de pedirle que ladre, tienes que comprobar si realmente es un `Perro` — eso es `instanceof`. El casting es abrir la caja y sacar el objeto con su tipo real: `Perro perro = (Perro) miAnimal`.
+
+---
+
+### TEMA 09 — Interfaces
+
+**¿Qué aprenderás?**
+- Qué es una interfaz y para qué sirve
+- Implementar múltiples interfaces en una clase
+- Diferencia entre interfaz y clase abstracta
+- Polimorfismo a través de interfaces
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01 | Primera interfaz y su implementación | `interface`, `implements` |
+| Ejercicio02Lista | Lista de objetos con interfaz común | Polimorfismo con interfaces |
+| Ejercicio03Jerarquia | Jerarquía de interfaces | Una interfaz extiende otra |
+| Ejercicio04Hibrida | Clase que implementa varias interfaces | Múltiple implementación |
+
+**Concepto clave:** Una interfaz es un contrato. Si una clase firma el contrato `Volable`, se compromete a implementar el método `volar()`. No importa si es un `Pajaro`, un `Avion` o un `Superheroe` — todos saben volar porque firmaron ese contrato. Esto te permite escribir código que funciona con cualquier cosa que vuele, sin saber exactamente qué es.
+
+---
+
+### TEMA 10 — Excepciones
+
+**¿Qué aprenderás?**
+- Qué es una excepción y por qué existen
+- Capturar errores con `try-catch-finally`
+- Capturar múltiples tipos de excepción
+- Crear tus propias excepciones personalizadas
+- Lanzar excepciones con `throw` y declararlas con `throws`
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01TryCatch | Capturar error de división entre cero | `try-catch`, `ArithmeticException` |
+| Ejercicio02MultipleCatch | Capturar distintos tipos de error | Múltiples bloques `catch` |
+| Ejercicio03Finally | Código que siempre se ejecuta | Bloque `finally`, cierre de recursos |
+| Ejercicio04ExcepcionPersonalizada | Crear tu propia excepción | `extends Exception`, constructor |
+| Ejercicio05ThrowThrows | Lanzar y declarar excepciones | `throw new`, `throws` en la firma |
+| Ejercicio06Practica | Ejercicio integrador de excepciones | Aplicación real con manejo de errores |
+
+**Concepto clave:** Una excepción es como una alarma de incendios. No evita el fuego, pero te avisa para que puedas reaccionar: apagar el fuego (`catch`), avisar a los bomberos (loguear el error), y abrir las ventanas pase lo que pase (`finally`). Sin gestión de excepciones, un error inesperado tumba todo el programa.
+
+---
+
+### TEMA 11 — Ficheros
+
+#### 11a — Ficheros de Texto
+
+**¿Qué aprenderás?**
+- Leer ficheros de texto con `BufferedReader` y `Files`
+- Escribir y modificar ficheros con `BufferedWriter`
+- Trabajar con rutas y directorios
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01Ejemplo | Crear, leer y editar un fichero de texto | `BufferedReader`, `BufferedWriter`, `Files` |
+| Ejercicio02Bonana | Proyecto completo de gestión con ficheros | Capas model/persistence/servicio/ui |
+
+**Concepto clave:** Un fichero de texto es como un cuaderno de notas que guardas en el disco duro. Puedes abrirlo, leer lo que hay escrito, añadir más contenido o borrarlo. Mientras el programa está cerrado, los datos siguen ahí — algo que no ocurre con las variables, que se pierden al terminar la ejecución.
+
+---
+
+#### 11b — Ficheros Binarios y Serialización
+
+**¿Qué aprenderás?**
+- Serializar objetos Java para guardarlos en disco
+- Deserializar: recuperar objetos guardados
+- `ObjectOutputStream` y `ObjectInputStream`
+- La interfaz `Serializable`
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01InsertaTabla | Guardar un array en fichero binario | `ObjectOutputStream`, `Serializable` |
+| Ejercicio02InsertaVersos | Guardar versos en fichero `.dat` | Escritura secuencial de objetos |
+| Ejercicio03RecuperaVersos | Leer los versos guardados | `ObjectInputStream`, deserialización |
+| Ejercicio04 | Serialización avanzada | `serialVersionUID`, versiones |
+| Ejercicio05 | Ejercicio integrador binarios | Guardar y recuperar objetos complejos |
+
+> **Nota:** Los ejercicios de CSV y PDF están siendo añadidos en este tema. Próximamente: `Ejercicio06CSV` (gestión de productos en CSV) y `Ejercicio07PDF` (generación de documentos PDF con iText).
+
+**Concepto clave:** La serialización es como hacer una fotocopia de un objeto y meterla en un cajón. Cuando necesites ese objeto de nuevo, sacas la fotocopia y la "rehidratas" para tener el objeto original. El fichero binario no es legible para humanos, pero Java lo entiende perfectamente y puede reconstruir el objeto exacto.
+
+---
+
+### TEMA 12 — Colecciones
+
+**¿Qué aprenderás?**
+- `ArrayList`: lista dinámica, el reemplazo moderno del array
+- `LinkedList`: lista enlazada, ideal como cola o pila
+- `HashSet`, `LinkedHashSet`, `TreeSet`: conjuntos sin duplicados
+- `HashMap`, `LinkedHashMap`, `TreeMap`: pares clave-valor
+- `Stack` y `Queue`: pilas y colas
+- Colecciones genéricas
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01Arrays | Del array a la colección | Por qué `ArrayList` mejora al array |
+| Ejercicio02ArrayList | Lista de elementos con operaciones | `add()`, `remove()`, `get()`, `size()` |
+| Ejercicio03pila | Pila LIFO con `Stack` | `push()`, `pop()`, `peek()` |
+| Ejercicio04LinkedList | Lista enlazada como cola | `offer()`, `poll()`, `peek()` |
+| Ejercicio05Map | Diccionario clave-valor | `HashMap`, `put()`, `get()`, `containsKey()` |
+| Ejercicio06ArrayList | ArrayList avanzado con objetos | Colección de objetos propios |
+| Ejercicio07HashSet | Conjunto sin duplicados | `HashSet`, unicidad automática |
+| Ejercicio08LinkedHashSet | Conjunto con orden de inserción | `LinkedHashSet` vs `HashSet` |
+| Ejercicio09TreeSet | Conjunto ordenado automáticamente | `TreeSet`, orden natural |
+| Ejercicio10LinkedHashMap | Mapa con orden de inserción | `LinkedHashMap` |
+| Ejercicio11TreeMap | Mapa ordenado por clave | `TreeMap`, `NavigableMap` |
+| Ejercicio12HashMap | HashMap avanzado | Colisiones, `equals()`, `hashCode()` |
+| Ejercicio13Generico | Colección genérica propia | `<T>`, tipos genéricos básicos |
+| Ejercicio14 | Ejercicio integrador | Escoger la colección correcta |
+
+**Concepto clave:** Las colecciones son como distintos tipos de contenedores de cocina. Una `List` es como una bandeja numerada (puedes tener duplicados y el orden importa). Un `Set` es como un tarro de caramelos únicos (sin duplicados). Un `Map` es como una agenda telefónica (buscas por nombre y te da el teléfono). Usa cada una para lo que fue diseñada.
+
+---
+
+### TEMA 13 — Acceso a Datos
+
+**¿Qué aprenderás?**
+- Leer y escribir ficheros de texto estructurado
+- Gestionar configuración con ficheros `.properties`
+- Trabajar con JSON en Java
+- Leer y generar ficheros CSV
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| ejercicio01 | Persistencia básica en texto plano | Lectura/escritura con `Files` |
+| ejercicio02Texto | Gestión de datos en fichero de texto | Parsear líneas, separadores |
+| ejercicio03 | Acceso a datos estructurado | Formato propio, lectura secuencial |
+| ejercicio04Properties | Configuración con `.properties` | `Properties`, `load()`, `getProperty()` |
+| ejercicio05json | Leer y escribir JSON | Librería JSON, objetos a JSON y viceversa |
+| ejercicio06csv | Gestión de productos en CSV | Separador `,`, `split()`, escritura CSV |
+
+**Concepto clave:**
+- **Properties** es como un archivo de configuración de Windows (`.ini`): clave=valor, sencillo y rápido para settings.
+- **JSON** es como un objeto JavaScript convertido en texto: ideal para APIs y configuraciones complejas.
+- **CSV** es como una hoja de Excel guardada en formato texto: filas de datos separadas por comas, perfecta para importar/exportar datos tabulares.
+
+---
+
+### TEMA 14 — Streams y Lambdas
+
+**¿Qué aprenderás?**
+- Programación funcional en Java
+- `Stream`: procesar colecciones de forma declarativa
+- Operaciones intermedias: `filter()`, `map()`, `sorted()`
+- Operaciones terminales: `collect()`, `reduce()`, `forEach()`
+- Referencias a métodos con `::`
+- `Optional`: evitar el `NullPointerException`
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01Hola | Primera lambda y primer Stream | `() -> {}`, `stream()` |
+| Ejercicio02SaludoMultiple | Stream sobre lista de nombres | `forEach()`, lambda con parámetro |
+| Ejercicio03StreamBasico | Filtrar y transformar una lista | `filter()`, `map()`, `collect()` |
+| Ejercicio04Reduccion | Reducir una lista a un valor | `reduce()`, `sum()`, `count()` |
+| Ejercicio05MethodReference | Simplificar lambdas con `::` | `System.out::println`, `Clase::metodo` |
+| Ejercicio06Optional | Manejar valores que pueden ser null | `Optional.of()`, `isPresent()`, `orElse()` |
+
+**Concepto clave:** Un Stream es como una cadena de montaje. Tienes una lista de piezas (tu colección), la pones en la cinta transportadora (`stream()`), aplicas operaciones en cadena (`filter` quita las defectuosas, `map` las transforma), y al final recoges el resultado (`collect`). Nada se modifica en el original — todo ocurre en la cadena.
+
+---
+
+### TEMA 15 — Hilos (Concurrencia)
+
+**¿Qué aprenderás?**
+- Qué es un hilo y para qué sirve
+- Crear hilos con `Thread` y con `Runnable`
+- Ciclo de vida de un hilo
+- Sincronización para evitar condiciones de carrera
+- `ExecutorService`: gestión moderna de hilos
+- Hilos daemon
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01 | Primer hilo con `Thread` | `new Thread()`, `start()`, `run()` |
+| Ejercicio02 | Hilo con `Runnable` | `Runnable`, lambda como hilo |
+| Ejercicio03SincronizacionHilos | Acceso concurrente a recurso compartido | `synchronized`, condición de carrera |
+| Ejercicio04SleepJoin | Esperar a que un hilo termine | `sleep()`, `join()` |
+| Ejercicio05Daemon | Hilo en segundo plano | `setDaemon(true)`, hilo de servicio |
+| Ejercicio06ExecutorService | Pool de hilos gestionado | `Executors.newFixedThreadPool()`, `submit()` |
+
+**Concepto clave:** Un hilo es como un empleado en una fábrica. Por defecto, Java tiene un solo empleado que hace todo en orden (un hilo, el `main`). Con `Thread`, contratas empleados adicionales que trabajan en paralelo. El problema: si dos empleados intentan usar la misma herramienta a la vez sin coordinarse, el resultado es impredecible — eso es una condición de carrera, y `synchronized` es el turno de trabajo que evita los conflictos.
+
+---
+
+### TEMA 16 — JDBC y Patrón DAO
+
+**¿Qué aprenderás?**
+- Conectar Java con una base de datos MySQL
+- Ejecutar sentencias SQL desde Java con `PreparedStatement`
+- El patrón DAO (Data Access Object): separar la lógica de acceso a datos
+- Gestionar conexiones de forma segura
+- Operaciones CRUD completas
+
+**Ejercicios incluidos:**
+
+| Componente | Descripción | Conceptos clave |
+|------------|-------------|-----------------|
+| `conexión/Conexion.java` | Clase de conexión con MySQL | `DriverManager`, `Connection`, env vars |
+| `model/Usuario.java` | Entidad de dominio | POJO, atributos mapeados a columnas |
+| `dao/UsuarioDAO.java` | Capa de acceso a datos | `PreparedStatement`, CRUD completo |
+| `gui/Main.java` | Interfaz gráfica de prueba | Swing, integración UI + DAO |
+
+**Requisitos adicionales para este tema:**
+- MySQL 8+ instalado y en ejecución
+- Crear la base de datos y tabla según las instrucciones del `README.md` del tema
+- Configurar la variable de entorno `DB_PASSWORD` con tu contraseña de MySQL
+
+**Concepto clave:** El patrón DAO es como el mostrador de una farmacia. Tú (la interfaz, la lógica de negocio) pides "dame el usuario con ID 5" al `UsuarioDAO`. Éste va al almacén (la base de datos), busca lo que pediste y te lo trae en una caja ordenada (un objeto `Usuario`). Tú no sabes nada del almacén, ni hace falta — el DAO es quien sabe dónde está cada cosa.
+
+---
+
+## Cómo ejecutar los ejercicios
+
+### Requisitos previos
+
+- **Java 24** (o Java 17+): [descargar en adoptium.net](https://adoptium.net)
+- **IntelliJ IDEA** (Community Edition es gratuita): [descargar en jetbrains.com](https://www.jetbrains.com/idea/download)
+- **Maven 3.6+** (solo para Tema16JDBC): incluido en IntelliJ
+
+### Pasos para ejecutar un ejercicio
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/tu-usuario/JavaRepo.git
+   ```
+
+2. **Abre el proyecto en IntelliJ IDEA:**
+   - `File` → `Open` → selecciona la carpeta `JavaRepo`
+   - IntelliJ detectará automáticamente el `pom.xml` raíz
+
+3. **Navega hasta el ejercicio:**
+   - En el panel de la izquierda (`Project`), busca la carpeta del tema
+   - Abre la carpeta del ejercicio y haz clic en `Main.java`
+
+4. **Ejecuta el ejercicio:**
+   - Haz clic en el triángulo verde (`▶`) junto al método `main`
+   - O pulsa `Shift + F10` para ejecutar el último programa activo
+   - La salida aparecerá en el panel `Run` en la parte inferior
+
+5. **Para Tema16JDBC** (requiere MySQL):
+   ```bash
+   cd Tema16JDBC
+   export DB_PASSWORD=tu_contraseña_mysql
+   mvn compile exec:java -Dexec.mainClass="tech.Kabadev.gui.Main"
+   ```
+
+---
+
+## Convenciones del código
+
+### Estructura de cada ejercicio
+
+```
+TemaXX_NombreTema/
+├── EjercicioYY_NombreDescriptivo/
+│   ├── Main.java            Punto de entrada — tiene el método main()
+│   └── ClaseAuxiliar.java   Clases de apoyo si el ejercicio las necesita
+└── README.md                Teoría del tema e índice de ejercicios
+```
+
+Cada ejercicio es independiente y autocontenido. No necesitas ejecutar otros ejercicios antes.
+
+### Comentarios `[APRENDE]`
+
+El código usa comentarios especiales para señalar exactamente dónde ocurre el concepto que se está enseñando:
 
 ```java
-// ACTUAL — password root del MySQL en codigo fuente público
-private static final String USUARIO = "root";
-private static final String PASSWORD = "221182";
+// [APRENDE] El método trim() elimina los espacios en blanco al inicio y al final
+String nombre = "  Juan  ".trim(); // resultado: "Juan"
 ```
 
-La contraseña de root del servidor MySQL esta en texto plano en el repositorio público de GitHub.
+Lee estos comentarios antes de ejecutar el código — te ahorran mucho tiempo de entendimiento.
 
-**Correccion:**
-```java
-// Opcion 1: variable de entorno
-private static final String PASSWORD = System.getenv("DB_PASSWORD");
+### Convención de nombres
 
-// Opcion 2: fichero .properties (en .gitignore)
-// database.url=jdbc:mysql://localhost:3306/tutorial
-// database.user=root
-// database.password=221182
-```
-
----
-
-### BUG — `Tema16JDBC/` — codigo duplicado dentro del mismo proyecto
-
-El proyecto tiene DOS paquetes con exactamente las mismas clases:
-- `org.kabalera82.conexión.Conexión` / `tech.Kabadev.conexión.Conexión`
-- `org.kabalera82.dao.UsuarioDAO` / `tech.Kabadev.dao.UsuarioDAO`
-- `org.kabalera82.model.Usuario` / `tech.Kabadev.model.Usuario`
-- `org.kabalera82.gui.Main` / `tech.Kabadev.gui.Main`
-
-Una de las dos implementaciones debe eliminarse. Mantener `tech.Kabadev` que es la mas completa.
-
----
-
-### BUG — `Tema16JDBC/` — nombre incorrecto
-
-El tema se llama JPA pero usa `java.sql.Connection`, `DriverManager` y `PreparedStatement` — eso es **JDBC**, no JPA. JPA usa Hibernate/EclipseLink con anotaciones como `@Entity`, `@Table`, `@Id`. El `pom.xml` solo tiene `mysql-connector-java`, no Hibernate.
-
-**Correccion:** Ya renombrado a `Tema16JDBC/`.
-
----
-
-### BUG — `Tema17JavaServerPages/` — proyecto vacio
-
-`Tema17JavaServerPages/src/main/java/tech/Kabadev/Main.java` contiene solo el placeholder de IntelliJ:
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        // vacio
-    }
-}
-```
-
-No hay codigo JSP, no hay dependencia de servlet en el `pom.xml`. O se implementa o se elimina.
-
----
-
-### BUG — `Tema12Colecciones/` — numeros de ejercicio duplicados
-
-```
-Ejercicio04LinkedList/    ← dos Ejercicio04
-Ejercicio04Map/           ← dos Ejercicio04
-
-Ejercicio06HashSet/       ← dos Ejercicio06
-Ejercicio06LinkedHashSet/ ← dos Ejercicio06
-```
-
-Renombrar para que los numeros sean unicos y el orden sea claro.
-
----
-
-### BUG — `Tema08_01Herencia/` — falta Ejercicio02
-
-```
-Ejercicio01Vehiculos/    ← existe
-                         ← Ejercicio02 ausente
-Ejercicio03Planta/       ← existe (salta el 02)
-```
-
-O se crea el Ejercicio02 o se renombra Ejercicio03Planta a Ejercicio02Planta.
-
----
-
-### BUG MENOR — `Tema13AccesoDatos/` — falta ejercicio04
-
-```
-ejercicio01/
-ejercicio02Texto/
-ejercicio03/
-             ← ejercicio04 ausente
-ejercicio05json/
-ejercicio06csv/
-```
-
-Renombrar ejercicio05 y 06 para que la numeracion sea consecutiva, o crear el ejercicio04.
-
----
-
-### BUG MENOR — Archivos con acentos en el nombre
-
-```
-Tema01ConceptosBasicos/Ejercicio03OperadoresAritméticos.java   ← acento en é
-Tema05_02MatricesArrays/Ejercicio07MétodosBusqueda.java        ← acento en é
-```
-
-Algunos sistemas de ficheros y herramientas Git tienen problemas con caracteres no-ASCII en nombres de archivo. Renombrar a `Ejercicio03OperadoresAritmeticos.java` y `Ejercicio07MetodosBusqueda.java`.
-
----
-
-### AVISO — `data/` en la raíz
-
-La carpeta `data/` con `clientes.txt`, `clientes.csv`, `datos.dat`, `miArchivo.txt`, etc., esta en la raíz del repo en lugar de dentro del ejercicio que la usa. Los archivos de datos deberían estar dentro de cada ejercicio o en `Tema13AccesoDatos/data/`.
-
----
-
-## 4. Temas que faltan por desarrollar
-
-### CRITICO — Excepciones (`try/catch/finally`)
-
-No existe ningun tema dedicado a excepciones. En el `Readme.txt` original aparecia como `Tema12Excepciones` pero la carpeta no existe — en su lugar hay `Tema13AccesoDatos` que es otro concepto.
-
-**Que incluir:**
-```java
-// Jerarquía de excepciones
-Throwable
-├── Error (OutOfMemoryError, StackOverflowError)
-└── Exception
-    ├── RuntimeException (no checked: NullPointerException, ArrayIndexOutOfBoundsException)
-    └── IOException, SQLException (checked — hay que declarar o capturar)
-
-// Bloque try-catch-finally
-try {
-    int[] arr = new int[5];
-    arr[10] = 1; // ArrayIndexOutOfBoundsException
-} catch (ArrayIndexOutOfBoundsException e) {
-    System.err.println("Índice fuera de rango: " + e.getMessage());
-} finally {
-    System.out.println("Esto siempre se ejecuta");
-}
-
-// Crear excepción personalizada
-public class SaldoInsuficienteException extends RuntimeException {
-    public SaldoInsuficienteException(double importe) {
-        super("Saldo insuficiente para operar con " + importe + " €");
-    }
-}
-
-// throw y throws
-public void retirar(double importe) throws SaldoInsuficienteException {
-    if (importe > saldo) throw new SaldoInsuficienteException(importe);
-    saldo -= importe;
-}
-```
-
-**Ejercicios propuestos:**
-1. Capturar `NumberFormatException` al parsear entrada del usuario
-2. Jerarquía de excepciones — `catch` multiple y orden
-3. `finally` para cerrar recursos
-4. Crear `CuentaBancariaException` personalizada
-5. `try-with-resources` con `BufferedReader`
-
----
-
-### IMPORTANTE — Cadenas de caracteres (ampliar Tema06)
-
-`Tema06CadenasDeCaracteres` tiene solo 2 ejercicios. Es un tema fundamental con mucho por cubrir.
-
-**Que incluir:**
-```java
-// Metodos de String mas importantes
-String s = "Hola Mundo";
-s.length()          // 10
-s.toUpperCase()     // "HOLA MUNDO"
-s.toLowerCase()     // "hola mundo"
-s.trim()            // elimina espacios
-s.substring(0, 4)  // "Hola"
-s.contains("Mundo") // true
-s.replace("Mundo", "Java") // "Hola Java"
-s.split(" ")        // ["Hola", "Mundo"]
-s.charAt(0)         // 'H'
-s.indexOf("Mundo")  // 5
-s.startsWith("Hola") // true
-
-// StringBuilder para concatenacion eficiente
-StringBuilder sb = new StringBuilder();
-sb.append("Hola").append(" ").append("Mundo");
-String resultado = sb.toString();
-
-// Comparacion correcta
-"hola".equals("hola")           // true (correcto)
-"hola".equalsIgnoreCase("HOLA") // true
-"hola" == "hola"               // NO usar == para Strings
-
-// Formateo
-String.format("Nombre: %s, Edad: %d", nombre, edad);
-```
-
-**Ejercicios propuestos (faltan al menos 10 mas):**
-1. Contar vocales y consonantes
-2. Revertir una cadena
-3. Comprobar si es palindromo
-4. Contar palabras en una oracion
-5. Cifrado Cesar básico
-6. Validar email con `contains()` e `indexOf()`
-7. Anagrama: comprobar si dos palabras son anagramas
-8. `StringBuilder` vs `String` — diferencia de rendimiento
-
----
-
-### IMPORTANTE — Polimorfismo y clases abstractas (ampliar Tema04_03 / Tema08)
-
-`Tema04_03Polimorfismo` tiene 1 ejercicio. El polimorfismo merece mucho mas desarrollo.
-
-**Que incluir:**
-```java
-// Clase abstracta
-public abstract class Figura {
-    public abstract double area();  // metodo abstracto — sin implementación
-    public void mostrar() {
-        System.out.println("Area: " + area()); // metodo concreto
-    }
-}
-
-// Herencia + polimorfismo
-public class Circulo extends Figura {
-    private double radio;
-    @Override
-    public double area() { return Math.PI * radio * radio; }
-}
-
-// Polimorfismo en acción
-List<Figura> figuras = List.of(new Circulo(5), new Rectangulo(4, 3));
-figuras.forEach(f -> f.mostrar()); // cada figura calcula su area a su manera
-```
-
----
-
-### IMPORTANTE — Enumeraciones (`enum`)
-
-No hay ningun ejercicio de `enum` en el repo.
-
-```java
-public enum DiaSemana {
-    LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO;
-
-    public boolean esLaboral() {
-        return this != SABADO && this != DOMINGO;
-    }
-}
-
-// Uso
-DiaSemana hoy = DiaSemana.LUNES;
-System.out.println(hoy.esLaboral()); // true
-```
-
----
-
-### UTIL — Generics basicos
-
-Los Generics son prerequisito para entender las colecciones y los Streams. No hay ningun ejercicio específico.
-
-```java
-// Clase generica
-public class Caja<T> {
-    private T contenido;
-    public void guardar(T item) { contenido = item; }
-    public T sacar() { return contenido; }
-}
-
-// Metodo generico
-public static <T extends Comparable<T>> T maximo(T a, T b) {
-    return a.compareTo(b) >= 0 ? a : b;
-}
-```
-
----
-
-### UTIL — Patrón DAO documentado como patrón
-
-`Tema16JDBC/` (realmente JDBC) implementa el patrón DAO pero sin documentarlo como tal. El patrón merece su propia explicacion teorica.
-
----
-
-## 5. Mejoras propuestas por tema
-
-### Tema01 — ConceptosBasicos
-
-| Mejora | Descripción |
-|--------|------------|
-| Completar `Ejercicio05` y `Ejercicio06` | Nombres vacios — añadir descripción en el nombre |
-| Renombrar `Primitivos.java` | No sigue el convenio `EjercicioXX` — mover a ejercicio de referencia |
-| Añadir ejercicio de `Scanner` | El `Scanner` se usa mucho pero no hay ejercicio dedicado |
-
-### Tema04 — Metodos
-
-| Mejora | Descripción |
-|--------|------------|
-| Unificar en una sola carpeta | `Tema04_01`, `Tema04_02`, `Tema04_03` deberían ser subcarpetas de `Tema04Metodos/` |
-| Ampliar `Tema04_03Polimorfismo` | Un solo ejercicio no es suficiente para este concepto |
-| Añadir clases abstractas | `abstract class` es el paso natural despues de interfaces |
-
-### Tema06 — Cadenas
-
-| Mejora | Descripción |
-|--------|------------|
-| Ampliar de 2 a 12 ejercicios | Ver sección "Temas que faltan" para lista completa |
-| Añadir expresiones regulares | `String.matches()`, `Pattern`, `Matcher` |
-| `String.format()` y `printf` | Formato de cadenas — muy util en todos los temas |
-
-### Tema07 — Clases
-
-| Mejora | Descripción |
-|--------|------------|
-| Unificar nomenclatura | Mezcla `Ejercicio07ClasesEspeciales` (carpeta) con `DDBBPersonCocheCCorriente.java` (archivo suelto) |
-| `DDBBPersonCocheCCorriente.java` | Nombre confuso — renombrar y mover dentro de una carpeta de ejercicio |
-| Añadir `Ejercicio09` con `enum` | Natural despues de los ejercicios de clases |
-| Documentar patrón de clase | Orden de elementos: constantes → campos → constructores → metodos |
-
-### Tema08 — Herencia
-
-| Mejora | Descripción |
-|--------|------------|
-| Crear `Ejercicio02` | El salto de 01 a 03 sugiere que falta un ejercicio |
-| Añadir clases abstractas | `Tema08_01Herencia` no tiene ningun ejemplo con `abstract` |
-| Añadir `@Override` explicito | Varios ejercicios sobreescriben sin la anotacion |
-
-### Tema11 — Colecciones
-
-| Mejora | Descripción |
-|--------|------------|
-| Corregir numeracion duplicada | Dos Ejercicio04 y dos Ejercicio06 — renombrar |
-| Añadir `Deque` | `ArrayDeque` como pila y cola — el mas eficiente |
-| Añadir `PriorityQueue` | Cola con prioridad — muy pedida en examenes |
-| Mover o eliminar `Set.txt` | Archivo de texto suelto en la carpeta — su contenido debería estar en el README |
-
-### Tema12 — AccesoDatos
-
-| Mejora | Descripción |
-|--------|------------|
-| Corregir typo en nombre | `Tema13AccesoDatos` → `Tema13AccesoDatos` (doble 'c') |
-| Crear ejercicio04 | La numeracion salta del 03 al 05 |
-| Añadir `.properties` | Leer configuración desde fichero — muy util con JDBC |
-
-### Tema13 — Streams
-
-| Mejora | Descripción |
-|--------|------------|
-| Ampliar de 3 a 10+ ejercicios | Solo hay 3 archivos Java — insuficiente para el tema |
-| Añadir ejercicios de `filter/map/collect` | Las operaciones fundamentales |
-| Añadir `Optional` | Muy relacionado con Streams |
-| Convertir Readme.txt a README.md | Unificar extension de documentacion |
-
-### Tema14 — Threads
-
-| Mejora | Descripción |
-|--------|------------|
-| Ampliar de 3 a 8+ ejercicios | Solo 3 ejercicios — el tema es muy importante |
-| Añadir `ExecutorService` | El enfoque moderno para gestión de hilos |
-| Añadir `Callable` y `Future` | Para hilos con valor de retorno |
-| Documentar ciclo de vida | Diagrama ASCII: NEW → RUNNABLE → BLOCKED → TERMINATED |
-
-### Tema16 — JDBC (actualmente llamado JPA)
-
-| Mejora | Descripción |
-|--------|------------|
-| ~~Renombrar a `Tema15JDBC/`~~ ✅ hecho | El nombre actual (JPA) es incorrecto |
-| **Eliminar paquete `org.kabalera82`** | Codigo duplicado — mantener solo `tech.Kabadev` |
-| **Sacar password del codigo** | `"221182"` en texto plano en GitHub público |
-| Añadir `README.md` | Explicar patrón DAO, requisitos (MySQL), como configurar |
-| Añadir transacciones | `setAutoCommit(false)`, `commit()`, `rollback()` |
-| Añadir ejercicio sin GUI | La GUI de `Main.java` es demasiado compleja de entrada |
-
----
-
-## 6. Problemas estructurales del repo
-
-### Tema numerados con esquema inconsistente
-
-- Algunos temas usan `_01` y `_02` como subtema: `Tema04_01`, `Tema04_02`, `Tema04_03`, `Tema05_01`, `Tema05_02`, `Tema08_01`, `Tema08_02`
-- Otros son carpetas directas: `Tema01`, `Tema02`...
-
-**Propuesta:** Usar subcarpetas dentro de un tema en lugar de sufijos numericos:
-```
-Tema04Metodos/
-├── 01-metodos-basicos/      ← era Tema04_01Metodos
-├── 02-varargs-sobrecarga/   ← era Tema04_02VarArgs
-└── 03-polimorfismo/         ← era Tema04_03Polimorfismo
-```
-
----
-
-### `Tema99EjerciciosMultiples` sin organizacion
-
-Contiene ejercicios como `Algoritmos/` (que tiene FCFS, FIFO, SJF — mismos algoritmos de Java2), `Billetes/`, `campanadas/`, etc. No hay README y no queda claro si son examenes, practicas o ejercicios de repaso.
-
-**Propuesta:** Crear `README.md` en Tema99 explicando el origen de cada ejercicio (examen, práctica, repaso).
-
----
-
-### `data/` en la raíz del repo
-
-Los archivos de datos (`clientes.txt`, `clientes.csv`, `datos.dat`, etc.) estan en la raíz en lugar de dentro de los ejercicios que los usan. Esto dificulta saber que ejercicio usa cada archivo.
-
-**Propuesta:** Mover cada archivo a su ejercicio correspondiente o crear una carpeta `Tema13AccesoDatos/data/` centralizada.
-
----
-
-### Falta `.gitignore` actualizado
-
-El `.gitignore` actual es el de IntelliJ por defecto. No excluye:
-- `out/` (compilados)
-- `target/` (Maven build)
-- `*.class`
-- Ficheros de propiedades con credenciales (`database.properties`)
-
----
-
-## 7. Convenios de codigo
-
-### Naming
-
-| Elemento | Convenio | Ejemplo |
-|---------|----------|---------|
+| Elemento | Convención | Ejemplo |
+|----------|------------|---------|
 | Clase | PascalCase | `CuentaBancaria` |
-| Metodo | camelCase | `calcularSaldo()` |
+| Método | camelCase | `calcularSaldo()` |
 | Variable | camelCase | `nombreUsuario` |
 | Constante | UPPER_SNAKE_CASE | `MAX_INTENTOS` |
-| Paquete | lowercase sin acentos | `tema01conceptosbasicos` |
-| Archivo | Igual que la clase pública | `CuentaBancaria.java` |
+| Paquete | todo en minúsculas | `tema01conceptosbasicos` |
+| Archivo | igual que la clase pública | `CuentaBancaria.java` |
 
-**Violaciones actuales:**
-- `Ejercicio03OperadoresAritméticos.java` — acento en nombre de archivo
-- `Ejercicio07MétodosBusqueda.java` — acento en nombre de archivo
-- `ejercicio01persona/`, `ejercicio02coche/` en Tema07 — minuscula
-- `Main.java` suelto en Tema07 — sin contexto de cual ejercicio es
+### Paquetes
 
-### Excepciones
+Los ejercicios siguen la estructura de paquetes `TemaXX_nombre.EjercicioYY`. Por ejemplo:
 
 ```java
-// MAL — bloque catch vacio
-} catch (Exception e) { }
+package Tema07Clases.ejercicio01persona;
 
-// MAL — solo printStackTrace en produccion
-} catch (IOException e) { e.printStackTrace(); }
-
-// BIEN
-} catch (IOException e) {
-    System.err.println("Error al leer: " + e.getMessage());
+public class Persona {
+    // ...
 }
 ```
 
-### Credenciales
+---
 
-**NUNCA** poner passwords, tokens o credenciales en el codigo fuente. Usar variables de entorno o ficheros `.properties` excluidos del control de versiones:
+## Recursos adicionales
 
-```
-# .gitignore
-database.properties
-application.local.properties
-*.env
-```
+Si quieres profundizar más allá de los ejercicios de este repositorio:
+
+- **Documentación oficial de Java**: [docs.oracle.com/en/java](https://docs.oracle.com/en/java/)
+- **Exercism Java Track** (práctica guiada): [exercism.org/tracks/java](https://exercism.org/tracks/java)
+- **Baeldung** (tutoriales en profundidad): [baeldung.com](https://www.baeldung.com)
+- **Refactoring Guru** (patrones de diseño): [refactoring.guru/es](https://refactoring.guru/es)
+- **Visualgo** (visualización de algoritmos): [visualgo.net](https://visualgo.net)
 
 ---
 
-## 8. Hoja de ruta
+## Licencia
 
-### Prioridad 1 — Seguridad y basura (hacer ANTES de cualquier otra cosa)
-
-- [ ] **ELIMINAR `red.text`** — expone IPs reales del sistema en repo público
-- [ ] **ELIMINAR `errores.txt`** — archivo vacio sin proposito
-- [ ] **Eliminar password hardcodeada** en `Tema16JDBC/Conexión.java` — `"221182"` en repo público
-- [ ] **Eliminar paquete duplicado** `org.kabalera82` de `Tema16JDBC/`
-- [ ] Crear `README.md` (este archivo) y eliminar `Readme.txt`
-
-### Prioridad 2 — Bugs estructurales
-
-- [ ] Corregir numeracion duplicada en `Tema12Colecciones/` (Ejercicio04×2, Ejercicio06×2)
-- [ ] Crear o aclarar `Ejercicio02` en `Tema08_01Herencia/`
-- [ ] ~~Renombrado a `Tema16JDBC/`~~ ✅ hecho
-- [ ] Corregir typo `Tema13AccesoDatos/` → `Tema13AccesoDatos/`
-- [ ] Renombrar archivos con acentos: `Ejercicio03OperadoresAritméticos.java`, `Ejercicio07MétodosBusqueda.java`
-
-### Prioridad 3 — Temas que necesitan contenido urgente
-
-- [x] **Crear `Tema10Excepciones/`** ✅ hecho — 6 ejercicios creados
-- [ ] Ampliar `Tema06CadenasDeCaracteres/` de 2 a 10+ ejercicios
-- [ ] Ampliar `Tema04_03Polimorfismo/` con clases abstractas
-- [ ] Ampliar `Tema14Streams/` de 3 a 10+ ejercicios
-- [ ] Ampliar `Tema15Hilos/` de 3 a 8+ ejercicios
-
-### Prioridad 4 — Limpieza estructural
-
-- [ ] Implementar o eliminar `Tema17JavaServerPages/` (actualmente vacio)
-- [ ] Mover archivos de `data/` raíz al ejercicio correspondiente
-- [ ] Añadir `Tema99EjerciciosMultiples/README.md` explicando el origen de cada ejercicio
-- [ ] Unificar nomenclatura de subtemas (Tema04_01 vs subcarpetas)
-
-### Prioridad 5 — Mejoras de calidad
-
-- [ ] Añadir `enum` como ejercicio en Tema07 o Tema09
-- [ ] Añadir Generics basicos como ejercicio en Tema12Colecciones
-- [ ] Documentar patrón DAO en `Tema16JDBC/`
-- [ ] Añadir transacciones JDBC en `Tema16JDBC/`
-- [ ] Actualizar `.gitignore` para excluir `target/`, `out/`, `*.class`, `database.properties`
+Este repositorio está publicado bajo la licencia **MIT**. Puedes usarlo, copiarlo y modificarlo libremente, con o sin atribución. Si te ha sido útil, una estrella en GitHub siempre se agradece.
 
 ---
 
-## 9. Requisitos y compilacion
-
-**Requisitos:**
-- **Java 17+** (recomendado) — el `pom.xml` raíz usa Java 24
-- **Maven 3.6+** — para `Tema16JDBC/`, `Tema17JavaServerPages/`
-- **MySQL 8+** — para `Tema16JDBC/` (JDBC)
-- **IDE recomendado:** IntelliJ IDEA o VS Code con Extension Pack for Java
-
-**Compilar un ejercicio sin IDE:**
-
-```bash
-# Ejercicios sueltos (Tema01-Tema06, sin package complejo)
-javac -d out Tema01ConceptosBasicos/Ejercicio01HolaMundo.java
-java -cp out Tema01ConceptosBasicos.Ejercicio01HolaMundo
-
-# Ejercicios en carpeta con package
-javac -d out Tema07Clases/ejercicio01persona/*.java
-java -cp out ejercicio01persona.Main
-
-# Tema16JDBC con Maven
-cd Tema16JDBC
-mvn compile
-mvn exec:java -Dexec.mainClass="tech.Kabadev.gui.Main"
-```
-
-**Estructura de cada tema:**
-```
-TemaXX/
-├── README.md           ← Teoria + índice de ejercicios
-├── EjercicioXX/        ← Cada ejercicio en su carpeta
-│   ├── Main.java       ← Punto de entrada
-│   └── *.java          ← Clases auxiliares
-└── data/               ← Archivos de datos si aplica
-```
-
----
-
-*Ultima actualizacion: 2026-03-21*
+*Última actualización: marzo 2026*
