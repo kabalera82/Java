@@ -55,7 +55,9 @@ JavaRepo/
 ├── Tema09Interfaces/              Interfaces, implementación múltiple
 ├── Tema10Excepciones/             try-catch-finally, excepciones personalizadas
 ├── Tema11_01FicherosDeTexto/      Lectura y escritura de ficheros de texto
-├── Tema11_02FicherosBinarios/     Serialización, ObjectOutputStream/InputStream
+├── Tema11_02FicherosBinarios/     Serialización, DataOutputStream, ObjectOutputStream
+├── Tema11_03CSV/                  Crear, leer, modificar y CRUD sobre archivos CSV
+├── Tema11_04PDF/                  Generar y leer PDFs con iText 7
 ├── Tema12Colecciones/             List, Set, Map, Queue, Stack
 ├── Tema13AccesoDatos/             Texto plano, Properties, JSON, CSV
 ├── Tema14Streams/                 Streams, lambdas, Optional
@@ -447,22 +449,64 @@ JavaRepo/
 **¿Qué aprenderás?**
 - Serializar objetos Java para guardarlos en disco
 - Deserializar: recuperar objetos guardados
-- `ObjectOutputStream` y `ObjectInputStream`
-- La interfaz `Serializable`
+- `DataOutputStream` para tipos primitivos binarios
+- `ObjectOutputStream` / `ObjectInputStream` para objetos completos
+- La interfaz `Serializable` y `serialVersionUID`
 
 **Ejercicios incluidos:**
 
 | Ejercicio | Descripción | Conceptos clave |
 |-----------|-------------|-----------------|
-| Ejercicio01InsertaTabla | Guardar un array en fichero binario | `ObjectOutputStream`, `Serializable` |
-| Ejercicio02InsertaVersos | Guardar versos en fichero `.dat` | Escritura secuencial de objetos |
-| Ejercicio03RecuperaVersos | Leer los versos guardados | `ObjectInputStream`, deserialización |
-| Ejercicio04 | Serialización avanzada | `serialVersionUID`, versiones |
-| Ejercicio05 | Ejercicio integrador binarios | Guardar y recuperar objetos complejos |
-
-> **Nota:** Los ejercicios de CSV y PDF están siendo añadidos en este tema. Próximamente: `Ejercicio06CSV` (gestión de productos en CSV) y `Ejercicio07PDF` (generación de documentos PDF con iText).
+| Ejercicio01InsertaTabla | Guardar un array de enteros en fichero binario | `ObjectOutputStream`, escritura binaria |
+| Ejercicio02InsertaVersos | Guardar un poema en fichero `.dat` | Escritura secuencial de `String` |
+| Ejercicio03RecuperaVersos | Leer y mostrar el poema guardado | `ObjectInputStream`, deserialización |
+| Ejercicio04 | Escribir enteros con centinela -1, releerlos | `DataOutputStream`, `DataInputStream`, centinela |
+| Ejercicio05 | Serializar/deserializar objetos `Socio` | `Serializable`, `serialVersionUID`, `ArrayList` |
 
 **Concepto clave:** La serialización es como hacer una fotocopia de un objeto y meterla en un cajón. Cuando necesites ese objeto de nuevo, sacas la fotocopia y la "rehidratas" para tener el objeto original. El fichero binario no es legible para humanos, pero Java lo entiende perfectamente y puede reconstruir el objeto exacto.
+
+---
+
+#### 11c — CSV (Comma-Separated Values)
+
+**¿Qué aprenderás?**
+- Crear y escribir archivos CSV desde cero
+- Leer y parsear líneas CSV con `split()`
+- Modificar registros en un CSV (patrón leer-modificar-reescribir)
+- Implementar un DAO completo sobre CSV con menú interactivo
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01EscribirCSV | Crear `productos.csv` con 5 productos | Cabecera, separador `;`, `PrintWriter` |
+| Ejercicio02LeerCSV | Leer y mostrar CSV como tabla formateada | `split(";")`, `printf`, parseo de tipos |
+| Ejercicio03ModificarCSV | Subir precios un 10% y reescribir el CSV | Patrón leer → modificar → reescribir |
+| Ejercicio04AppCompleto | App con menú: listar, buscar, añadir, actualizar, eliminar | DAO pattern, `Scanner`, append mode |
+
+**Concepto clave:** Un CSV es como una hoja de Excel guardada en formato texto: cada fila es un registro y cada columna está separada por un delimitador (`;` en nuestro caso, más seguro que `,` con textos en español). Es el formato más universal para intercambiar datos tabulares entre sistemas.
+
+---
+
+#### 11d — PDF con iText 7
+
+**¿Qué aprenderás?**
+- Crear documentos PDF desde Java
+- Añadir texto con distintos estilos (negrita, color, tamaño)
+- Extraer texto de un PDF existente
+- Generar informes con tablas y pie de página
+
+**Ejercicios incluidos:**
+
+| Ejercicio | Descripción | Conceptos clave |
+|-----------|-------------|-----------------|
+| Ejercicio01CrearPDF | Crear `hola_mundo.pdf` con título y párrafos | `PdfWriter`, `Document`, `Paragraph` |
+| Ejercicio02LeerPDF | Extraer texto de un PDF página a página | `PdfTextExtractor`, `PdfReader` |
+| Ejercicio03InformePDF | Informe profesional con tabla de productos | `Table`, cabecera, filas alternadas, pie de página |
+
+> **Requisito:** iText 7 ya está configurado en el `pom.xml` del proyecto (`com.itextpdf:kernel` y `com.itextpdf:layout`, versión 7.2.5).
+
+**Concepto clave:** Un PDF es como imprimir un documento y sellarlo — el aspecto queda fijado independientemente del sistema operativo, fuente o impresora. iText te da un "lienzo" sobre el que colocas elementos (párrafos, tablas, imágenes) con coordenadas y estilos precisos.
 
 ---
 
